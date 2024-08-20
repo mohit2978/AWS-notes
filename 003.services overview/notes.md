@@ -119,14 +119,29 @@ you need to mount EFS to multiple e instances!! below you can see EFS can be att
 
  Suppose uploading 1 TB data to s3 ,it will take days!!so for that AWS comes with service called SNOW FAMILy(used to physical data transfer)!!AWS send you 3 physical devices 
 
- 1. SnowCone support 8 TB
+ 1. SnowBallCone or snow ball support 8 TB
  2. SnowBall Edge support 100 TB
- 3. Snow Mobile support PB's
+ 3. Snow Mobile (is a truck) support PB's
 
-### What is AWS Snowball?
+![alt text](image-7.png)
+
+## What is AWS Snowball?
 It is used to move large amounts of data in and out of AWS using a portable storage device for transport. The idea here is if a customer has a large amount of data then you bypass the internet by plugging a snowball and then AWS will ship the encrypted snowball device for you to plug in and extract data at your data center.
 
 This is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data in and out of AWS.
 
 ![alt text](image-5.png)
 
+![alt text](image-9.png)
+
+
+__If you delete Ec2 ,root volume is deleted not additional storage!!__
+![alt text](image-6.png)
+
+![alt text](image-8.png)
+
+Snow family we cant do practicals!!All this data will be pushed to S3!!
+__Snow family is used to transfer data physically from on-premises to AWS or vice-versa__
+
+If you are not using Some photos,videos ,we can archive it, for that we have a service called as glacier!!
+![alt text](image-10.png)
