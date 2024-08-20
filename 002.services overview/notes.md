@@ -58,4 +58,36 @@ In case of static website, you can host on S3!! no need to go to EC2 or elastic 
 
   here HDD is called as Volume (EBS Volume)! now we call HDD as Volume!!__When launching EC2 we need to tell Volume!! Ec2 comes with default volume called as root volume which has OS!!__ Rest of volumes is called as Additional volumes!! Anytime we can attach volume or detach it!!
   ***
-  
+
+![alt text](image-1.png)
+
+EBS is centralized storage !! to create a volume create volume Attach to ec2 and after use detach it!!
+
+We can attach multiple volumes to ec2 instance. Default volume is root Volume which has OS!
+
+here we have server side OS !! Ec2 doesn't support client side OS like Windows 10,11!!it support only server side OS like windows server 2021,2022,redhat,ubuntu!
+
+Windows Ec2 instance default size EBS-->30GB<br>
+Linux Ec2 instance default size EBS-->8 or 10GB<br>
+These are pre-provisioned (Already decided by AWS)<br>
+maximum volume size-->16TB<br>
+We can attach one volume to multiple ec2? no can you attach your HDD to multiple laptops! no!!
+***
+__Volume size can be increased on fly!! no need to stop the Server (ec2 instance)==> no downtime,but volume size cant be decreased!!__
+
+Root volume device name is /dev/sda1!! whenever you attach root volume it device name should be /dev/sda1!for os ec2 look into this volume name only!!
+
+__for ubuntu sometimes we have root volume name /dev/xvda__
+
+__Additional volume is /dev/sd_1 in _ you can put b,c,d-----__
+
+> **Note :**
+We cant stop root volume while ec2 instance is running!! but an detach additional volume!!But it is not recommended!! as some developer might be working on it! just stop ec2 and then detach!!
+
+![short notes](image-2.png)
+
+You can not delete the volume while it is attached!! first detach and then delete!! 
+
+EC2 instance has AZ and volume also has AZ!! should both be same AZ(data centre)? both should be in same AZ (data centre)1a AZ cant be attached to 1b Ec2 instance!!   
+
+We cant put a volume to multiple EC2 but now i need shared storage!!We want to share the stroage!!
