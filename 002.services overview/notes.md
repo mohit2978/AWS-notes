@@ -90,4 +90,6 @@ You can not delete the volume while it is attached!! first detach and then delet
 
 EC2 instance has AZ and volume also has AZ!! should both be same AZ(data centre)? both should be in same AZ (data centre)1a AZ cant be attached to 1b Ec2 instance!!   
 
-We cant put a volume to multiple EC2 but now i need shared storage!!We want to share the stroage!!
+We cant put a volume to multiple EC2 but now i need shared storage!!We want to share the storage!!
+
+If you have 100Gb Storage and used 30 GB !! wil AWs charge for 100GB or 30GB? you go to restaurant you ordered full biryani you ate half you need to pay for full naa !! same here if you take 100 GB pay for 100 Gb whether you use or not full 100 GB!!
