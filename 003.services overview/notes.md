@@ -143,5 +143,59 @@ __If you delete Ec2 ,root volume is deleted not additional storage!!__
 Snow family we cant do practicals!!All this data will be pushed to S3!!
 __Snow family is used to transfer data physically from on-premises to AWS or vice-versa__
 
-If you are not using Some photos,videos ,we can archive it, for that we have a service called as glacier!!
+If you are not using Some photos,videos ,we can archive it, for that we have a service called as glacier which is cheaper than S3!!
+
 ![alt text](image-10.png)
+
+## What is AWS storage gateway?
+AWS storage gateway is a service that connects an on-premises software application with cloud-based storage to provide seamless and secure integration between an organization’s on-premise IT infrastructure and the AWS infrastructure.
+
+Suppose on-premises machine we want to use S3,EFS,glacier !so for that we use storage gateway!! no need of console !! with storage gateway now these storage act as storage in your PC like a different drive!!
+
+AWS is public storage !! in on premises it is private storage!!
+so Storage Gateway becomes Hybrid storage!!
+
+![alt text](image-11.png)
+
+now lets move to Db services!!
+
+## AWS database types
+AWS has following database types:
+
+1. RDS(relational Db services) = OLTP
+
+2. Dynamo DB – No SQL
+
+3. Redshift – Amazon Data warehouse – OLAP
+
+4. Elastic Cache – In-Memory cache
+
+![alt text](image-12.png)
+ 
+ MOMPMAI is just abbreviation to remember all 7 db engines!!
+
+ __AWS db is Aurora!! like MSsql is by microsoft!!__
+
+ DB instance is managed by AWS!! just need to create instance!! Db instance we cant SSH into it like we do in ec2 We can just connect to it!!
+
+DMS (Database migration service) used to migrate RDBMS!! 
+Relational -->in relation --> bounded
+Non relational-->not in relationa --> not bounded -->mongo db ,casandra
+
+Non relational are faster than relational!!
+
+__DynamoDb is non relational service by AWS__
+
+database used to store data!!
+__datawarehouse is service used to store huge data!! so for that we have RedShift! used to store bug data!__
+
+
+## Elastic cache
+ElastiCache is a fully managed, in-memory caching service supporting flexible, real-time use cases. You can use ElastiCache for caching, which accelerates application and database performance, or as a primary data store for use cases that don’t require durability like session stores, gaming leaderboards, streaming, and analytics. ElastiCache is compatible with Redis and Memcached.
+
+Elastic cache supports two open-source in-memory caching engines:
+
+1. Memory cache(Mem CacheD)
+2. Redis
+
+Example: This can be used when the user would like to get the top 10 songs by genre, if the data here does not frequently change an in-memory cache can be used.
