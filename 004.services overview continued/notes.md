@@ -58,4 +58,25 @@ Establishing fault isolation boundaries is a fundamental principle in designing 
 #### Snow family is Physical data transfer
 
 #### glacier is used for archive purpose of photos and videos. not S3
+***
+## LoadBalancers
+
+LoadBalancer is recognized by url!!it is a service in AWS!!
+
+Url given by AWS is very bad to rad ,cant be given to customer so we need to convert the URL to some nice name ,so for that we have a service called __Route 53__ which is used to convert nasty bad URL to some nice URL.
+
+Route53 (53 is port number of DNS) is first service hit by customer which converts back to that bad URL of load balancer!!
+Route53 is map<Good url,bad url>.Route 53 has records of this mapping.
+
+Web server is not needed if we have load balancer!! as the work of web server is done by LB!!
+***
+## VPC(Virtual Private Cloud)
+
+Every infra we create should be inside VPC!! VPC is like private virtual datacenter!! it is regional ,max 5 (including default) we can have!! so first we create vpc before launching ec2 ,AWS provide default VPC in every region so that user no need to create VPC before creating ec2!!
+
+Data centre handled by us is On-Premises!!We connect to AWS we use shared network (public network)!!now we need a private network virtually so company use VPN(virtual private network) to connect to various internet services!! VPN in backend uses shared internet!! so some company doesn't use this to connect to AWS!! they want a dedicated connection to AWS so for that we have a service by AWS called as __Direct connect__ which uses AWS network not internet!!
+
+![alt text](image-3.png)
+
+it is very costly !! $16000 per month !! NASA,ISRO,private projects use this !!It is lease line connection!!
 
