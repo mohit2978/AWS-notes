@@ -80,3 +80,43 @@ Data centre handled by us is On-Premises!!We connect to AWS we use shared networ
 
 it is very costly !! $16000 per month !! NASA,ISRO,private projects use this !!It is lease line connection!!
 
+---
+## CloudFront
+We have an application deployed on Mumbai region So origin of application is Mumbai. so, People in India will have low latency !! But people accessing from different region will have high latency!!
+
+![alt text](image-4.png)
+
+- Solution1 --> Put application in all regions but we dont have that much budget
+
+- Solution 2 --> we use a service called cloudFront where we have edgeLocation who cache the application so diifernet location caches the application!!
+
+![alt text](image-5.png)
+
+In cloud front we create distribution ,we tell ki our original application in Mumabi and ask to cache application!!
+
+now from application to edge location we transfer the application content using CDN(content delivery network) not internet!!
+
+Edge location managed by AWS which caches both static and dynamic data!!
+
+lets say user try to access boom.com
+user-->boom.com-->R53--> Elastic Load balancer
+user-->boom.com-->R53--> cloud front--> Elastic Load balancer
+
+
+How long data cached?
+ time in TTL(time to live)
+
+Now suppose you have TTL-12 hours and put some wrong data in application and cache has taken that value now  we notice it and we change in application in origin but on cache it will be there till 12 hours so to remove immediately we __invalidate cache__ from edge location!!
+
+ we created distribution origin and we can select continent where we want to cache
+
+ also we can block some countries so that they can not access the application!!   
+
+---
+## IAM (idendity and access mangement)
+
+in company ,we are will be working in company account!! we want to have 100 users in a account these users are called as IAM users!!
+
+__main account is called as root user__ .Other user in that account is called as IAM users!!
+
+lecture 14 over!!
