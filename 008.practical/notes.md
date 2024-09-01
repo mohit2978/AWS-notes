@@ -117,3 +117,19 @@ Review your configuration, and click “Create user” to complete the process.
 Step 8: See the User Details
 
 ------------------
+
+While creating user adding policies you see filter
+
+![](image-17.png)
+
+AWS managed and customer managed we know
+
+based on job you have we have policies called AWS managed-job function like gor DBA what kind of policy we need and so on for other type of jobs!!
+
+![](image-18.png)
+
+see above according to different roles different policies are selected!! If selected administrative access, then the account already have all permissions!!  Also we have boundary permissions which tells how many permission max you can have on a user!!
+
+![](image-19.png)
+
+> Password will be visible only one time !! copy it somewhere or download excel!!
