@@ -133,3 +133,35 @@ see above according to different roles different policies are selected!! If sele
 ![](image-19.png)
 
 > Password will be visible only one time !! copy it somewhere or download excel!!
+
+### User created
+
+![alt text](image-20.png)
+
+ARN --> Amazon resource name
+
+You can see everything you have put !!We have only used managed policy !! not inline one which is written in AWS!! 
+
+> You can attach at max 10 policy to user
+
+## Creating an IAM Group👥
+Creating an IAM group consolidates permissions for multiple users:
+
+Step 1: Navigate to Groups
+In the IAM dashboard, choose “Groups” from the left navigation pane.
+
+Step 2: Create Group
+Click “Create group” to initiate the group creation process.
+
+Step 3: Add Users
+Select users to add to the group. Group permissions will apply to all members.
+
+![alt text](image-21.png)
+
+Step 4: Attach Policies
+Associate policies that define group permissions.
+
+Step 5: Review and Create
+Review the group details and click “Create group.” Then you can see your group is created Successfully.
+
+On Users > select a user > Groups --> here you can change group properties or directly going to group from left side!!
