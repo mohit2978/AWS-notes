@@ -40,6 +40,10 @@ we need to create case for any support we need!!
 
 Technical support not available in basic plan!!
 
-Here you can see its IAM user not user
+Here you can see its IAM user not user!! on that you can see AccountID!! see below image!!
 
 ![alt text](image-7.png)
+
+max Ec2 instance you can create is 20 in fresh account!! all that info yu can see in Service Quotas!!
+
+![alt text](<Screenshot 2024-09-01 234340.png>)
