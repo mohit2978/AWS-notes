@@ -165,3 +165,91 @@ Step 5: Review and Create
 Review the group details and click “Create group.” Then you can see your group is created Successfully.
 
 On Users > select a user > Groups --> here you can change group properties or directly going to group from left side!!
+
+Tags we can have max  50 for a resource!!
+
+![alt text](image-22.png)
+
+see 47 left!!
+
+To reset password of a user
+
+Go to security credentials
+
+Click on manage console access
+![alt text](image-23.png)
+
+Then this screen will appear where you can reset console password for IAM user
+
+![alt text](image-24.png)
+
+You can also disable account from same location
+
+![alt text](image-25.png)
+
+ set up MFA
+
+ ![alt text](image-26.png)
+
+ Use authenticator app ,use google authenticator
+
+ Then you can get steps on the screen!!
+
+To remove MFA
+
+![alt text](image-27.png)
+
+## Setting up MFA for root user
+To setup MFA you must have an AWS account. Log in to the AWS account using your credentials 
+
+Step 1:
+After login to AWS console, search for IAM service from the top services drop-down search box and select IAM.
+
+AWS Services drop-down screen
+
+Step 2: Click on Activate MFA on your root account tab and click manage MFA.
+
+IAM service screen
+
+Step 3: Click on the Multi-factor authentication tab and select Activate MFA.
+
+
+Step 4: Select the Virtual MFA device option to add your app(Google authenticator/Microsoft authenticator) based TOTPs. If you have any other devices for the TOTP generation you can select the others as well and click on continue.
+
+
+Step 5: Before step 4, download Google authenticator or Microsoft authenticator to your phone or laptop.download Google authenticator from the play store. Install the app and open to add your AWS account for 2 step-verification.
+
+Now go to your AWS screen to scan QR code using your authenticator app.
+
+
+Scan your screen’s QR code using the authenticator app
+
+Step 5: After scanning the QR code, your authenticator app will start generating 6 digits OTP. We need to add two successive 6 digits OTP to below input boxes MFA Code 1 and MFA Code 2 to add MFA to your AWS account.
+
+
+Click on Assign MFA after giving MFA Code 1 and 2. That's it, you have added 2FA for your AWS account.
+
+Now, try log-out and log-in again to check the 2FA, after submitting the password, it will ask for 6 digits OTP, which you need to provide it from the App which you have configured before.
+
+
+You can also generate keys for IAm user so that he can login by CLI!!Keys will be visible only one time!! so save it once done!!
+
+To create a new key you must delete old one and then create new one!
+
+To delete a key first deactivate and then delete!!
+
+To disable pragmatical access just delete keys!!
+
+## IAM Access Advisor:
+Click on the Users tab, then click on the desired user. Now click on the “Access Advisor” tab, this will show you when some services were last used, and recent activity.
+
+## Revision
+## How can Users access AWS?
+A User has 3 options to access the AWS console:
+1. AWS Management Console (password + MFA, what we’ve been suing so far in this walkthrough)
+2. AWS Command Line Interface (CLI) (protected by “access keys”)
+3. AWS Software Developer Kit (SDK) (for code: protected by “access keys”)
+Note: Access keys are generated through the AWS Console. Users manage their own access keys. DO NOT share your access keys, treat them as passwords.
+
+## Tasks
+![alt text](image-28.png)
