@@ -198,6 +198,14 @@ It is important to identify different types of instances from each other. Instan
 - The last position before the period (.) i.e., the fourth position is used to highlight additional capabilities of the instance. After the period (.), the instance size is represented such as small, xlarge and etc.
 
 ![alt text](image-5.png)
+
+## Burstable Performance Instances
+
+Suppose we have t2.small which have 2vCPu so need more CPU's.
+So we need to give More Cpu!!We cant give at runtime !! we need to have downtime!! so to avoid this downtime we need to enable Burstable Performance Instances!! which give you more CPU on runtime!! it is for limited time!! it use CPu credits given by AWS!!
+
+- Billable
+
 ## Security Groups
  Security groups are like firewalls to the associated resources; they control the inbound and outbound traffic for an associated resource.
 
