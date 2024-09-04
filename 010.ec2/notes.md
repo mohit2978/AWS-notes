@@ -2,6 +2,20 @@
 
 Amazon Elastic Compute Cloud (EC2) offers resizable compute capacity(thats definition of elasticity and scalability) in the cloud. It allows users to run virtual servers, known as instances, for various computing tasks. EC2 offers a broad set of servers with the latest processors, storage, networking, operating systems, and different purchase models, including pay-as-you-go. EC2 is a secure, flexible, and scalable solution, enabling businesses to easily deploy, manage, and scale applications without investing in physical hardware.
 
+> IAM is free Ec2 is free for 750 hrs per month!In month there is 720 hrs!!750 hrs is for all Ec2 instances not for single Ec2! Ec2 is billable for every hour!EC2 is pay as you go model!!
+
+![alt text](image-1.png)
+
+Ec2 is only charge for Running state!!
+
+Suppose you launch ec2 for 5 min and terminate and one more instance you launched for 5 min and termminate,what will you pay?
+
+suppose you go to internet cafe and use for 5 min ans he charge 20rs for 1 hour so will he charge for 5 min? no !! he will charge for 1 hour only so likewise here also AWS will charge for 1 hour!! whether you use it or not!
+
+you started one machine started for 5 min so 1 hr usage and then 5 min then also 1 hr usage!! so total 2 hr !!
+
+Suppose you created 5 Ec2 instances then you use each for 1 hour so now you will be charged for 5 hrs!!
+
 ![alt text](image.png)
 
 > Ec2 is regional service
@@ -43,6 +57,8 @@ When launching an EC2 instance, we can attach an existing security group or crea
 - No deny rule: There is no explicit “deny” rule. If a rule is not explicitly allowed, it is denied by default.
 
 - Separation of duties: Use different Security Groups for different purposes (e.g., web servers, database servers) to enhance security and management.
+
+
 
 ## Revision
 1. Can a IAm user create another IAM user? yes if the user have IAM permission!!
