@@ -179,6 +179,7 @@ vCpu-->virtual CPU
 after xlarge we have2Xlarge,3Xlarge and so on!!
 in free tier we use t2.micro!!
 
+>t2.micro is free for 1 year after that it will be billable!
 
 >we want to scale up !! then we change the instance type!to t2.micro to t2.small!!
 
