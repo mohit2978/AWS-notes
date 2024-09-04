@@ -135,6 +135,8 @@ Saving plans provide low prices for EC2 instances in exchange for a long-term co
 > The key difference between Saving and reserved instances is that Saving plans don’t restrict a specified Availability Zone or a specific instance type, like reserved instances. Saving plans allow for change of instance size within the instance family or operating system or Availability Zone in a region. So good flexibility in saving plans!
 
 ![alt text](image-4.png)
+## Cost Optimization
+better than On demand use reserved in companies as gives discount and project of 1-3 years!!
 
 ## Exam Tip
 - Question: A company needs guaranteed Amazon EC2 capacity in three specific Availability Zones in a specific AWS Region for an upcoming event that will last 3 weeks.
@@ -149,6 +151,53 @@ Saving plans provide low prices for EC2 instances in exchange for a long-term co
 ## Amazon Machine Image (AMI)
 An Amazon Machine Image is a pre-configured image provided by AWS that contains the necessary information required to launch an instance. AMI serves as a template for the root volume that includes information regarding the operating system, application server, and applications.
 
+## Instance type
+
+Instances are categorized based on their computing power, memory, and networking capabilities. We select any instance type based on our requirements. When launching an instance, the instance type specifies the hardware of the server. Each type offers different computing power, amount of memory, and networking capabilities. Let’s look at the different types of instances below:
+
+- General purpose: These instances offer a balance of compute, memory, and networking capabilities that can be used for a wide range of workloads.
+
+- Compute optimized: These instances offer high compute power, making them ideal for intense applications that require intense processing.
+
+- Memory optimized: These instances offer fast memory performance, specially designed for workloads that require large datasets in memory.
+
+- Storage optimized: These instances are designed to offer high sequential read and write capabilities on local storage.
+
+- Accelerated computing: These instances use hardware accelerators to offer complex calculations in a more efficient manner. They offer more parallelism for intensive workloads.
+
+- High-performance computing: These instances are built to offer the best price-performance for high-performing compute instances. They are normally used to solve complex computational problems.
+
+- Mac instances: These instances are used to build, develop, and test Apple applications.
+
+Instance type = CPU + memory so type is combination of CPU and memory!!
+t2 is a family!!
+
+![alt text](image-6.png)
+
+
+vCpu-->virtual CPU
+after xlarge we have2Xlarge,3Xlarge and so on!!
+in free tier we use t2.micro!!
+
+
+>we want to scale up !! then we change the instance type!to t2.micro to t2.small!!
+
+>While scaling up or down Data is never lost!as data is stored in volumes!!we only increase or decrease in CPU and memory!!
+
+>to scale up and scale down you need to stop Ec2 so their will be downtime!!
+
+
+It is important to identify different types of instances from each other. Instances types are named after family, generation, processor family, additional capabilities, and size. Let’s understand the nomenclature of instance types with an example. Consider an instance r7gd.16xlarge:
+ 
+- The first position in the instance type name is used to refer to the instance family.
+
+- The second position is used to represent the instance generation.
+
+- The third position is used to represent the processor family in the instance.
+
+- The last position before the period (.) i.e., the fourth position is used to highlight additional capabilities of the instance. After the period (.), the instance size is represented such as small, xlarge and etc.
+
+![alt text](image-5.png)
 ## Security Groups
  Security groups are like firewalls to the associated resources; they control the inbound and outbound traffic for an associated resource.
 
@@ -182,7 +231,18 @@ When launching an EC2 instance, we can attach an existing security group or crea
 - No deny rule: There is no explicit “deny” rule. If a rule is not explicitly allowed, it is denied by default.
 
 - Separation of duties: Use different Security Groups for different purposes (e.g., web servers, database servers) to enhance security and management.
+## Instance lifecycle
+The lifecycle of EC2 transits through different states from creation to termination. It’s important to understand the behavior of instances to fully understand how EC2 works. An instance is a server in the cloud; naturally, it can be launched and terminated like a local server. However, EC2 instances can also be stopped, hibernated, rebooted, and retired. Let’s take a deeper look into the different states of EC2 instances.
 
+- Launch: When an instance is launched from a selected instance type, its state is updated from pending to running. When the instance state is changed to “Running,” the instance has started booting. There might be a slight delay before we can do anything with our instance.
+
+- Stop: Once the instance is running, we can stop and start the instance again anytime. It is important to note when an instance is stopped, the data stored in the RAM is lost and the instance may not have the same public IP but the private IP stays the same. The instance store volumes are also lost; AWS offers an alternative to preserve the data stored in the RAM using Hibernation.
+
+    - Hibernation saves the content of RAM to the EBS root volume. It also preserves the other EBS volumes attached. During reboot, the contents of RAM saved earlier are again loaded into the memory.
+
+- Termination: Once the work is done and we no longer require the instance, we can terminate the instance. Terminating an instance changes the state of the instance from “Running” to “Shutting down.” The instance can not be started again after it has been terminated.
+
+![alt text](image-7.png)
 
 
 ## Revision
