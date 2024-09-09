@@ -39,10 +39,19 @@ EC2 instances are virtual servers in the cloud that can run applications and sto
 Volumes are Hard disk these volumes are basically EBS!!
 Lets see EBS(Elastic Block Store)
 # Volumes
+
+Elastic Block Store (EBS) is a block storage service offered by AWS, designed to be used with EC2 instances for storing persistent data. Being a zonal service, EBS volumes are physically located in an Availability Zone (AZ), which is a distinct location within a geographic region. This design choice ensures that EBS volumes have low latency and high throughput when accessed from EC2 instances in the same AZ.
+
+EBS volumes are engineered to be resilient, meaning they can automatically handle failures within the volume itself through redundancy and replication mechanisms. This resilience ensures data durability and availability under normal circumstances.
+
+However, EBS’s dependency on a single AZ introduces a risk: if the entire AZ faces issues such as power outages, network disruptions, or natural disasters, the EBS volumes within that AZ can become inaccessible or suffer data loss. This highlights the importance of implementing disaster recovery strategies, such as backing up data across multiple AZs or regions, to mitigate the risk of AZ-level failures.
+
 ![alt text](image-1.png)
 
 EBS is persistent (permanent) storage!! if you stop and start instance data is not lost!! EBS is billable!! max size 16TB!!
  windows default size 30 GB and linux 8 GB default is free on top of that whatever you use is billable!
+
+ EBS volumes are like hard drives that can be mounted to the EC2 instances for additional storage. We can mount multiple volumes to a single instance. By default, a root volume is attached to the EC2 instance, which is not persistent. This means we lose the data in the default volume as soon as we terminate the instance. Any additional EBS volume mounted to the EC2 instance retains the data independent of the EC2 instances’ state. Therefore, we can always access the data in an EBS volume by mounting it to another EC2 instance if the volume is not formatted.
 ## EBS
 
 2 types:
@@ -64,12 +73,54 @@ when you terminate an instance then only data is lost in ec2!!
 
  default root volume type of Ec2 is GP2!! 
 
- for Db we use 2 .provisioned IOPS as need high performance!!
+ for Db(extreme read write) we use 2 .provisioned IOPS as need high performance!!
 
 ![alt text](image-2.png)
 
 - Throughput refers to the amount of data that can be transferred in a given period of time. In the context of EBS volumes, throughput is important for workloads that involve large amounts of data, such as big data processing and log processing. The Throughput Optimized HDD (st1) volume type is specifically designed to provide high throughput for these types of workloads.
+ 
+    when using frequently accessible data we use Throughput Optimized HDD
 
 - IOPS (input/output operations per second) is a measure of how many read or write operations can be performed in a given period of time. In the context of EBS volumes, IOPS is important for workloads that require low latency, such as databases and other transactional workloads. The Provisioned IOPS SSD (io1) volume type is specifically designed to provide high IOPS for these types of workloads.
 
+    Here just need to tell how many IOPS we need in number,IOPS is configurable!!
+
 - Latency refers to the amount of time it takes for a data transfer or operation to complete. In the context of EBS volumes, latency is important for workloads that require low response times, such as databases and other transactional workloads. The Provisioned IOPS SSD (io1) volume type is specifically designed to provide low latency for these types of workloads.
+
+### General purpose SSD volumes
+The general purpose is based on Solid State Drives (SDD). SDD volumes are optimized for IOPS, best for workloads involving frequent read and write operations. They are particularly helpful when the I/O payload size is small.
+
+General-purpose volumes are typically used for testing and development. They can also store log files or small-scale applications where average latency is acceptable and data is not accessed frequently.
+
+We have two types of general-purpose volumes: gp2 and gp3. The gp2 volumes implement a credit mechanism to determine the amount of IOPS it can perform. Let’s understand the mechanism. 
+
+### Provisioned IOPS volumes
+As the name suggests, provisioned IOPS volumes are optimized for provisioning IOPS. These volumes are ideal for use cases requiring more than baseline performance where we want to perform frequent read-write operations. Thus, they are commonly stored in large relational or non-relational databases such as MySQL and more.
+
+Provisioned IOPS volumes allow us to adjust the IOPS independent of the size. However, they are limited by the per-instance performance, which is the maximum performance provided by the EC2 instance to which the volume is mounted.
+
+There are two types of provisioned IOPS systems, io1 and io2 block express. The io2 express is a step ahead of io1 in performance. Provisioned IOPS volumes are helpful when we need sub-millisecond latency and high performance for smaller volumes.
+
+
+> io1,io2 and gp3 are iops value configurable!! you need to tell how many IOPS you need!more iops means more bill!!
+
+### Throughput-optimized HDD volumes
+Hard disk drives (HDD) are optimized for throughput. Thus, they are commonly used in scenarios where we have a large size of synchronized I/O.
+
+Throughput-optimized HDD volumes, or st1, offer a maximum of 500 IOPS; however, the payload size is up to 500 MB, which means it can transfer a maximum of 500 MBs of data in one second. They are suitable for scenarios where data is read or written in large, sequential chunks, and the emphasis is on sustained data throughput rather than low-latency random access. For example, we might use them for big data, log processing, or data warehousing.
+
+### Cold HDD volumes
+Cold HDDs are optimized for costs. Cold storage in the context of data storage typically refers to a type of storage that is optimized for long-term retention of data at a lower cost compared to more frequently accessed or hot storage solutions.
+
+Cold HDD volumes, or sc1, are designed for infrequent or cold workloads where lower-cost storage is prioritized over high-performance, frequent access. Cold HDD volumes are suitable for specific use cases where the data access pattern is infrequent and the workload can tolerate higher latencies.
+
+It is commonly used as a backup storage, data snapshots, and archival. For example, consider a company with regulatory requirements for data retention. They can conveniently use Cold HDD volumes as they are more economical.
+
+>Note:
+ root volume supports gp2,gp3,io1,io2,standard!!Additional volume support all !!
+
+ ![alt text](image-3.png)
+
+ >Important:
+ 1 volume can be attached to multiple ec2 instances at same time ? No,generally!! but io1,io2 can be attached to multiple ec2 as it recently came!! 1 volume(only io1 or io2(majorly provisioned)) can be attached to 16 ec2 instances!!
+
