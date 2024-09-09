@@ -130,3 +130,59 @@ It is commonly used as a backup storage, data snapshots, and archival. For examp
 non-persistent/temporary unlike EBS!!If you stop and start ec2 instance data is lost or gone as these are temporary storage!! these are free(__no bills__)!!
 
 Also called as Emphemeral (spelled as Afimiral) Storage!!
+
+when you terminate ec2 automatically root volume is deleted as the option is enabled by default!! but additional volume will not be deleted!!!for additional volume ,__delete on termination__ option is enabled!!
+
+if you don't want root volume delete then just disable  delete on termination option!!
+
+>EBS max size 16TB!! Since ISv are free we cannot create it !!it will be created by AWS automatically!! no control by us on it!! it is for bigger machines then AWS give it!! not small machines like t2.micro you will not get!!
+
+![alt text](image-5.png)
+
+in EBS if you reboot data is not lost!!  in ISV too data is not lost!! lets see the difference between two!!
+
+There logic in AWS if you stop and start ec2 instance ,ec2 instance will jump from one host to other!!EBS is central storage just like a pointer pointing to central storage location!!
+
+Initially
+
+![alt text](image-6.png)
+
+After stop and start and jump
+
+![alt text](image-7.png)
+
+EC2 instance on host 2 but EBS is central storage !! its pointing to same location as of before!! so data is not lost!!
+
+Now if you reboot the ec2 instance not jump ,its on same host machine!! so in both cases in EBS data is not lost!!
+
+> In EBS no data lost if you reboot or stop and then start!
+
+Now lets see ISV!
+ISV is not central a part of hard disk of host is put as a ISV!
+![alt text](image-8.png)
+
+Now if reboot!no jump so no data loss
+
+but if stop and start then jump and so new Host so previous data lost!!
+
+terminate --> data is lost for both 
+
+when we launch AWS ec2 instance !! AWS do 2 status check!!
+1. Instance Status check --> checks hardware
+2. System status check --> checks software whether ip assigned properly or not!!
+
+these 2 checks need to be passed!!sometime you get 1/2 or 0/2 checks !! you should get 2/2 if you want to login!!
+
+> to solve see sometimes host machine condition is not good!!so stop and start so that it will jump from one host to other!
+
+Another solution is you click on recover for EC2 instance!!
+
+performance ISV or EBS?
+
+EBS is attached via internet to ec2 but ISV is in the system so ISV gives better performance!!as physical drive on host!!
+
+![alt text](image-9.png)
+## Summary
+![alt text](image-10.png)
+
+![alt text](image-11.png)
