@@ -124,3 +124,9 @@ It is commonly used as a backup storage, data snapshots, and archival. For examp
  >Important:
  1 volume can be attached to multiple ec2 instances at same time ? No,generally!! but io1,io2 can be attached to multiple ec2 as it recently came!! 1 volume(only io1 or io2(majorly provisioned)) can be attached to 16 ec2 instances!!
 
+
+![alt text](image-4.png)
+## Instance Store Volume(ISV)
+non-persistent/temporary unlike EBS!!If you stop and start ec2 instance data is lost or gone as these are temporary storage!! these are free(__no bills__)!!
+
+Also called as Emphemeral (spelled as Afimiral) Storage!!
