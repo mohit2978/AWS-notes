@@ -124,6 +124,8 @@ It is commonly used as a backup storage, data snapshots, and archival. For examp
  >Important:
  1 volume can be attached to multiple ec2 instances at same time ? No,generally!! but io1,io2 can be attached to multiple ec2 as it recently came!! 1 volume(only io1 or io2(majorly provisioned)) can be attached to 16 ec2 instances!!
 
+>Note:
+gp2 is not iops configurable,we get 1:3 iops in here for every 1 GB ,we get 3 iops
 
 ![alt text](image-4.png)
 ## Instance Store Volume(ISV)
