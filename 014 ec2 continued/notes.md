@@ -143,3 +143,40 @@ When launching an EC2 instance, we can attach an existing security group or crea
 
 ### Lets start now!!
 to secure ec2 instance!!stops unauthorized access to ec2 instances!!
+
+
+to access ec2 instance you need to go in order of diagram below!!
+
+![alt text](image-5.png)
+
+SG--> security group
+NACL--> network access control list
+
+NACL hit first then SG then ec2!!
+
+inside SG,here 2 rules 
+inbound --> traffic coming toward ec2!!
+outbound-->traffic coming outside ec2!!
+
+![alt text](image-6.png)
+
+by default inbound rules denied!!no protocol allowed!! 
+
+by default outbound rules is allowed !!
+
+to connect to ec2 we need to allow SSh on port 22 in inbound rule!!
+
+![alt text](image-7.png)
+
+every ec2 must have 1 security group attached!!
+
+Just revise port no
+- RDP port 3389
+- Https on 443 port
+
+>Note:
+we don't talk about outbound rules!! we only talk about inbound rules
+
+by default we have a default security group in AWS!!
+
+3 teams devops ,dev ,testers for all 3 we will have 3 different security groups.
