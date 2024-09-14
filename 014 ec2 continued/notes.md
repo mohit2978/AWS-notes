@@ -180,3 +180,71 @@ we don't talk about outbound rules!! we only talk about inbound rules
 by default we have a default security group in AWS!!
 
 3 teams devops ,dev ,testers for all 3 we will have 3 different security groups.
+
+we use default security group for all instances!!
+
+![alt text](image-8.png)
+
+ELB-->elastic load balancer
+
+see above for 3 type of instances we have 3 type of security group!!
+
+see RDP/SSH is not accessible on load balancer. it only listens to http or https protocol so only allow that!!
+
+what is source from where ELB get http or https request?
+1. Custom ( from selected group of people)
+2. Anywhere ( from everyone)
+3. MyIP ( you created ELB and you want to access ELB)
+
+app-SG source is load balancer so inbound for this is ELB
+then DB-SG source is EC2-app!! so customer only access load balancer!!
+
+now you want to connect to ec2 !!you  have aws and company!!you can connect via VPN!!as we have VPN we can connect to ec2!!!
+
+a brand ne security group all inbound rule deny and outbound rules allowed!! 
+
+you need to allow for inbound rules and no need of outbound rules--> this is called as stateful!!so security group are stateful!!
+
+
+if you allow inbound rules and then you need to allow that for outbound rules that concept is called as Stateless!! NACL is stateless!! NACL (sodium chloride) is stateless(like powder no proper form just to remember)!!
+
+## NACL (Network access control list)
+
+in NACL we can deny too!!
+
+by default in default NACL ,inbound rules and outbound rules are allowed!! so thats why no one talk about it!!
+but if you create a new NACL both inbound and outbound is denied!!    
+
+
+which ip is assigned to an ec instance is defined by VPC (Virtual private cloud) as entire infra is in VPC!!
+
+suppose VPC range is 192.168.0.0/16 !!
+own isolated network is subnet!! each subnet is in one AZ!!
+
+one subnet must be in one AZ!! one subnet can't expand to multiple AZ!! one AZ can have multiple subnet!!
+
+we launch ec2 instances in subnets!! in 1 subnet we can have multiple security groups!!
+
+> now suppose a hacker comes and attach ec2 instances now what we do is we remove security group ssh inbound rule !! but we need to do for each security group !! it will take time in meanwhile hacker can attack !
+
+ - solution is deny in NACL!!
+  - there is 1 NACL in each subnet!
+  - 1 subnet cant be in multiple NACL!!1 NACL can have multiple NACL!!
+  - NACL overrule security group!!
+  - NACL is at subnet level while security group at ec2 instance level!!
+
+
+NACL is optional !! if required tight it else leave it!!
+
+
+what will happen in below case?ssh allowed or denied?
+![alt text](image-9.png)
+
+As ssh denied by NACL ,so it will be denied!!
+
+
+![alt text](image-10.png)
+
+![alt text](image-11.png)
+
+![alt text](image-12.png)
