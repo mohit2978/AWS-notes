@@ -1,3 +1,11 @@
+![alt text](image-15.png)
+
+AWS’s provision of Content Delivery Networks (CDNs) refers to its offering of services like Amazon CloudFront and Global Accelerator, which are designed to distribute content across a network of servers located around the world. This setup helps in reducing latency by serving content from a location nearest to the user. AWS’s CDN services are highlighted as solutions to enhance content delivery speed and reliability, enabling businesses to efficiently reach their global audience by overcoming geographical limitations and improving the user experience through faster content loading times.
+
+1. Why Combine S3 and CloudFront?
+- Scalability: S3’s virtually unlimited storage meets CloudFront’s robust CDN network.
+- Performance: With CloudFront’s global edge locations, content is served from the nearest location, reducing latency.
+- Security: Control access, integrate with AWS WAF, and deliver content over HTTPS.
 
 ## Steps
 - Step 1 - Signup and get an AWS account. 
@@ -78,3 +86,11 @@ By the end of this, you should have a working cloudfront URL.
 ![alt text](image-13.png)
 
 ![alt text](image-14.png)
+
+week 22 aws
+
+links 
+
+1.https://medium.com/geekculture/deploy-a-static-website-using-aws-s3-and-cloudfront-55cfdbea1f4
+
+2.https://medium.com/@nikola.kuzmic945/deploy-a-static-website-on-custom-domain-using-aws-s3-cloudfront-85a4983c1fe5
