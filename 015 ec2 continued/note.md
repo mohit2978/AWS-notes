@@ -10,13 +10,43 @@
 
 Autoscaling scale out or in ec2 based on load!!
 
-Horizontal scalability, sometimes called scaling out or in, adds more instances or nodes to a pool to handle increased load or remove from it. T
+#### Horizontal scalability
+ sometimes called scaling out or in, adds more instances or nodes to a pool to handle increased load or remove from it. T
 
 In AWS, services such as Amazon EC2 Auto Scaling and Elastic Load Balancing (ELB) practically take care of the horizontal scaling for users.
 
 - Amazon EC2 Auto Scaling: This automatically adjusts the count of EC2 instances based on the application conditions so that performance levels are maintained. This service will help us make sure we have the right number of EC2s that are handling the load for the application, optimizing both cost and performance.
 
 - Elastic Load Balancing (ELB): Automatically distributes incoming application or network traffic across multiple targets, such as Amazon EC2 instances, containers, and IP addresses, in multiple Availability Zones. ELB automatically scales the load balancer according to the traffic to the application that varies periodically, hence ensuring the traffic is even among all instances. This distribution optimizes resource use and maximizes application responsiveness.
+
+#### Vertical scalability 
+Vertical scalability, the process of scaling up or down, is the aspect of growing the power (CPU, RAM, Storage) of an existing instance or node instead of adding further instances. In other words, it's like upgrading to a more powerful engine which will roll faster and smooth. This approach suits applications with consistent workloads where the demand gradually increases over time.
+
+That is usually realizable in AWS through vertical scaling—changing the server’s EC2 instance type to be more powerful or modifying other service resources.
+
+- Changing the instance type of EC2: EC2 allows scaling up the capability of a single instance in order to serve the increasing demand for the scaling of resources significantly. It allows for a quick boost in performance without the complexity of managing additional instances.
+
+- RDS, Elasticache, and others: Similarly to EC2, a great number of AWS services allow the modification of settings for some other services with increased efficiency, so that they could take on larger loads without adding more service instances. This flexibility in resource management is crucial for maintaining optimal performance as application demands evolve.
+
+#### Choosing between horizontal and vertical scaling
+The choice between horizontal and vertical scaling often depends on several factors, including:
+
+- Application architecture: Stateless applications are often easier to scale horizontally, while stateful applications can sometimes need some refactoring to be rightfully and appropriately horizontally scalable. Understanding the nature of the application can guide the choice of scaling strategy.
+
+- Cost efficiency: Horizontal scaling can save money when used on a large scale but needs more complex management and monitoring. Although it’s easy to set up and widely available, the benefits decrease as the maximum capacity of each resource becomes less effective.
+
+- Availability and fault tolerance: Horizontal scaling inherently supports improved availability and fault tolerance since the load is spread over several instances or nodes. It minimizes the effect of a single point of failure, enhancing the liveliness of the application infrastructure.
+
+#### Scaling options and triggers
+Scaling strategies in AWS Auto Scaling are complemented by various options that define how and when instances are adjusted:
+
+- Maintain scaling: This will maintain the number of instances constant in time, i.e., the number of instances existing at any time would meet the baseline instance count or minimum instance.
+
+- Manual scaling: Gives the user the freedom to change the instance both below and above the limits given, respectively, thus allowing the user full control of resource allocation.
+
+- Scheduled scaling: It enables users to schedule various occurrences within a predefined time. This is perfect for controlling predictable fluctuations in demand.
+
+- Dynamic scaling: It automatically scales with metrics found within AWS CloudWatch to change the number of instances, hence ensuring the efficiency of resources and rapid scaling of instance numbers based on actual application usage.
 ### Auto Scaling Groups
 > ASG is a service from AWS that helps the applications automatically adjust how many instances they use based on how much they need. Consider ASGs a smart system that watches over our application’s traffic, ensuring that it runs well. If more people start using our application and it gets really busy, ASGs will add more instances to handle everything smoothly. But when fewer people use it, ASGs take away some instances to reduce our operational cost.
 
@@ -97,6 +127,10 @@ it use image concept to configure the application!! we use launch template to te
 
 Launch templates provide a straightforward way to set up and start Amazon EC2 instances. They offer more options than setup, letting us use extra features like T2 unlimited instances, Elastic GPUs, and dedicated hosts. This means we can easily get our instances running how we need them, with more control over the setup and the ability to automate the process more effectively.
 
+there are 7 steps to launch in ec2 instances!!this launch template has 7 steps!!we tell everything like AMI,Security group ,key-pair,instance type etc to launch template!!
+
+Autoscaling group= ELB +ec2 +launch template + SNS (to get notification)
+
 Here are some important points regarding launch templates:
 
 - Launch templates enhance update and rollback processes through version control, ensuring a smoother transition when changes are made.
@@ -123,3 +157,7 @@ The magic behind ASGs lies in their ability to dynamically adjust resources base
 ![alt text](image-2.png)
 
 ![alt text](image-3.png)
+
+![alt text](image-4.png)
+
+## next topic Elastic load balancer
