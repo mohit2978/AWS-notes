@@ -160,4 +160,179 @@ The magic behind ASGs lies in their ability to dynamically adjust resources base
 
 ![alt text](image-4.png)
 
-## next topic Elastic load balancer
+## next topic Elastic load balancer(ELB)
+
+distributes traffic across multiple ec2 across AZ!!ELB is a service not a server! we can access it by dns name!!
+
+we get a very bad url (not easy to recognize) from load balancer to convert it to some custom url we can use Route53 !!
+
+
+we access load balancer by dns name !!so here load balancer is not having IP!!! but in backend load balancer is server so it has a ip in backend!! but for ip that is managed by AWS!!
+
+still some customer said we need ip of application!! we  application run on ec2 which has private ip!! so we give url of load balancer but customer need ip!! but there is no ip of load balancer!!
+
+you do nslookup you can find ip of load balancer
+
+nslookup is for dns lookup 
+- convert ip to url and vice versa
+- you put ip you get url of load balancer!!
+
+![alt text](image-5.png)
+
+but on different day you do nslookup you see different ip!!as load balancer will scale up and down load balancers!! load balancer server in backend might increase or decrease so ip is dynamic of load balancer!
+
+when we ask AWS it told you need to compromise with performance as it will limit number of servers and will make it static!!
+
+### types of load balancer!!
+
+initially
+- classic load balancer (works on http ,https and tcp)
+
+but when demands change it became prev gen load balancer
+
+- so mostly used LB is application load balancer(used with http ,https)(default one)
+
+#### Application load balancer (ALB)
+ An Application Load Balancer operates on the application layer (the seventh layer of the OSI model) and handles HTTP/HTTPS/Web Socket requests. default one ,best for microservices!!
+ 
+##### Target groups in ALB
+Target groups are used to define where an Application Load Balancer routes the incoming requests from a client. While creating a target group, we define the type of targets, the protocols, and the ports. ALBs support __EC2 instances, IP addresses, and Lambda functions__ as its target types, HTTP and HTTPS as its protocols, and ports 1-65535. When we create an ALB, we provide listener rules, where we define the conditions that must be met in order for the ALB to send client requests to a specific target group. Once a target group is created, AWS performs various health checks on the targets registered in a target group to ensure they are available to receive and process requests from a client.
+
+![alt text](image-6.png)
+
+##### Routing algorithms in ALB
+Application Load Balancers support various routing algorithms to distribute incoming requests across multiple target groups. We can select only one routing algorithm for a routing group at a time, however, we do have the option of updating these algorithms according to our applications’ requirements. Let’s look at the algorithms supported by ALBs:
+
+- Round robin: This is the default algorithm used by ALBs and distributes incoming requests evenly across multiple targets in a sequential order.
+
+- Least outstanding requests: Here, incoming requests are sent to the target with the least number of requests whose status is in progress.
+
+- Weighted random: In this algorithm, weights are assigned randomly to requests that evenly distribute requests across targets in a random order.
+
+#### Listeners in ALB
+
+- __for https we need to have to buy certificate we can get from Go daddy but in AWS we have service for certificate called Amazon certificate manager (ACM)__
+
+- __to generate access and secret key use IAM__
+
+- __encryption keys KMS__
+
+Application Load Balancers use listeners, that check connection requests received from the client. We define rules in listeners that determine how our load balancer routes the requests it receives. A single listener can have multiple rules and are evaluated according to the priority we set up. Following are the conditions we can define in rules for our listeners:
+
+- HTTP header conditions: These rules are created to handle client requests based on their HTTP headers.
+
+- HTTP request method conditions: These rules are created to handle client requests based on their HTTP request methods.
+
+- Host conditions: Rules can be created to route requests based on the name of the host.
+
+- Path conditions: Path conditions in the URL of the request can be used to create rules to route requests to different targets.
+
+- Query string conditions: Key/value pairs in the query string of the incoming request can be used to create rules to route requests.
+
+- Source IP address conditions: Rules can be created that route incoming requests based on the source IP address. This IP address must be specified in the CIDR format.
+
+these rules we cant create in classic load balancer for each different rule we were having different load balancer in classic!!
+
+![alt text](image-9.png)
+
+for cb.com we have different LB and web.abc.com a different LB!!
+in ALB we group the various instances and call them target groups
+
+![alt text](image-10.png)
+
+we can have multiple target groups based on various conditions like above discussed path ,query parameters!!
+so only 1 LB need in ALB!!
+
+#### Things to keep in mind
+Following are some of the things we must keep in mind while using Application Load Balancers:
+
+- IP address: ALBs support IPv4 addresses and dual-stack (using both IPv4 and IPv6 addresses) to receive connection requests from the client.
+
+- Availability zone: We must specify at least two Availability Zones while creating an ALB and should launch at least one target in both zones.
+
+- Security groups: The security groups associated with our ALB must allow traffic flow in both directions on the listener and the health check port. Also, the security groups associated with our target groups must have inbound rules with the ALB’s security group as the source to allow the ASG to access our targets.
+
+- WebSockets: ALB supports WebSockets. This means we can create a bidirectional communication channel between a client and a server over a TCP connection to exchange messages in real time.
+
+- Sticky sessions: We can create sticky sessions in ALB. Through this mechanism, we can ensure that any further requests from a client are sent to the same target.
+
+- Health checks: ALB performs regular health checks on the registered targets in a target group to ensure they are fit to receive requests from a client.
+
+### Network Load Balancer(NLB)
+neeeded when extreme high speed!! works on TCP and UDP!
+
+Network Load Balancer (NLB) operates on the transport layer, the fourth layer of the OSI model, and is used to distribute incoming TCP and UDP traffic across multiple targets. NLB uses a single static IP address and is optimized to handle sudden and volatile traffic patterns.
+
+Once a Network Load Balancer receives a request from a client, it tries to open a connection with a target from the target group on the port specified in the targets’ listener rule. The protocols Network Load Balancers support are TCP, TLS, UDP, and TCP_UDP.
+
+NLB (Network Load Balancer) supporting zonal isolation means it can operate within a single Availability Zone (AZ) in a cloud environment. This capability allows for the design of architectures that are confined to a specific geographic location within a cloud provider’s infrastructure for reasons such as compliance, data locality, or high availability within that zone.
+
+While Network Load Balancers are capable of working within a single AZ, thereby providing zonal isolation, they are also designed to work across multiple zones. This multi-zone capability is recommended to enhance the availability of applications by distributing the load not just within a single AZ but across several, thus ensuring better resilience and uptime for the applications they support.__However, using multiple zones is recommended as it increases the availability of our applications.__
+
+#### Target groups in NLB
+Targets of a Network Load Balancer are registered in a target group, which is then used to route requests. When a listener is created, we define a target group in this listener to specify the target group we want to send our traffic to. A target group performs regular health checks on the registered targets to ensure they are fit to receive incoming requests. Requests are only sent to a target if its status is “Healthy.”
+
+Network Load Balancers support EC2 instances, private IP addresses, and Application Load Balancers as their targets. 
+
+
+>We can use on-premises servers as targets if the selected target type is IP by connecting them to the AWS cloud using AWS Direct Connect or AWS Site-to-Site VPN.
+
+>Meaning
+Generally, it means that physical servers located in a company’s data center (on-premises) can be designated as targets for a Network Load Balancer (NLB) in AWS, provided these servers are accessible via an IP address. This integration is achieved through AWS Direct Connect, a dedicated network connection, or AWS Site-to-Site VPN, a secure, encrypted connection over the internet.
+
+>In the context of the lesson, it highlights the flexibility of AWS’s Network Load Balancer to not only route traffic to AWS resources like EC2 instances but also to on-premises servers. This is particularly useful for hybrid cloud architectures, where some resources are kept on-premises while others are migrated to the cloud. By using AWS Direct Connect or Site-to-Site VPN, businesses can ensure a secure, reliable connection between their on-premises servers and AWS’s cloud infrastructure, allowing the NLB to distribute incoming requests to both cloud and on-premises resources seamlessly.
+
+![alt text](image-7.png)
+
+#### Using ALB as a target#
+Network Load Balancers can forward the requests it receives to an Application Load Balancer. Following are some use cases where ALBs are added as targets for NLBs:
+
+1. Multimedia services: A combination of NLB and ALB can be used in multimedia services where a single endpoint is required for multiple protocols, such as HTTP for signaling and RTP to stream content.
+
+2. AWS PrivateLink: An NLB can be used to create a route between clients and an ALB over AWS PrivateLink.
+
+#### Security groups for NLBs 
+Security groups are virtual firewalls that control the incoming and outgoing traffic for AWS resources. In a Network Load Balancer, it is optional to add a security group. However, it is recommended to add a security group to your load balancer and specify the ports and IP addresses that can access our load balancers. If we don’t associate a security group with our NLB, all client traffic can reach the load balancer listeners, and all traffic can leave the load balancer.
+
+#### Main features of NLB#
+Following are some of the main features of an NLB that distinguish it from an ALB:
+
+1. Client IP preservation: By default, the IP address of a client is replaced with the IP address of the load balancer before the request is forwarded to a target. However, Network Load Balancers have a client IP preservation feature. This means the IP address of the client who made the connection request is preserved and can be forwarded to the target. This feature is useful in applications where we need to process the IP address of the client. For example, the IP address of the client can be used to monitor and analyze the pattern of the requests received.
+> remeber ip of client(jha se reqest aa rhi uska ip load balancer ke ip se change nhi hoga when reaching to target) is preserved not
+
+2. Health checks: We can only use TCP, HTTP, or HTTPS protocols to create health checks for the target groups associated with our NLBs.
+
+3. Low latency: NLBs can be used in applications that require low latency.
+
+4. this provide 1 static IP per AZ!
+
+### gateway load balancer (GLB)
+latest one! it's for security purpose !!not for applications!!
+
+- deploy and manage ,scale a fleet of 3rd party network virtua appliances in AWS!!
+
+- used in Firewall, prevention systems ,deep packet inspection etc
+
+- works on protocol GENEVE on 6081
+
+Gateway Load Balancers (GLB) operate on the network layer, the third layer of the OSI model, and allow us to maintain, scale, and deploy third-party virtual appliances such as intrusion detection systems. A virtual appliance is a software package that includes an operating system, application software, and virtual hardware configuration required to run a virtual machine platform.
+
+These load balancers act as a gateway (a single point of entry and exit) and distribute incoming traffic across multiple appliances, scaling them up or down according to our applications’ requirements, decreasing the risk of potential failure.
+
+#### Listeners and target groups#
+Gateway Load Balancers check for incoming requests through processes known as listeners. Unlike the listeners in ALB and NLB, we can not specify the port and protocol while creating a listener for Gateway Load Balancers. GLB listeners check for IP packets across all ports.  Rules in a listener specify the target group for a specific request.
+
+Virtual appliances are registered as targets in target groups for Gateway Load Balancers. Target groups can have multiple registered targets, and regular health checks are performed on these targets. GLBs ensure that traffic is routed only to healthy targets. Following are some of the things we must keep in mind while creating target groups for a Gateway Load Balancer:
+
+- Protocol and port: Target groups for GLB support only the GENEVE protocol and port 6081.
+
+- Target type: Only EC2 instance IDs and IP addresses are supported as the target type for GLB target groups. Publicly accessible IP addresses are not supported by GLB.
+
+- Deregistering targets: GLB stops sending new requests to targets that are deregistered and in case of existing requests, it closes the connection if it has been idle for more than 120 seconds
+
+#### Gateway Load Balancer endpoint
+A Gateway Load Balancer is deployed in the same VPC as the target group. GLB endpoint is a VPC endpoint that allows us to create a private connection link between the virtual appliances in our provider VPC and application servers in our consumer VPC. The application server and GLB endpoints are deployed in different subnets. The following diagram shows how GLB endpoints are used.
+
+![alt text](image-8.png)
+
+In the diagram above, traffic coming from the internet uses the internet gateway to get to the GLB endpoint located in the consumer VPC. This endpoint routes this traffic to the Gateway Load Balancer, which distributes this traffic to the virtual appliance (the target of the GLB). Once the virtual appliance analyzes the traffic, it is sent back to the Gateway Load Balancer, which sends it to the application servers located in the consumer VPC.
