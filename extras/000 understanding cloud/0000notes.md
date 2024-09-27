@@ -273,3 +273,232 @@ Follow the steps below to create an IAM role:
 - Name the role AccessBucketRole.
 
 - Scroll to the end of the page and click the “Create role” button.
+
+# launch ec2
+
+- Step 1: Add instance name and tags
+
+    Set clab-instance as the name of the instance.
+
+    For now, we can skip adding additional tags and proceed to the next step.
+
+- Step 2: Choose Amazon Machine Image (AMI)
+For this lab, we’ll use an Ubuntu-based image to launch the instance.
+
+    In the “Quick Start” menu, select the “Ubuntu” image.
+
+    Select the Ubuntu Server AMI 24.04 LTS (HVM), SSD Volume Type.
+
+    Select the 64-bit (x86) architecture.
+
+- Step 3: Choose an instance type
+
+    An instance type combines various AWS resources like CPU, memory size, and storage that we want to attach to the instance according to our business needs.
+
+    For this lab, we’ll use the t2.micro instance type, normally used for running inexpensive and general-purpose tasks.
+
+    Select the t2.micro type from the list.
+
+-   Step 4: Select key pairs
+
+    From the “Key pair name” drop-down menu, select the “Proceed without a key pair (Not recommended)” option.
+
+- Step 5: Configure network settings
+
+    Select the “Select existing security group” option.
+
+    From the security groups drop-down menu, select the web-app-security-group security group we previously created.
+
+- Step 6: Configure storage
+
+    Ensure that 8 GiB of gp3 storage is selected. We don’t need to add any new storage for this instance or modify the existing one. Leave everything at its default setting and proceed to the next step.
+
+- Step 7: Configure advanced details
+   -  IAM instance profile
+
+    Click the drop-down menu and select “AccessBucketRole” to attach the IAM role.
+
+    - User data
+    
+        The “user data” section is used during the bootstrapping process, which involves running a script on the instance on instance launch to install any required dependencies for the user on our server. Copy the following script and paste it into the “User data” textbox to launch a basic web server.
+
+        ```bash
+      
+        sudo apt update && sudo apt install unzip
+        curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" &&\
+        unzip awscliv2.zip && sudo ./aws/install
+        sudo apt -y install nginx
+        sudo systemctl start nginx.service
+        ```
+        ![alt text](image-17.png)
+- Step 8: Launch instance
+Review the settings for the new instance before clicking the “Launch instance” button to launch the instance.
+
+    Finally, click “View all instances” to return to the “Instances” page. Within a few minutes, the status of our newly launched instance should automatically change to “Running.”        
+
+# Deploy Web Application on EC2 instance
+
+In this task, we’ll set up an application on the nginx server running on the EC2 instance. We’ll fetch and use the file from the S3 bucket. The provisioned architecture at the end of this task will be similar to the architecture diagram below:    
+
+![alt text](image-18.png)
+
+Select the instance clab-instance and click “Connect”. This will open the “Connect to instance” page. Here, select “Connect using EC2 Instance Connect” as the connection type. Keep the rest of the settings as it is, and click “Connect.” We’ll connect to the EC2 instance.
+
+Check the status of the nginx server using the command given below.
+
+```bash
+
+sudo systemctl status nginx.service
+
+```
+![alt text](image-19.png)
+
+Move into the directory to var/www/html by typing the following commands.
+
+```bash
+cd /var/www/html
+```
+
+Next, we’ll copy the contents of the S3 bucket into the current directory with the command given below. Replace [YOUR_BUCKET_NAME] with the name of your S3 bucket.
+
+```bash
+sudo aws s3 cp s3://[YOUR_BUCKET_NAME]/index.html . 
+```
+
+The file index.html stored in the bucket is now copied to the directory.
+
+Copy the “PublicIPs” mentioned below the CLI and open it in a new tab, but make sure to use HTTP and not HTTPS in the URL. You can now view your HTML in the web browser.
+![alt text](image-21.png)
+
+see public ip same as the ip entered on browser
+
+![alt text](image-20.png)
+
+# What is Serverless Computing?
+
+Serverless computing is an execution model that enables users to run their applications without setting up the servers. The cloud provider manages the allocation, scaling, and maintenance of computing resources. Serverless computing still requires servers. However, it spares developers the hassle of setting up the infrastructure for code execution.
+
+## How does serverless computing work?
+
+Serverless computing dynamically allocates the resources required for code execution at runtime. Function as a service (FaaS) is a subcategory of serverless commuting. It allows the developer to write their code as functions. These functions are triggered by some event. Once triggered, the cloud provider allocates the required compute resources and executes the function on the backend.
+
+## Lambda functions
+Some of the major cloud providers offer serverless computing. AWS offers a serverless and event-driven compute service called Lambda function. When a Lambda function is invoked, it creates a container with the required resources and executes the code in the container. The user only pays for the number of times the function is invoked and the time taken by the function to execute.
+
+Lambda functions can be used to execute code in response to events, such as changes to data in an Amazon S3 bucket, updates to an Amazon DynamoDB table, or HTTP requests via Amazon API Gateway. They are frequently used to host static websites, process data streams, create serverless APIs, and more.
+
+## Create a Lambda Function
+
+In this task, we’ll create a Lambda function and create an IAM role to enable the function to access S3 objects. After the completion of this task, the provisioned infrastructure would be similar to the one shown in the figure below:
+
+![alt text](image-22.png)
+
+### Create IAM Role
+Follow the steps below to create an IAM role for the lambda function:
+
+- On the AWS Management Console, search for “IAM” and select “IAM” from the search results. This takes us to the IAM dashboard.
+
+- Click “Roles” under the “Access management” heading in the left menu bar.
+
+- Click the “Create role” button.
+
+- For “Trusted entity type,” select “AWS service.”
+
+- Click the drop-down menu for “Use case” and select “Lambda.”
+
+- Click the “Next” button.
+
+- On the “Add permissions” page, search for S3AccessPolicy under the “Permissions policies” section.
+
+- Select the S3AccessPolicy policy from the search results and click the “Next” button.
+
+- Name the role LambdaRole.
+
+- Scroll to the end of the page and click the “Create role” button.
+
+### Create Lambda function
+
+- Open the AWS Management Console for “IAMLabUser.” Search for “Lambda” and select “Lambda” from the search results. This takes us to the Lambda dashboard.
+
+- Click the “Create function” button.
+
+- On the “Create function” page, select “Author from scratch.”
+
+- Under the “Basic information” section, enter the following information:
+
+- For “Function name,” enter WebPageFunction.
+
+- For “Runtime,” choose “Python 3.11” from the drop-down list.
+
+- For “Architecture,” select “x86_64” from the list.
+
+- Our lambda function needs to access the bucket. Thus, we'll allow it to assume the LambdaRole created in the previous section. Click the “Change default execution role” label:
+
+- For “Execution role,” select “Use an existing role” from the list.
+
+- Select LambdaRole from the drop-down list.
+
+- In the “Advanced settings” section, check the “Enable function URL” checkbox and select “NONE” as the Auth type.
+
+- Leave the remaining settings as they are and click the “Create function” button at the end of the page.
+
+#### Update function code
+We’ve successfully created a Lambda function and attached an execution role. Now, it is time to update the function code to read a given file from the S3 bucket.
+
+For that, under the “Code” tab on the Lambda function page, replace the code in the lambda_function.py file with the code in the widget below. Replace the value of the <[BUCKET-NAME]> variable on line 5 with the name of the S3 bucket you created earlier.
+
+```python
+import boto3
+
+s3 = boto3.client('s3')
+def lambda_handler(event, context):
+    bucket_name = '<BUCKET-NAME>'
+    index_file = 'index.html'
+    
+    try:
+        response = s3.get_object(Bucket=bucket_name, Key=index_file)
+        content = response['Body'].read().decode('utf-8')
+        
+        return {
+            'statusCode': 200,
+            'headers': {
+                'Content-Type': 'text/html',
+            },
+            'body': content
+        }
+    except Exception as e:
+        return {
+            'statusCode': 500,
+            'body': str(e)
+        }
+```
+
+Let’s get an overview of the code given in the widget above:
+
+Line 5: This is the name of our S3 bucket.
+
+Line 6: This is the name of the file that we want to read.
+
+Line 8: We implement a try block to get the contents of the bucket.
+
+Line 9: We pass two parameters, bucket_name and index_file, to the get_object() function to retrieve an S3 object with the specified name.
+
+Line 10: We read and decode the file contents.
+
+Line 12–18: The file contents are returned as a string.
+
+Line 19–23: We catch the exception and return error.
+
+![alt text](image-23.png)
+
+Now that we’ve updated the code of our Lambda function, we can go ahead and deploy it. Click the “Deploy” button to deploy the code changes.
+ Next, copy the “Function URL” and paste it in your browser. The lambda function retrieves the index.html file from the S3 bucket and displays it on the browser. Thus, we’ve successfully hosted a serverless web application.
+
+![alt text](image-24.png)
+
+----
+
+output:
+
+![alt text](image-25.png)
+
