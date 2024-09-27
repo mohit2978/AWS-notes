@@ -502,3 +502,83 @@ output:
 
 ![alt text](image-25.png)
 
+# Clean up
+
+We’ll start with the resources created using the account of IAMLabUser.
+
+## Terminate the instance
+Follow the steps below to terminate the instance:
+
+- Close the “EC2 Instance Connect” shell and return to the EC2 dashboard.
+
+- Open up the sidebar and click the “Instances” option under the “Instances” section.
+
+- Select the clab-instance instance from the list.
+
+- Click the “Instance state” drop-down button and then click the “Terminate instance” option.
+
+- Click the “Terminate” button.
+
+## Delete the security group
+Before deleting the security group, we need to ensure that the clab-instance instance is terminated. Otherwise, we won’t be able to delete the security group. Follow the steps below to delete the security group:
+
+- Open up the sidebar and click the “Security Groups” option under “Network & Security.”
+
+- Select the web-app-security-group security group from the list if it isn’t already selected.
+
+- Click the “Action” drop-down button and then the “Delete security groups” option.
+
+- In the pop-up prompt, click the “Delete” button.
+
+## Delete the Lambda function
+Delete the Lambda function by following the given steps:
+
+- Head over to the “Lambda > Functions” page and select the function WebPageFunction from the functions list.
+
+- Click the “Actions” button and then click “Delete” from the drop-down menu.
+
+- Enter delete in the pop-up window textbox and click the “Delete” button to confirm the deletion.
+
+- You’ll see the success status indicating the successful deletion of the Lambda function. Click the “Close” button to close the pop-up window.
+
+## Delete the S3 bucket
+Before we delete our S3 bucket, we must empty it. Follow the given steps to empty our S3 bucket:
+
+- Head to the “Buckets” page and select your S3 bucket.
+
+- Select the S3 bucket we had created and click Empty. Enter “permanently delete” in the text field and click “Empty."
+
+- After the bucket is successfully emptied, we’ll see a success message. Click the “Exit” button.
+
+Now that we’ve emptied the S3 bucket, we can delete the S3 bucket itself. Follow the given steps to delete the S3 bucket:
+
+- Select the bucket from the bucket list.
+
+- Click the “Delete” button.
+
+- Enter the bucket name in the textbox to confirm deletion and click the “Delete bucket” button.
+
+## Delete the IAM role
+Next, let’s delete the IAM roles we created for our EC2 instances and lambda functions:
+
+- Search for “IAM” and select “IAM” from the search results to head over to the IAM dashboard.
+
+- Click “Roles” under the “Access management” heading in the left menu bar.
+
+- Select AccessBucketRole and LambdaRole. Click the “Delete” button.
+
+- Type "delete" in the pop-up window and click the “Delete” button to confirm the deletion.
+
+Now that we’ve deleted the EC2 instance, Lambda function, the IAM role, the S3 bucket and its contents, we can sign out from our IAMLabUser account by clicking the username in the top-right corner and then clicking the “Sign out” button.
+
+Resources created by the original account
+Go back to the original browser window from where we started off and clean up the IAM user.
+
+## Delete the IAM user
+Follow the given steps to delete the IAM user:
+
+- On the “Users” tab select IAMLabUser from the list and click the “Delete” button.
+
+- Enter IAMLabUser in the confirmation pop-up and click the “Delete” button to permanently delete the user.
+
+Congratulations! You’ve successfully completed this cloud lab!
