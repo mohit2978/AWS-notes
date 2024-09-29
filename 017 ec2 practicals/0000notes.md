@@ -145,4 +145,22 @@ KMS has default keys we know!!
 
  Domain join directory is active directory where we attach ec2!!
 
+![alt text](image-15.png)
+
+Instance auto recovery if you get 1/2 or 0/2 checks then you just stop and start the instance but if you choose instance auto recovery you will get auto-recover instance!!you no need to stop and start ! it will be managed by AWS!! by default it is enabled!! it recently came!!
+
+next is shutdown behavior where we select what happen on shutdown!!
+
+then hibernate behavior is sleep behavior!!hibernate not work for t2.micro!!
+
+next is termination protection!! if enabled then you will not able to terminate until you disable it!!
+
+similarly we have stop protection!!
+
+then we have monitoring!!! not enable detailed cloud monitoring as it will create bill!!
+
+then credit specification for burst mode!!if enabled then billable!!
  
+![alt text](image-16.png)
+
+Nitro Enclave if enabled then environment will be super secure !! for protection purpose!!
