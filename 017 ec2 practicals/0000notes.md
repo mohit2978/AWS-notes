@@ -85,4 +85,64 @@ if something like maintenance is going on host machine and your ec2 goes down so
 
 Look to events regularly!!here aws will send notifications!!
 
+>Global Accelerator in backend has servers has same ip!!which send request to nearest edge location!!edge location don't have same ip!
 
+tags are important when using any resource of ec2!! we are using redhat for reyaz classes!!
+
+![alt text](image-8.png)
+
+the third one you see here!!
+
+In real time,you need to ask people to launch which instance they need!! don't blindly launch as they say !! you need to analyze the capacity!!
+
+![alt text](image-9.png)
+
+see the storage type you get above is ISV!! we have seen it !! it's only for machine for high configuration for free as we can see above!!
+
+> while launching we can edit network setting and edit default VPC!
+
+VPC always use 1-a or 1-b subnet!! as t2.micro nit support 1-c!!
+
+also while launching auto-assign public ip enable it!! you can disable it if required !! but if you disable it you will not able to connect via SSH!!
+
+![alt text](image-10.png)
+
+in advanced network settings !! we see 2 network interfaces max 2 we can have!!
+by default we have 1 which is for private ip!! other one we get for public ip!!
+
+if you do add network interface! you will be assigning network interface to private ip and not able to assign public ip to ec2 !! and aws will not allow you to do it and will give error!!
+
+
+you see secondary ip in network interface 1!! secondary ip is for health checks and all so that primary ip is not get congested!! so we can have 2 private ip :
+
+primary and secondary can see in advanced network setting in network interface 1!!
+
+### EFA(elastic fabric adaptor)
+
+if you have heavy application like machine learning application !! it increase your performance!! it is not for t2.micro!!
+
+![alt text](image-11.png)
+
+ENA express and ENA express UDP increase performance at network level!!
+
+## storage
+
+not encrypted volume!!
+now they are changing to gp3 as default volume!!
+![alt text](image-12.png)
+
+to encrypt we use KMS !! all encryption keys are in KMS!!
+KMS has default keys we know!!
+
+ do not increase size from 10GB for linux!! for windows its 30GB!!
+
+ ![alt text](image-13.png)
+
+ 0 * file systems tells about EFS!! here no EFS attached!!
+
+ let's see advanced details!!
+ ![alt text](image-14.png)
+
+ Domain join directory is active directory where we attach ec2!!
+
+ 
