@@ -76,6 +76,7 @@ we have another action manage AMI deprecation!! where we can set when the image 
 then we have disable AMI option where if we disable AMI then it will not be able to launch instance!!
 
 then we have instance store backed AMI!! but we are using EBS store backed AMI's!! from s3 we can create Instance store backed AMI's!!!
+
 ---
 
 while launching instance in advanced settings we have purchasing options where we can spot instance!!
