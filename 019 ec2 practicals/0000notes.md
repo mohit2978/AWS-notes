@@ -59,29 +59,61 @@ to encrypt select encrypt option and copy image in same region!!
 
 to not get bill immediately go to region where you have copied go to AMIs and deregister the copied one!!
 
+![alt text](image-7.png)
+
+to delete an AMI we just deregister it!!
+
+### in actions>Edit AMI permissions!!
+
+click on edit we share AMI by Adding account ID!!
+
+we can even share to an organization !!
+
+we have another action manage AMI deprecation!! where we can set when the image will be deprecated!!
+
+![alt text](image-9.png)
+
+then we have disable AMI option where if we disable AMI then it will not be able to launch instance!!
+
+then we have instance store backed AMI!! but we are using EBS store backed AMI's!! from s3 we can create Instance store backed AMI's!!!
+---
+
+while launching instance in advanced settings we have purchasing options where we can spot instance!!
+
+![alt text](image-8.png)
+
+in that request type we have one time which means instance will not stay with you and another one is persist which means it will persists!!
+
+---
+
+Snapshot created by AWS while creating images cant be deleted as they are attached to those images!! first delete AMI's and then snapshots!!
+
+![alt text](image-10.png)
+
+images and snapshot does not have AZ !! but when we create volume out of snapshot than it has AZ!!
+
+>create volume as in same AZ as you want to attach in EC2!!
+
+>V.V.Imp from snapshot of root volume which has OS Images can be created too!!
+
+![alt text](image-11.png)
+
+see above image from snapshot can be created if snapshot has OS!!
+
+snapshot has 2 tiers
+- standard tiers
+- archive tiers --> if not used then put here, to restore from here it takes 24 to 72 hours!! from archive tier you cannot create volume
 
 
+on modify permissions we can share the snapshot!!and even make it public!!
 
+![alt text](image-12.png)
 
+we can even lock the snapshot see below and read about it two modes
 
+![alt text](image-13.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+>just read above images for two modes
 
 
 
