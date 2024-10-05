@@ -115,13 +115,25 @@ we can even lock the snapshot see below and read about it two modes
 
 >just read above images for two modes
 
+in snapshot, AMIs we have recycle bin , if you delete snapshot snapshots and images come here if you have retention rule!! you need to create retention rule!! we need to tell which tags images needs to be moved to recycle bin!! all the images you want to put to recycle bin put them in same tag!!
 
 
+![alt text](image-14.png)
+
+you need to tell which tags to match!! if you check apply to all all amis will be moved to recycle bin!!
+
+in a retention rule also we can have max 50 !!
+
+in retention period we put time period (max 365 days) after which the images will be permanently deleted!!
+
+you deregister images it will move to recycle bin if same tags and after 365 days(if you select that) images will be deleted!!
 
 
+ec2 instance delete then AMis deleted than snapshots deleted!!
+even delete retention rule!!
 
 
-
+everything should be zero except key pair and security group!
 
 
 
