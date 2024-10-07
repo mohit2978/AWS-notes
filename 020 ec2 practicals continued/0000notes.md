@@ -2,8 +2,15 @@
 
 today we see volume and lifecycle manager!!first launch ec2 instance!!
 
+to get more instance like running instance click on actions after selecting running instance then images an templates>launch more like this.
 
+for 2 ec2 instance there will be 2 volumes!! 
 
+to get which volume attached to which ec2 instance just go to volumes and select that volume and go to column attached resources!! and then change name of volume and put any name!!
+
+/dev/sda1 is root volume .if you see in attached resources then you will be able to see it!!
+
+![alt text](image.png)
 
 
 
