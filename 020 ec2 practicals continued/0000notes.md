@@ -147,109 +147,52 @@ cross account sharing sharing across various accounts!!
 
 we can also take backup of ec2 too here in lifecycle manger called as AMIs!!
 
+## Load balancer
 
+min 2 ec2 instance for creating a load balancer!
 
+you need to deploy sample application to ec2 instance!
 
+we will be deploying application using user data!! where we need to put shell script!!
 
+ shell script is executed in linux OS!!
 
+in linux everything starts with / like in windows we have c/program files where we have 
+all softwares
 
+likewise in linux we have so many directories in various directories!
 
+shell is interface between kernel and CMD!!
 
+you give command in CMD which cMD gives to shell then shell to kernel and kernel to
+hardware!! then hardware gives response to kernel then to shell and then CMD!!
 
 
+![alt text](image-11.png)
 
+we are using shell /bin/bash so firstly we tell shell info in first line!!
+ first line where we tell about shell is called as shebang!!
 
+ linus we have 2 types
+ 1. RPM based e.g centOS ,redhat . package manager -yum -install
+ 2. debian based e.g. ubuntu ,SUSE .package manager -apt-get
 
+in rpm based we call web server as httpd and in debian based apache2
 
+-y in any command means all yes
 
 
+we using redhat so command is!!
 
+![alt text](image-12.png)
 
+## tasks
 
+![alt text](image-13.png)
 
+cross task move one volume to other AZ using snapshot!!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+extend existing volume in linux is important!! explore it!!
 
 
 
