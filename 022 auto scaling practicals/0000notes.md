@@ -32,50 +32,75 @@ example create a topic in 530PMbatch and all students who subscribe to topic wil
 >SNS is push based system(sending notification)
 
 ------
+first we create empty target group!! just don't register any ec2 instances!!
+
+then create load balancer!!
+
+now we create launch template!! so we need our own AMI!! as discussed in extras>002!!
+
+another option is choose AMI simple and in user Data put script !! this is done for small application!! that AMI approach for large application!!
+
+> It is not possible to edit the launch template you need to create a new version of it!!
+
+![alt text](image.png)
+
+click on modify template it will not edit old one !! it will create a new one!!
+
+to create ASG you can select and click on actions and then you can create ASG!!
 
 
+ ![alt text](image-1.png)
+
+here you need to select the your launch template!!
+below launch template you see version of launch template whichever version you can select!!
+
+--
+## Step 2
+on step 2 select existing load balancer!! then choose target group of load balancer!
+
+then turn on health check by load balancer!!
+
+health check grace period  after ec2 starts it goes to initializing state in that time we cannot do health check!!so for that time period we  need to wait that is told by grace period so min we should wait for 5 seconds so that instance is up and fully working!!
+
+do't check monitoring we ee it later in cloudwatch!!
+
+enable default instance warmup!! do not enable it it is same as health check grace period but it is for cloudwatch to monitor the application!!
+
+now got to  step3 do not click on skip 
+
+---
+
+## Step 3
+
+put desired capacity ,min and max!!
+
+desired capacity > min and <max
+
+now we want scaling policies so select on target tracking scaling policy!!now select avg cpu utilization!! we keep it 70 for now!!
+
+do not click on disable scale in if you check it scale in will not happen!!
+
+now instance maiantainence policy we put as no policy!!suppose you create app abc first and put on production and 5 ec2 instance running that now your application changed to def now  you put that on one ec2 instance!! what will you do with rest 4 !!
+
+either you launch new 4 ec2 before terminating them !!this helps in availability!!
+
+another approach is terminate 4 and then launch 4!!this helps in cost optimization!! as only 5 ec2 instance running!! but in that availability approach 9 instance running so more cost!! this behavior is told here!!
+
+![alt text](image-2.png)
 
 
+then instance scale-in protection!! new ec2 instance is protected from termination by scaling activities!!
 
+now next we move to step 5
 
+---
+## step 5
 
+to add notification!! create topic!! and put email you want to send notification!!
 
+we can have more than 1 crore subscriber for a single topic!!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+then tags are optional and then review!!
 
 
 
