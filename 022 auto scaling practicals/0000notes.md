@@ -102,21 +102,25 @@ we can have more than 1 crore subscriber for a single topic!!
 
 then tags are optional and then review!!
 
+to add more subscriber go to SNS select topic and create subscription!!
+
+---
+in ASG in activity tab you see all activity done by ASG !!
+
+![alt text](image-3.png)
 
 
+here you get all reason why scale out scale in happens!!
 
+then we have another tab Automatic scaling
 
+![alt text](image-4.png)
 
+here we can so scheduled actions!! like on big billion days flipkart increase number of instances!!
 
+also we have predictive scaling policies !! we can ignore this!!as it uses prediction and based on prediction AWS will automatically create instances!!
 
-
-
-
-
-
-
-
-
+now we have instance management!!
 
 
 
