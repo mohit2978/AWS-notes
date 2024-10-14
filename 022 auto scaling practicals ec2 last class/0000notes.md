@@ -119,7 +119,7 @@ then we have another tab Automatic scaling
 here we can so scheduled actions!! like on big billion days flipkart increase number of instances!!
 
 also we have predictive scaling policies !! we can ignore this!!as it uses prediction and based on prediction AWS will automatically create instances!!
-
+## instance management
 now we have instance management!!
 
   ![alt text](image-5.png)
@@ -133,5 +133,61 @@ means machine will not be terminated while scaling-in!!
 
 remove scale-in protection to remove scale-in protection!!
 
+### lifecycle hooks 
 
+used by developers, we know 6 instance states!!
 
+after pending before running or after shutting down before terminated developer do some activity and that he can do by lifecycle hooks!!
+
+## instance refresh
+
+terminate all ec2 instance and start new ec2 instance!!
+
+you need to check whether doing refresh is there any downtime!!
+
+#### now we are done with ec2 !!
+
+## Question
+4 ec2 instances 
+
+m1 running from 30 min
+
+m2 from 1 min
+
+m3 from 55 min
+
+m4 from 5 min
+
+if scale-in happens which instance is terminated first??
+
+## Answer 
+
+aws charge per hour we know if 1 min is terminated then your 59 min is wasted!!
+
+so 55 min instance is terminated first as closest to an hour!! instance running 
+closest to hour will be terminated first!! so your charge be minimum and max utilization!!
+
+## lightsail is service where everything is already present and no autoscaling possible!!
+
+![alt text](image-6.png)
+
+here we call instance as lightsail instance!!
+
+just click on create instance!! use for small audience application!! 
+
+LightSail does not integrate with any other service !! it give its own !!!
+if you go to RDS for database Lightsail tells i will provide you with database!!
+
+![alt text](image-7.png)
+
+in lightsail we have app with the OS while selecting instance!!
+
+here we have prepaid plan unlike ec2 instance where we use t2.micro!!
+
+![alt text](image-8.png)
+
+then click on create instance!! 
+
+in everything in lightsail you have to choose prepaid plan!!
+
+Lightsail provide it's own services but smaller than aws!!
