@@ -122,9 +122,16 @@ also we have predictive scaling policies !! we can ignore this!!as it uses predi
 
 now we have instance management!!
 
+  ![alt text](image-5.png)
 
+we have 5 machines see if we want to remove any machine from ASG then you can do detach
 
+if you do set to standby the machine will be in rest ,it will not receive traffic
 
+if you set up scale-in protection then the scale in for that machine will not happen 
+means machine will not be terminated while scaling-in!!
+
+remove scale-in protection to remove scale-in protection!!
 
 
 
