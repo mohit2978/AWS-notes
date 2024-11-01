@@ -72,94 +72,63 @@ Condition like OR and AND can be used !!
 
 ---
 
+### Events /event Bridge
 
+We know all events are stored in Event bridge!!
 
+we want if someone stopped ec2 we should get notification!! now who  will tell ec2 is stopped!!
+that is done by event bridge!! it notices that ec2 is stopped!!
 
+whenever ec2 is stopped stopped event is generated!!
 
+>For every service there is a event in event bridge!!
 
+In event bridge we generate a event rule!! we select event which we are interested in!! whenever 
+that event occurs We route to target in SNS ! and we get notification from that!! 
 
+we can call any service as target when an event occurs!! can call lambda when ec2 terminated!!
 
+![alt text](image-1.png)
 
+Bucket --> container of object
+Namespace --> container of metrics!
 
+ ec2 is Namespace where all metrics of ec2 will be there!!
+ 
+ s3 is Namespace where all metrics of s3 will be there!!
+ 
+ ---
 
+### Logs
 
+Logs means information!! first need to check logs if something wrong anywhere!! logs is first investigation thing!!
 
+suppose 20 ec2 instance!! there is person PJ need to check logs for each ec2 !! to do that we need to do login in each machine and then check the logs!
+we feel why can not we get all the logs in one machine!!we do not want to login each and every machine!
 
+so we use cloudwatch logs which give all the logs in one place!!
 
+if you want some group inside info what u do !? you put a agent/informer in them!!
 
+like that here too we use an agent!Agent give logs to cloudwatch logs!!
 
+we need to put agent in all 20 ec2 machine!!
 
+![alt text](image-2.png)
 
+Agent do not have permission to send logs to Cloudwatch Logs!! so to get permission we use IAM role!!
 
+we attach role to the Agent then all the logs be pushed to Cloudwatch logs!! if we want we can group all ec2 machine!!
 
+for each instance instance id be created!! and in that file name that instance logs be created!! these logs are called as logstreams!!
 
+AWS is slowly enhancing it's own monitoring tools!! Cloudwatch cannot monitor endpoints !! but aws came up with
+feature called __Canary__ which monitor endpoints!! it give request every 5 min to endpoints if not working then give mail to all
+users! you can also check monitoring with customized information like you check site working but you want to know if we able
+to login then we put login credentials to canary and tell if he can login or not!! if not able to login then
+it send you notification!!
 
+Application monitoring ,website monitoring can be done by canary!!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Cloudwatch can monitor lambda , containers , k8 ,microservices (which are 3rd party)!!
 
