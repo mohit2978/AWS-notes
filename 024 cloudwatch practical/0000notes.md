@@ -90,4 +90,45 @@ can see steps on various site how to add events for a service!!
 
 > Task : Create rule for get notification for launch of ec2
 
+we click on events it will take us to eveent bridge!!
+
+![alt text](image-6.png)
+
+we have to create Rule!! i should recieve notification if someone stopped/started/terminated ec2 instance!!These type of things are done by event bridge!!
+
+>You see EventBus it has events. we can share this bus to other accounts so that other account can also access this account events!!
+
+1. Define rule detail
+
+![alt text](image-7.png)
+
+choose rule with event pattern as we define pattern
+
+2. then next page we have to choose source so we choose ec2 so we choose firstly AWS events!!
+On event pattern we choose Ec2!!
+
+    Then we need to choose categories,based on requirement you need to choose categories!!we use __Ec2 instance state change notification__!! then select which state you want to get notification!!
+
+3. then we have target we need notification so we choose target as SNS!! then all next and finish!!
+
+now we want at 9pm ec2 should stop and 9 am it should start!! we use lambda in it!!
+
+>Lambda has no permission to stop ec2 so here we use IAM role !! we should give ec2 inline policy permission not full permission to lambda so that lambda can only have access to stop and start of ec2!!
+
+steps 
+![alt text](image-8.png)
+
+1. create ec2
+2. create policy
+3. create IAm rule for lambda
+4. create lambda 
+5. create rule for event schedule!!
+
+>Volume if you leave it is billable in non-free tier, so if your free tier is over even volume will generate the bill!!
+
+In free tier EBS volume is free !! After one year when free tier is over EBS volume is charged!!
+For that you need to terminate the machine!!
+
+There are some limits to lambda functions see:
+
 
