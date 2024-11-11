@@ -118,6 +118,8 @@ now we want at 9pm ec2 should stop and 9 am it should start!! we use lambda in i
 steps 
 ![alt text](image-8.png)
 
+At 9pm and 9 am scheduler will trigger lambda function here!!
+
 1. create ec2
 2. create policy
 3. create IAm rule for lambda
@@ -130,5 +132,28 @@ In free tier EBS volume is free !! After one year when free tier is over EBS vol
 For that you need to terminate the machine!!
 
 There are some limits to lambda functions see:
+
+![alt text](image-9.png)
+
+No need to setup any server for creating lambda! We choose python to create lambda!!
+
+Lambda function is lazy!! Lambda when executed is billable!!
+
+1. Lambda max execution time is 15 min!!
+
+2. Serverless so we need to give some RAM to it!! so min we use 128MB and max 10 Gb RAM!!
+
+3. environment varibale max size 4KB
+
+4. temporaray storage 512 MB min 10 GB max
+
+5. In parallel 1000 times we can execute lamba
+
+6. zip code can be of 50 MB max where we have code!!
+
+
+let us create policy!!
+
+>all lambda logs can be pushed to cloudwatch logs
 
 
