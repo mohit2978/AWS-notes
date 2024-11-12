@@ -141,19 +141,119 @@ Lambda function is lazy!! Lambda when executed is billable!!
 
 1. Lambda max execution time is 15 min!!
 
-2. Serverless so we need to give some RAM to it!! so min we use 128MB and max 10 Gb RAM!!
+2. Serverless so we need to give some RAM to it!! so min we use 128MB and max 10 GB RAM!!
 
 3. environment varibale max size 4KB
 
-4. temporaray storage 512 MB min 10 GB max
+4. temporaray storage in funtion container 512 MB min 10 GB max
 
 5. In parallel 1000 times we can execute lamba
 
-6. zip code can be of 50 MB max where we have code!!
-
-
-let us create policy!!
+6. zip code can be of 50 MB max where we have code!! And uncompressed file size can be max 250 MB.
 
 >all lambda logs can be pushed to cloudwatch logs
 
+#### let us create policy!!
 
+Go to IAM and then policies. 
+
+![alt text](image-10.png)
+
+LogStream is instance ID of which log belong to which ec2 machine!!
+Action see start and stop!
+
+In policy editor in JSON ,put policy directly as we can get this policy from internet!!
+
+### then we create role
+
+- Trusted entity lambda
+
+- in permission choose your permission you created just before
+
+>permission and policy are same!!
+
+### then we create lambda
+
+Lets go to lmabda and create function!! it is regional!! just go and click on create a function!!
+
+![alt text](image-11.png)
+
+Choose the role you just created and archictecture then create function!!
+
+then you need to put code!!
+
+you can get from internet !! 
+
+![alt text](image-12.png)
+
+you should chnage according to your instances!! in instances variable we put instance id!!
+
+After pasting function click on deploy!!
+
+![alt text](image-13.png)
+
+>You can code ,test ,monitor ,put aliases and versions in lambda!!
+
+
+ you can test function by test bar in function!!
+
+>now we need event bridge to call lambda!! for event bridge to access lambda we need another role
+so that event bridge can access lambda
+
+ ![alt text](image-14.png)
+
+ Now we will choose the schedule then click on continue to create rule!!
+
+ then their is cron job way you need to put!! we know we want to stop 9pm ec2!! 
+
+ ![alt text](image-15.png)
+
+ Next on target we choose lambda fucntion we created !!
+
+ ![alt text](image-16.png)
+
+ see function overview ,lambda is trigger for the function!! you can also choose destination!!
+
+In cloud watch in Log group you can see logs!!
+
+## Logs
+
+now we use Amazon linux 2 machine which has system logs now we want to push that logs to cloudwatch, for
+that we need to create IAM role! for that we need to put agent in ec2 machine!
+
+![alt text](image-17.png)
+
+Create a role for trusted entity ec2! permission we want is cloudwatch fullaccess!! and then 
+create role!!
+
+then on actions > Security > modift IAM role , add the role!!
+
+now we want to install agent on ec2!!
+
+### commands
+
+- sudo -s --> to go to root user
+- yum install -y awslogs --> to install aws cloudwatch agent
+
+After agent is installed ,it will create 2 files!!
+
+- cd /etc/awslogs/ --> go to this location
+- ls --> to list file
+
+2 files are
+1. awslogs.conf
+2. awscli.conf
+
+- cat awscli.conf --> to see file now you see different region so chnage region to yours
+- vi awscli.conf --> to edit file chnage region
+
+now you changed region so logs will be saved in the region you put in .conf file!!
+
+- cat awslogs.conf --> in file you see path /var/log/messages ,whichever logs you want to push 
+put that path here!! for now it is ok as we need system logs!! if there is some application logs you
+want to push to cloudwatch then put that path!!
+
+- systemctl start awslogsd --> to start the service!!
+
+now check cloudwatch log groups!!
+Now we can put agent on 10 machines and we get logs of all that on cloudwatch!!
