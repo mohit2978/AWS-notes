@@ -1,0 +1,3 @@
+# Notes Lecture 39
+
+
