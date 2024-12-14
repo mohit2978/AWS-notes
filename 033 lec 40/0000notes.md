@@ -67,29 +67,104 @@ we get private key (.ppk )!!
 
 >Note: For transfer server we create IAM role so that it can access to put data in S3!!Trustes entity is transfer server
 
+## Steps
+1. Create public bucket (if you think deleted data has needs no backup then dont use versioning)
+2. create bucket policy
+3. create transfer server
+4. create IAM role
+5. add user
+6. give transfer server name,username and private key 
 
 
+1. create bucket done
+
+2. in bucket go to permissions>bucket policy on edit go to policy generator ,as we do not want customer to have full access as public bucket!! public should not have full accesss so using bucket policy!!
+
+it open a new policy generator window
+
+![alt text](image.png)
+
+In principal put * , we have selected 3 actions put Object, get Object and List Bucket!!
 
 
+For security we have put a condition that only specific ip adress should be able to upload to s3!!
+we get the policy
 
+```json
+{
+  "Id": "Policy1734199008418",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1734199003844",
+      "Action": [
+        "s3:GetObject",
+        "s3:ListBucket",
+        "s3:PutObject"
+      ],
+      "Effect": "Allow",
+      "Resource": "<ARN name here>",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": "106.219.120.224"
+        }
+      },
+      "Principal": "*"
+    }
+  ]
+}
+```
+put this in s3 bucket policy!!
 
+To give permissions to all sub folders put ARN/* so that customer get permission to get and put in all subfolders of bucket!!
 
+now go to aws transfer family and create server!!
 
+![alt text](image-1.png)
 
+we enable SFTP then click on next
 
+service managed  identity provider then next
 
+we choose public accesss endpoint!!
 
+choose where to push either s3 or efs we choose s3
 
+create a new logs group!!
 
+Mananged workflow we put empty for now !! but if we need something like a notification should come 
 
+we have its own security policy!!
 
+Server host key we will choose for individual! so no neeed to chnange it keep everything default!!
 
+![alt text](image-2.png)
 
+Wait until server get started!!
 
+## IAM role
+let us create IAM Role
 
+![alt text](image-3.png)
 
+then on next page give full accesss of s3 to server!! select tarnsfer as trusted entity!!
 
+we need to attach this role to transfer server!!
 
+Now when server is online click on add user!! add role to that user!!
 
+![alt text](image-4.png)
 
+In home directory we choose user name as from username folder will be created and user will upload to that folder
 
+![alt text](image-5.png)
+
+download putty it has puttyGen with it ,it help to generate public key!!just click on generate and copy entire key!! that is public key 
+
+and then on puttyGEn save private for same public key!!
+
+after creating user you see EndPoint!!
+
+![alt text](image-6.png)
+
+Now to transfer file can use mobaxterm or filezilla!!
