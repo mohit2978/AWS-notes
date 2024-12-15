@@ -202,3 +202,28 @@ are stored locally on ec2!!
 To get aws services in ec2 by CLI in ec2 ,use IAM roles!! and attach that role to ec2!! whatever service you 
 want to access give permission to that role for that service!!
 
+we have done that in k8s classes , where we have installed AWS CLI!!
+
+you can search how to install aws cli on linux machine!!
+
+To get access keys go to IAM>Users >select user>Security credentials>Create access keys
+
+there you get both access keys and secret keys!!
+
+to get to where keys are stored!!
+
+![alt text](image-9.png)
+
+see it is stored locally so we must use IAM role!!
+
+>Note: CLi can do more than console , you can see command reference documentation!!
+
+## Sample aws cli commands
+
+![alt text](image-10.png)
+
+anywhere no one will ask whole line of coomand just tell the command not parameters
+
+In AMIs you can get AMI Id by here based on architecture !1
+
+![alt text](image-11.png)
