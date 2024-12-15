@@ -1,4 +1,4 @@
-# Lecture 40 AWS transfer family
+# Lecture 40 AWS transfer family and AWS CLI
 
 The AWS Transfer Family is a service offered by Amazon Web Services (AWS) that provides secure and managed file transfer capabilities. It simplifies moving files to and from AWS Storage services like Amazon S3 or Amazon EFS. It securely transfers data using protocols like SFTP, and FTPS while seamlessly integrating with the existing security measures. This means we can migrate and automate file transfers without disrupting the users or applications; everything works the same way behind the scenes.
 
@@ -168,3 +168,37 @@ after creating user you see EndPoint!!
 ![alt text](image-6.png)
 
 Now to transfer file can use mobaxterm or filezilla!!
+
+![alt text](image-7.png)
+
+If you upload large files it will be chargable!!
+
+# Ways to access AWS
+whether IAM user or Root user ways to access AWS :-
+
+- AWS console(username and password)
+- AWS CLI(uses access key and secret key)
+
+In linux we can install AWS CLI!! in windows we can use CMD there we can install AWS CLI!!
+
+for windows you need to download AWSCLI.msi file!!
+
+To check AWS cli installed or not use command `aws --version` . In backend it uses python so python is installed with it!!
+
+now to login we need to put keys
+
+![alt text](image-8.png)
+
+In region put region code like for mumbai ap-south-1
+
+output type : 
+1. Table
+2. json
+3. xml
+
+If you configure keys and accessing aws by ec2 instance ,it is not a good way to put keys in ec2 as keys
+are stored locally on ec2!!
+
+To get aws services in ec2 by CLI in ec2 ,use IAM roles!! and attach that role to ec2!! whatever service you 
+want to access give permission to that role for that service!!
+
