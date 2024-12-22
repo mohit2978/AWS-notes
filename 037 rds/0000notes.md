@@ -1,6 +1,8 @@
 # RDS 
 
-This is from old lecture lec-47  of 2023 batch!!
+This is from old lecture lec-47  of 2023 batch and lec-44 of 2024 batch!!In DB services we talk about RDS !!
+
+RDS supoorts 7 engines!!
 
 In ec2 we call ec2 instance here we call it RDS db instance!!
 
@@ -14,15 +16,27 @@ Every Db is connected via EndPoint!!
 
 Here we cannot login like SSH as this is Platform as a service!! we can just connect to DB!!
 
-There are some db which are read only!! for those application we create read replica so that whole load not comes to main DB!!
+Whenver we create RDS instance it's role is instance only!!
+
+There are some applications like Business Intelligence tools (read from DB and generate lots of report) which are read only!! for those application we create read replica so that whole load not comes to main DB!!
 
 In primary DB we write and all read replica we read!! Every read replica has it own end point!!
+
+Amazon RDS read replicas have separate endpoints from the primary database instance. Each read replica is assigned its own endpoint, which allows applications to connect directly to it for read operations.
+
+This setup is beneficial for distributing the read workload, improving the overall performance and scalability of your application.
+
+>Note:If you try to write in read replica it will give error!!
+
+After creating read replica role will be Primary of main Db!!
 
 Read replica can be in multiple regions !! for application in multiple regions!! All write on master server
 and all read on replica !! all the write will be synched with replica after some time!! so after writes read will happen
 asynchronously!!
 
 Read replica is not for high availability it is just to __increase performance__!!
+
+![alt text](image-3.png)
 
 >Note: we can have max 5 read replicas
 
