@@ -101,6 +101,83 @@ Global datasource is just replication in another region!!
 
 Connect redis cluster to Ec2!!
 
+## Amazon DynamoDB (another devloper topic)
+
+Nothing to do on console!!No engine ,nothing!!
+
+Amazon DynamoDB is a fully managed, schemaless NoSQL database service that handles all management tasks, including monitoring the hardware capacity, software updates, and patches. It offers fast and predictable performance and seamless scalability. DynamoDB automatically replicates data across three availability zones in an AWS Region to provide high availability and durability.
+
+It provides an encryption mechanism to prevent us from worrying about data protection. We can scale up and down DynamoDB according to the data amount without downtime. It also supports on-demand backup, point-in-time restore, and long-term retention for regulatory compliance.
+
+### Core components of DynamoDB
+
+NoSQL--> Not Only SQL
+
+Facebook,Amazon not using RDBMS ,as they need super-fast response so they use NoSQL (non-relational DB)!! They provide very fast response!!
+
+SQL is very much restricted NoSQL is not restricted, In SQl you need to respect the relation!!
+
+![alt text](image-10.png)
+
+e.g. Redis,MongoDB, casandra etc
+
+>Note:Sql is for complex queries but Nosql is for super-fast response,not for complex queries
+
+![alt text](image-11.png)
+
+![alt text](image-12.png)
+
+Redis is key-value Nosql
+
+DynamoDB support document and key-value both!!
+
+Redshift support columnar ,used for big-data!!
 
 
+There are three main components of Amazon DynamoDB that help to store data, maintain ordering and structure, and query the data:
 
+- Tables: The table is the main entity, like we have in relational databases. It stores the data about a particular entity/thing in the form of items and maintains relations. 
+
+- Items: An item is a collection of attributes that describe the item’s properties. An item is unique among the other items. Items are the same as other databases’ records, rows, or tuples. In DynamoDB, we can have unlimited items in a table, and a table can exist without any item.
+
+- Attributes: An attribute is a building block of a table. It defines an item’s properties and nature. The type of an attribute remains the same for each item in a table. In DynamoDB, attributes can be considered columns or fields of other databases.
+
+DynamoDB maintains keys and indexes to manage and organize data efficiently.
+
+In Rds we increase capacity of server by changing capacity of chnaging instance type!!
+
+![alt text](image-13.png)
+
+In RDS we need to stop machine to scale-up !! In here we have RCU (read capacity unit) and WCU(Write capacity unit)
+if we want to scale up we just put in these and dynamoDB will scale up!!
+
+![alt text](image-14.png)
+
+Two consistency model 
+1. ECR ( Eventually consistency reads)(slowly read)(default)
+2. SCR (Strongly consistency reads)(immediately read)
+
+
+in DynamoDB we give PK called as Partition Key!! this is first column we give when we create Nosql table!!It is 
+manadatory!!
+
+If we want to add two tables but two tables have same keys!! We can do that by composite key which is comination of 
+partition key and sort key (eg empId+PhoneNo)!! But phoneNo should be unique!! sort key is optional , Partition key is
+mandatory!!
+
+Primarykey or partition key is also called as Hash attribute!! and sort key is also called as range attribute!!
+
+DynamoDB streams has logs about what items you have change ,it notes logs whatevr you chnage!!
+
+Kinesis DataStream can also be used to get item level change!!
+
+You can set TTL time for a record , suppose you take netflix subscription for 3 months ,then The AWS engineer put record with TTL of 3 months
+after 3 months ,it will be deleted from table !! so after 3 months this is how your subscription get over!!
+
+Indexes we know in table!!It help to speed up the search!!Without index you need to go row by row!!
+2 types of index
+1. LSI(Local secondary index)(partition key+ any sort key)(can be created only at time of creating table)
+2. GSI(Global secondary index)(any partition key +any sort key)(can be created any time)
+
+
+![alt text](image-15.png)
