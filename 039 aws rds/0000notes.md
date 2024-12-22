@@ -15,7 +15,7 @@ we use standard create as we need to select !! in easy create most of things are
 Then we select Engine type!! Suppose we select Postgrsql as free and opensource!!
 
 When you create engine version , go and ask developer!! Which version he wants!!
-As sometime s application might be compatible with certaain verion!!
+As sometime's application might be compatible with certaain verion!!
 
 Then we have templates!! we select free tier!! other are paid!! but lets see other options for producton!!
 so lets select production just to see all version!!
@@ -38,7 +38,7 @@ Since there is no secondary database instance, if the availability zone (AZ) hos
 
 >Note:Single-AZ instance is a good option for development and testing scenarios but not best for the production environment where high availability and automatic failover are required.
 
-### Multi-AZ instance#
+### Multi-AZ instance
 Multi-AZ instance deployment launches two DB instances in two different AZs. The first is called a primary instance, and the second is a standby instance. Like the Single-AZ instance, the primary instance entertains all the read and write operations, and the data is replicated synchronously to the secondary instance. The illustration below depicts the Multi-AZ instance deployment scenario:
 
 ![alt text](image-4.png)
@@ -160,8 +160,9 @@ Then we have delete protection which protects accidental deletes!!
 
 Then we have monthly costs estimate!!
 
-If your manager says reduce bil then!! You can do some optimization!! depending on load and everything!!
+If your manager says reduce bill then!! You can do some optimization!! depending on load and everything!!These below points can help to reduce bill!!
 
+![alt text](image-28.png)
 
 >Note: In free tier multiple options you see will be greyed out!!
 

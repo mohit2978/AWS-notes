@@ -62,7 +62,9 @@ If someone deleted table failover will not happen, it happens when something wro
 
 We can also enable Multi AZ for read replicas!!
 
-You can reserve DB instances!!
+You can reserve DB instances for 1 or 3 years!!
+
+Multi AZ doubles the bill!! so select it after thinking a lot!!
 
 ## RDS features
 
@@ -91,12 +93,20 @@ we can have autoscaling at storage level as we can provide min storage and max s
 storage full ,it will increase storage automatically!!
 
 >Note:You will be charged only for storage you are using not for max storage when exceeds min storage!!
+
+Parameter group are engine level variables!!
+
+![alt text](image-4.png)
+
 ##  Aurora
+
+AWS is 5 times faster than postgresql and 3 times than mySQL!!
 
 Amazon Aurora is a fully managed, cost-effective, and high-performance relational database. It allows us to use the power and flexibility of popular open-source databases like MySQL and PostgreSQL with enhanced throughput. We can create and configure Amazon Aurora using the same Amazon RDS Management Console.
 
 AWS has it's propiatory Engine -Aurora!!It is comptaible with mysql and postgres!! Aws will always recommend to use it!!
-It is 5 times faster than mysql and postgres!! In aurora you can create 15 Read replica whereas in other you can create only 
+
+ In aurora you can create 15 Read replica whereas in other you can create only 
 5 read replica!!
 
 Aurora gives a load balancer for read replica on top of 15 read replica!!
