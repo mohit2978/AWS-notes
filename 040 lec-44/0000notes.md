@@ -20,6 +20,10 @@ Basically whenevr you connect to server , You are in a session ,session data has
 
 ![alt text](image.png)
 
+## Lazy loading and write through difference
+
+![alt text](image-2.png)
+
 AWS Outposts is a fully managed service from Amazon Web Services (AWS) that extends AWS infrastructure, services, APIs, and tools to virtually any on-premises or edge location. It provides a hybrid cloud solution that allows you to run applications seamlessly across on-premises and AWS environments.
 
 AWS Outposts is like bringing the AWS cloud into your own building. Imagine you have a piece of AWS sitting in your office or data center. It lets you use AWS services (like servers, storage, and databases) right where you need them, instead of only in the AWS cloud.
@@ -38,26 +42,64 @@ Why Use It?
 
 ElasticCache is service having 2 engine :redis and memcached like RDS is service having 6 engines!!
 
+Redis is widely used so let us see that in detail!!
+
+Cluster --> collection of shards!!
+
+Shard --> collection of nodes!!In 1 shard there are 6 nodes!!1 Primary and 5 read replica!!
+
+In 1 cluster you can have 500 shard!!
 
 
+If no cluster mode then only one shrad if cluster mode enabled then can have 500 shrad!!
+
+![alt text](image-1.png)
+
+![alt text](image-3.png)
+
+This elasticCache menu is very much similar to RDS!!
+
+we choose to create MemcacheD
+
+![alt text](image-4.png)
+
+Easy create just everything is automatically selected and in Standard create we 
+need to create everything!!
+
+![alt text](image-5.png)
 
 
+we choose standard create where we choose location as AWS cloud as on On premises cache will be sent to our location!!
+That an outpost!!
 
+![alt text](image-6.png)
 
+see the above options we have selected!!Rest all same as RDS!!
 
+>Note:To get max limits of any service see service Quotas Just select the 
+service and you will get the Quotas
 
+![alt text](image-7.png)
 
+Adjustability means we can increase by raising the ticket to AWS!! If not adjustable it means we cannot increase it!!
 
+>Note:ElasticCache is a key-value DB in backend!!
 
+While Choosing redis you will get option to cluster mode enable or disable!!
 
+![alt text](image-8.png)
 
+If enabled it asks how many shrad and in every shrad how many max node you need!!
 
+Redis supports backup and extra thing we have seen already than memcached!
 
+![alt text](image-9.png)
 
+Global datasource is just replication in another region!!
 
+## Task
 
-
-
+Connect redis cluster to Ec2!!
 
 
 
