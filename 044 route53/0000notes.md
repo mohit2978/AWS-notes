@@ -45,7 +45,12 @@ So when request comes to route53 , route53 routes the request from boom.com to n
 
 HostedZone is container of records!!
 
-## What is Route 53?
+2 types of hostedZone
+1. public hostedZone(Application working on interent use this)
+2. private hostedzone(if want to use url within VPC) in case of intranet like within company we want to access
+
+
+### What is Route 53?
 Route 53 collaborates with top-level domain registries such as .com, .io, .net, and .org. When a domain is registered using Route 53, it first checks with the registry for that top-level domain if it is available. Route 53 then automatically makes itself the DNS service for the domain by doing the following:
 
 1. Route 53 creates a hosted zone with the same name as the domain.
@@ -58,21 +63,58 @@ Route 53 collaborates with top-level domain registries such as .com, .io, .net, 
 
 5. The registrar then forwards the domain information to the corresponding registry, which maintains a database of domain registrations for specific top-level domains, such as .com. Additionally, certain details may be included in the public WHOIS database for transparency and accessibility.
 
+Whenever you create a public hosted zone 2 records are created within record
+1. Ns(Name server) record (Nameserver is group of 4 servers)
+2. SOA record (admin of Hosted zone)
 
+These records are created and managed by AWS!! If you delete Ns record you will not be able to get NastyUrl from Domain name so website will not be working!!
 
+![alt text](image-4.png)
 
+If you get domain from godaddy you need to create hosted zone yourself and do some configuration , it is recommended to get domain from route53 only ,then route 53create hosted zone automatically!!
 
+![alt text](image-5.png)
 
+### Rout53 Records
 
+![alt text](image-6.png)
 
+CName record is billable so not used much so we go for ALias record mostly as free and can connect Url to any resource!!
 
+Mostly we use A record and Alias record!!
 
+pj.com is called as Main domain or Naked domain or Zone apex record
 
+and admin.pj.com or hello.pj.com is sub domain!!
 
+Cname records does not support naked domains so can use ALias!! for subdomains you can use cname!!
 
+>Note:If customer wants ip adress of website use Global Accelerator
 
+## Routing policies
+Routing policies are the rules and algorithms that route traffic to different endpoints like IP addresses, AWS resources, or other domain names based on various criteria. Route 53 offers several routing policies to allow users to implement sophisticated traffic routing strategies:
 
+- Simple routing policy: It allows users to configure standard DNS records without additional routing logic. It is typically used to route traffic to a single resource, such as a web server for a website. No health checks here! If mumbai region is where your website hosted goes down , then website will go down!!
 
+- Failover routing policy: It allows users to define a primary resource and a standby (failover) resource in another region, along with health checks to monitor each resource’s availability. It is designed to provide high availability by routing traffic to a backup resource.
+
+    ![alt text](image-7.png)
+
+    Here AWS route53 doing healthcheck too, so here we switch to secondary if primary falls!!
+
+- Weighted routing policy: It enables users to control the distribution of traffic among multiple resources by assigning weights to each resource. This allows traffic splitting based on specified ratios, providing flexibility in testing new deployments or allocating traffic based on resource capabilities. 
+
+- Latency routing policy: It routes traffic to the resource with the lowest latency for the user, ensuring optimal performance and minimal response times.
+
+- Geolocation routing policy: It directs traffic based on the user’s geographic location, ensuring that users are routed to the nearest available resource or a resource optimized for their region.
+
+- Geoproximity routing policy: Geoproximity routing policy routes traffic based on the user’s geographic location and the location of AWS resources, considering factors like latency and proximity.
+
+- Multivalue routing policy: Multivalue Routing Policy combines elements of simple routing and failover routing to improve availability and fault tolerance.
+
+- IP-based routing policy: IP-based routing policy directs traffic based on the IP address of the requesting device or DNS resolver. It allows users to define routing rules based on IP addresses or ranges, ensuring that requests from specific devices or networks are directed to designated resources.
+
+Remembering the routing policies can come in handy during the exams and in real-world scenarios.
 
 
 
