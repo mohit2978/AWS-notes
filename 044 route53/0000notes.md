@@ -102,24 +102,43 @@ Routing policies are the rules and algorithms that route traffic to different en
 
     Here AWS route53 doing healthcheck too, so here we switch to secondary if primary falls!!
 
+    >Note:Another Solution:In case of website maiantainence, as that is static web page so we can put that in s3 so we can point second record can point to s3 website endpoint
+
 - Weighted routing policy: It enables users to control the distribution of traffic among multiple resources by assigning weights to each resource. This allows traffic splitting based on specified ratios, providing flexibility in testing new deployments or allocating traffic based on resource capabilities. 
+
+    ![alt text](image-9.png)
+
+    20 percent traffic goes to server1, 70 percent to server2
 
 - Latency routing policy: It routes traffic to the resource with the lowest latency for the user, ensuring optimal performance and minimal response times.
 
+    request get connected wherever latency is low!!
+
 - Geolocation routing policy: It directs traffic based on the user’s geographic location, ensuring that users are routed to the nearest available resource or a resource optimized for their region.
+
+    based on user location!! we want different langauge based on location on webpage!!
+
+    we create as many record as many regions we have!!Route53 automatically gets location based on that it will redirect to that route!!
+
+    ![alt text](image-8.png)
 
 - Geoproximity routing policy: Geoproximity routing policy routes traffic based on the user’s geographic location and the location of AWS resources, considering factors like latency and proximity.
 
-- Multivalue routing policy: Multivalue Routing Policy combines elements of simple routing and failover routing to improve availability and fault tolerance.
+- Multivalue routing policy: Multivalue Routing Policy combines elements of simple routing and failover routing to improve availability and fault tolerance.(not used)(same as single routing policy but it has health checks)
+
+
 
 - IP-based routing policy: IP-based routing policy directs traffic based on the IP address of the requesting device or DNS resolver. It allows users to define routing rules based on IP addresses or ranges, ensuring that requests from specific devices or networks are directed to designated resources.
 
 Remembering the routing policies can come in handy during the exams and in real-world scenarios.
 
+In order to purchase domain AWS charge 1000RS per year!!You will need that to have practicals!!
 
+How to get domain in Route53!!
 
-
-
+1. Go to Route53> registered domains
+2. Go to Register Domain
+3. write domain and you get price and then checkout!
 
 
 
