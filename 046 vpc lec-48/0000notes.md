@@ -76,25 +76,61 @@ But we want to connect to private subnet!!
 So we create Baston server or jump server (just an ec2 instance) in public subet!!
 from this server we connect to private server!!
 
+In company like SDS when we are at office we able to connect to VDI and everything without connecting to VPN as company has
+it's private network connected to private AWS or some cloud network through which we able to connect to VDI , it is like private to private connection!!
+
+But when at home we need VPN ,VPN makes our IP to be one of the company private network and then when ip is in company private
+network we able to connect to VDI!!
+
+![alt text](image-1.png)
+
+>Note:NAT gateway and IGW are services not servers!!
+
+Previously we have NAT software which is put on some ec2 instance !! If get more traffic it will goes down!! So AWS comes up with NAT gateway!!
+
+If some customer says i do not need interent to private subnet!!
+No need of NAT then for that server , so we delete the route from private routing table!! as if we delete NAT then other private subnet will loose internet access!!
+
+But now he wants to access AWS services, he do not have internet now how he can access AWS services so AWS comes up with __VPC endpoints__ where we add the service endpoint which we want to accesss!!
+
+VPC endpoints are used to access AWS services without NAT for private subnet!!
+
+Multiple private subnet needs to communicate with each other then they can communicate as they are connected!!
+
+## CIDR (Classless inter domain routing)
+
+Ip adress range is given by Network admin!!
+
+In company network you see Ip starts from 10,172,192 . these IP are for private network!!
+
+We can create 254 subnets at max!! each subnet is named as 1a,1b,1c,1d and so on!!
+
+### IPv4 address range for subnets
+When creating a VPC, we allocate a CIDR block to define the overall IP address range for the VPC. Within this range, we reserve specific CIDR blocks for individual subnets. AWS provides flexibility in defining subnet sizes and allows us to allocate appropriate IP address ranges based on the requirements for each subnet. Below are a few important points related to the CIDR block for subnets:
+
+- The CIDR block is only allowed between /28 to /16 netmask.
+
+- The first four and the last IP addresses in the CIDR range are unavailable and not assigned to instances. 
+
+Here 5 ip are reserved in a subnet in every!!If the CIDR block is 10.0.0.0/24
+
+10.0.0.0-->Reserved for network address
+
+10.0.0.1-->Reserved by AWS for the VPC router
+
+10.0.0.2-->Reserved by AWS for mapping to Amazon provided DNS
+
+10.0.0.3-->Reserved by AWS for future use
+
+10.0.0.255-->AWS does not support broadcast in a VPC therefore, already reserved to not be used
+
+![alt text](image-2.png)
 
 
+Whenever you create VPC ,default security group ,NACL,route Table(Main route table) will be created!!
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+By default 2 VPC cannot communicate with each other but if they want can communicate by VPC peering!!
 
 
 
