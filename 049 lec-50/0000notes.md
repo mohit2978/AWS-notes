@@ -14,7 +14,7 @@ If you are doing in another region so another vpc security group should accept t
 
 See notes in drive for this peering!!
 
-
+if you delete route table enteries ,status will become blackhole!!in case if you delete IGW of any subnet!!
 
 
 
