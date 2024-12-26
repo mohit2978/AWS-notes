@@ -121,6 +121,7 @@ to check interent access use
 
 if windows then we use RDP!!
 
+![alt text](image-18.png)
 ## VPC endpoint practical
 
 Now we do not want internet access from bastion ,we just need access(any AWS service) AWS s3!!
@@ -164,22 +165,49 @@ You able to see private routing table the endpoint is added!!
 ## how to delete VPC
 1. terminate ec2 instances
 2. delete NAT
-3. delete VPC
-4. delete elastic IP
+3. delete VPC (IGW will be deleted automatically)
+4. delete(relese) elastic IP
 
 In vpc >Actions > create flow logs
 
 in flow logs traffic is monitored and can be stored in S3!! It is billable!!
 
 
+## VPC peering
 
+Two VPC communicate by VPC peering!!Two VPC can be another region , another account !!
 
+In ireland we create another VPC!!
 
+>Note:CIDR should be unique so in ireland we can not use same CIDR!
 
+so In ireland we use 192.169.0.0/16!!
 
+![alt text](image-19.png)
 
+we caanot connect two private subnet in two different VPCs!! We can acheive it by VPC peering!!
 
+![alt text](image-20.png)
 
+from company to AWS we connect by VPN!!
+At AWS we need to configure 3 things from VPC dashboards
+1. VPG (virtual private Gateway)(just need to give name)
+2. Customer Gateway --> give IP adress of company
+3. side to side VPN
 
+Then AWS gives you configuration file and that configuration file you neeed to give to company!!
+
+2 tunnels will be created if one goes down other will be up!!
+
+Network ACLs (NACLs)
+
+![alt text](image-21.png)
+
+add inbound rules for SSH and now you will not be able to connect  to machine!!
+as NACL has denied it!!do for mumbai VPC!!
+
+If you want to connect multiple VPC you can set routing table using transit gateway!!
+
+![alt text](image-22.png)
 
 
