@@ -1,0 +1,35 @@
+<svg viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="900" height="260" fill="#ffffff"/>
+
+  <rect x="150" y="90" width="70" height="60" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="185" y="125" text-anchor="middle" font-size="11" fill="#c0392b">pubg</text>
+  <text x="150" y="170" font-size="12" font-weight="bold" fill="#c0392b">Dev's Mobile</text>
+
+  <rect x="270" y="90" width="90" height="60" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="315" y="115" text-anchor="middle" font-size="11" fill="#c0392b">pubg server</text>
+  <text x="315" y="135" text-anchor="middle" font-size="11" fill="#1e8449">ak47</text>
+  <text x="270" y="170" font-size="12" font-weight="bold" fill="#000">PROD Environment</text>
+
+  <rect x="430" y="90" width="90" height="60" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="430" y="170" font-size="12" font-weight="bold" fill="#2e86c1">Pre-Prod</text>
+
+  <rect x="590" y="90" width="90" height="60" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="590" y="170" font-size="12" font-weight="bold" fill="#c0392b">Test Environment</text>
+
+  <rect x="750" y="90" width="90" height="60" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="755" y="115" font-size="11" fill="#000">devgun</text>
+  <text x="855" y="118" font-size="12" font-weight="bold" fill="#000">developer</text>
+
+  <path d="M220,105 C 245,90 250,90 270,105" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#a3)"/>
+  <path d="M270,135 C 245,150 245,150 220,135" fill="none" stroke="#2e4053" stroke-width="2" marker-end="url(#a3)"/>
+
+  <path d="M430,110 C 400,100 385,100 360,110" fill="none" stroke="#2e4053" stroke-width="2" marker-end="url(#a3)"/>
+  <path d="M590,110 C 565,100 545,100 520,110" fill="none" stroke="#2e4053" stroke-width="2" marker-end="url(#a3)"/>
+  <path d="M750,110 C 725,100 705,100 680,110" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#a3)"/>
+
+  <defs>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2e4053"/>
+    </marker>
+  </defs>
+</svg>

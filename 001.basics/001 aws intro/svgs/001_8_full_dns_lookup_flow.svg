@@ -1,0 +1,56 @@
+<svg viewBox="0 0 820 650" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="820" height="650" fill="#ffffff"/>
+
+  <text x="230" y="30" font-size="13" font-weight="bold" fill="#1e8449">Which identify the domain name</text>
+  <path d="M100,45 L215,45" stroke="#c0392b" stroke-width="2" marker-end="url(#a8)"/>
+  <text x="150" y="35" font-size="12" font-weight="bold" fill="#c0392b">Name Server</text>
+  <path d="M330,45 L420,45" stroke="#c0392b" stroke-width="2" marker-end="url(#a8)"/>
+  <text x="440" y="35" font-size="12" font-weight="bold" fill="#c0392b">SOA</text>
+  <text x="440" y="55" font-size="12" font-weight="bold" fill="#1a237e">has the IP</text>
+  <path d="M420,65 L340,65" stroke="#7d3c98" stroke-width="2" marker-end="url(#a8p)"/>
+
+  <text x="150" y="100" font-size="14" fill="#2e86c1">.com</text>
+  <text x="120" y="125" font-size="13" font-weight="bold" fill="#c0392b">Top Level Domain</text>
+
+  <text x="60" y="165" font-size="13" fill="#2e86c1">.org</text>
+  <text x="200" y="165" font-size="13" fill="#2e86c1">.in</text>
+  <path d="M155,215 L155,130" stroke="#c0392b" stroke-width="2.5" marker-end="url(#a8)"/>
+  <path d="M155,215 L80,175" stroke="#2e86c1" stroke-width="2.5" marker-end="url(#a8)"/>
+  <path d="M155,215 L220,175" stroke="#2e86c1" stroke-width="2.5" marker-end="url(#a8)"/>
+
+  <text x="90" y="245" font-size="13" font-weight="bold" fill="#1e8449">Identify .com, .in  etc</text>
+  <text x="100" y="270" font-size="14" font-weight="bold" fill="#c0392b">Root Name Server</text>
+  <text x="140" y="295" font-size="13" font-weight="bold" fill="#c0392b">RNS</text>
+  <path d="M155,340 L155,300" stroke="#c0392b" stroke-width="2.5" marker-end="url(#a8)"/>
+
+  <path d="M330,180 L280,210" stroke="#7d3c98" stroke-width="1.5" marker-end="url(#a8p)"/>
+  <text x="335" y="165" font-size="11" fill="#7d3c98">SOA</text>
+
+  <text x="65" y="380" font-size="12" fill="#2e4053">/etc/host</text>
+  <text x="150" y="380" font-size="12" fill="#2e4053">Local DNS has IP</text>
+  <text x="65" y="405" font-size="13" font-weight="bold" fill="#c0392b">Local DNS</text>
+  <path d="M75,455 L75,395" stroke="#c0392b" stroke-width="2" marker-end="url(#a8)"/>
+  <path d="M105,395 L105,455" stroke="#1e8449" stroke-width="2" marker-end="url(#a8)"/>
+  <path d="M260,395 L200,375" stroke="#7d3c98" stroke-width="1.5" marker-end="url(#a8p)"/>
+
+  <rect x="45" y="455" width="140" height="90" fill="none" stroke="#000" stroke-width="2.5"/>
+  <text x="115" y="505" text-anchor="middle" font-size="14" fill="#1e8449">Browser</text>
+  <line x1="40" y1="545" x2="190" y2="545" stroke="#000" stroke-width="2"/>
+  <line x1="65" y1="545" x2="45" y2="565" stroke="#000" stroke-width="2"/>
+  <line x1="165" y1="545" x2="185" y2="565" stroke="#000" stroke-width="2"/>
+  <text x="115" y="590" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">Srinivas's Laptop</text>
+
+  <path d="M185,495 L305,495" stroke="#1a237e" stroke-width="1.5"/>
+  <text x="305" y="480" font-size="13" fill="#7d3c98">HostName</text>
+  <text x="305" y="500" font-size="13" fill="#7d3c98">google.com</text>
+  <text x="305" y="535" font-size="13" fill="#7d3c98">IP</text>
+
+  <text x="400" y="480" font-size="14" font-weight="bold">DNS = Domain Name Server</text>
+  <text x="400" y="505" font-size="13" fill="#2e86c1">It keeps track of all hostnames and IP address</text>
+  <text x="400" y="530" font-size="13" fill="#2e86c1">DNS will convert IP to Host and Host to IP</text>
+
+  <defs>
+    <marker id="a8" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#c0392b"/></marker>
+    <marker id="a8p" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7d3c98"/></marker>
+  </defs>
+</svg>

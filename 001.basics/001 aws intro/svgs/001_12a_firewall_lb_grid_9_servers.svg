@@ -1,0 +1,39 @@
+<svg viewBox="0 0 780 480" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="780" height="480" fill="#ffffff"/>
+  <rect x="130" y="30" width="620" height="330" fill="none" stroke="#1a237e" stroke-width="2.5"/>
+  <rect x="150" y="55" width="90" height="270" fill="none" stroke="#8e2418" stroke-width="2"/>
+  <text x="165" y="80" font-size="12" font-weight="bold" fill="#1e8449">Allow</text>
+  <text x="165" y="100" font-size="12" font-weight="bold" fill="#c0392b">Deny</text>
+  <text x="165" y="135" font-size="12" font-weight="bold" fill="#2e86c1">Rule</text>
+  <text x="150" y="345" font-size="13" font-weight="bold" fill="#c0392b">Firewall</text>
+
+  <rect x="270" y="55" width="55" height="270" fill="#e67e22"/>
+  <text x="260" y="345" font-size="13" font-weight="bold" fill="#c0392b">Load Balancer</text>
+
+  <g font-size="12" font-weight="bold">
+    <rect x="360" y="55" width="95" height="55" rx="12" fill="none" stroke="#000" stroke-width="2"/><text x="407" y="87" text-anchor="middle" fill="#7d3c98">WebServer</text>
+    <rect x="480" y="55" width="95" height="55" rx="12" fill="none" stroke="#000" stroke-width="2"/><text x="527" y="87" text-anchor="middle" fill="#2e86c1">App Server</text>
+    <rect x="600" y="55" width="95" height="55" rx="12" fill="none" stroke="#000" stroke-width="2"/><text x="647" y="87" text-anchor="middle" fill="#7d3c98">DB Server</text>
+
+    <rect x="360" y="135" width="95" height="55" rx="12" fill="none" stroke="#000" stroke-width="2"/><text x="407" y="167" text-anchor="middle" fill="#7d3c98">WebServer</text>
+    <rect x="480" y="135" width="95" height="55" rx="12" fill="none" stroke="#000" stroke-width="2"/><text x="527" y="167" text-anchor="middle" fill="#2e86c1">App Server</text>
+    <rect x="600" y="135" width="95" height="55" rx="12" fill="none" stroke="#000" stroke-width="2"/><text x="647" y="167" text-anchor="middle" fill="#7d3c98">DB Server</text>
+
+    <rect x="360" y="215" width="95" height="55" rx="12" fill="none" stroke="#000" stroke-width="2"/><text x="407" y="247" text-anchor="middle" fill="#7d3c98">WebServer</text>
+    <rect x="480" y="215" width="95" height="55" rx="12" fill="none" stroke="#000" stroke-width="2"/><text x="527" y="247" text-anchor="middle" fill="#2e86c1">App Server</text>
+    <rect x="600" y="215" width="95" height="55" rx="12" fill="none" stroke="#000" stroke-width="2"/><text x="647" y="247" text-anchor="middle" fill="#7d3c98">DB Server</text>
+  </g>
+
+  <path d="M325,190 L360,82" stroke="#000" stroke-width="1.5" marker-end="url(#a12)"/>
+  <path d="M325,190 L360,162" stroke="#000" stroke-width="1.5" marker-end="url(#a12)"/>
+  <path d="M325,190 L360,242" stroke="#000" stroke-width="1.5" marker-end="url(#a12)"/>
+
+  <text x="440" y="400" text-anchor="middle" font-size="14" font-weight="bold">Google Company</text>
+  <text x="150" y="425" font-size="12" fill="#c0392b">Firewall = Which stop unauthorized access to the Network</text>
+  <text x="150" y="450" font-size="12" fill="#c0392b">Load Balancer = Which distribute the traffic to multiple Servers</text>
+  <text x="620" y="425" font-size="12"><tspan fill="#1e8449">Allow</tspan> / <tspan fill="#c0392b">Deny</tspan></text>
+
+  <defs>
+    <marker id="a12" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#000"/></marker>
+  </defs>
+</svg>

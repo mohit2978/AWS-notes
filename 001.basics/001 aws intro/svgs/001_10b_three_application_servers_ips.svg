@@ -1,0 +1,24 @@
+<svg viewBox="0 0 780 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="780" height="420" fill="#ffffff"/>
+  <g font-size="12" fill="#7d3c98">
+    <text x="60" y="60">http://192.168.10.20/index.html</text>
+    <text x="60" y="85">http://192.168.10.21/index.html</text>
+    <text x="60" y="110">http://192.168.10.22/index.html</text>
+  </g>
+  <text x="60" y="150" font-size="13" font-weight="bold" fill="#c0392b">Shashank</text>
+
+  <rect x="520" y="40" width="110" height="60" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="575" y="70" text-anchor="middle" font-size="13" fill="#2e86c1">Application</text>
+  <text x="575" y="115" text-anchor="middle" font-size="12" fill="#c0392b">Server</text>
+  <text x="660" y="75" font-size="12">192.168.10.20</text>
+
+  <rect x="520" y="150" width="110" height="60" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="575" y="180" text-anchor="middle" font-size="13" fill="#2e86c1">Application</text>
+  <text x="575" y="225" text-anchor="middle" font-size="12" fill="#c0392b">Server</text>
+  <text x="660" y="185" font-size="12">192.168.10.21</text>
+
+  <rect x="520" y="260" width="110" height="60" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="575" y="290" text-anchor="middle" font-size="13" fill="#2e86c1">Application</text>
+  <text x="575" y="335" text-anchor="middle" font-size="12" fill="#c0392b">Server</text>
+  <text x="660" y="295" font-size="12">192.168.10.22</text>
+</svg>

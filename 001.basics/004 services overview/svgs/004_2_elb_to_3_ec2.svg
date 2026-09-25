@@ -1,0 +1,25 @@
+<svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="480" height="420" fill="#ffffff"/>
+  <rect x="60" y="60" width="70" height="330" fill="none" stroke="#000" stroke-width="2.5"/>
+  <text x="95" y="230" text-anchor="middle" font-size="15" fill="#c0392b">ELB</text>
+
+  <g stroke="#000" stroke-width="1.5" fill="none">
+    <line x1="130" y1="225" x2="255" y2="115"/>
+    <line x1="130" y1="225" x2="255" y2="225"/>
+    <line x1="130" y1="225" x2="255" y2="330"/>
+  </g>
+
+  <g font-size="14" font-weight="bold">
+    <rect x="255" y="90" width="90" height="55" fill="none" stroke="#000" stroke-width="1.5"/>
+    <text x="300" y="122" text-anchor="middle" fill="#c0392b">EC2</text>
+    <text x="360" y="122" fill="#1a237e" font-size="15">1a</text>
+
+    <rect x="255" y="200" width="90" height="55" fill="none" stroke="#000" stroke-width="1.5"/>
+    <text x="300" y="232" text-anchor="middle" fill="#c0392b">EC2</text>
+    <text x="360" y="232" fill="#1a237e" font-size="15">1b</text>
+
+    <rect x="255" y="305" width="90" height="55" fill="none" stroke="#000" stroke-width="1.5"/>
+    <text x="300" y="337" text-anchor="middle" fill="#c0392b">EC2</text>
+    <text x="360" y="337" fill="#1a237e" font-size="15">1c</text>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="900" height="480" fill="#ffffff"/>
+  <ellipse cx="420" cy="230" rx="340" ry="215" fill="none" stroke="#000" stroke-width="2.5"/>
+
+  <text x="330" y="90" font-size="15" font-weight="bold" fill="#c0392b">1a</text>
+  <rect x="250" y="100" width="170" height="140" fill="none" stroke="#1a237e" stroke-width="2.5"/>
+  <g stroke="#1e8449" stroke-width="2" fill="none">
+    <rect x="270" y="120" width="50" height="45"/><rect x="335" y="120" width="50" height="45"/>
+    <rect x="270" y="180" width="50" height="45"/><rect x="335" y="180" width="50" height="45"/>
+  </g>
+
+  <text x="580" y="90" font-size="15" font-weight="bold" fill="#c0392b">1b</text>
+  <rect x="500" y="100" width="170" height="140" fill="none" stroke="#1a237e" stroke-width="2.5"/>
+  <g stroke="#1e8449" stroke-width="2" fill="none">
+    <rect x="520" y="120" width="50" height="45"/><rect x="585" y="120" width="50" height="45"/>
+    <rect x="520" y="180" width="50" height="45"/><rect x="585" y="180" width="50" height="45"/>
+  </g>
+
+  <text x="455" y="370" font-size="15" font-weight="bold" fill="#c0392b">1c</text>
+  <rect x="375" y="290" width="170" height="140" fill="none" stroke="#1a237e" stroke-width="2.5"/>
+  <g stroke="#1e8449" stroke-width="2" fill="none">
+    <rect x="395" y="310" width="50" height="45"/><rect x="460" y="310" width="50" height="45"/>
+    <rect x="395" y="370" width="50" height="45"/><rect x="460" y="370" width="50" height="45"/>
+  </g>
+
+  <line x1="420" y1="170" x2="585" y2="170" stroke="#c0392b" stroke-width="2.5"/>
+  <line x1="335" y1="240" x2="460" y2="310" stroke="#c0392b" stroke-width="2.5"/>
+  <line x1="585" y1="240" x2="460" y2="310" stroke="#c0392b" stroke-width="2.5"/>
+
+  <text x="360" y="450" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">AWS - Region = Mumbai</text>
+</svg>

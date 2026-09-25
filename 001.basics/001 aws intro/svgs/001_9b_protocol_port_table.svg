@@ -1,0 +1,8 @@
+<svg viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="420" height="220" fill="#ffffff"/>
+  <rect x="10" y="10" width="400" height="200" fill="none" stroke="#2e86c1" stroke-dasharray="4,4"/>
+  <text x="30" y="45" font-size="22" fill="#1a237e" font-weight="bold">http = 80</text>
+  <text x="30" y="80" font-size="22" fill="#1a237e" font-weight="bold">https = 443</text>
+  <text x="30" y="115" font-size="22" fill="#1a237e" font-weight="bold">SSH = 22</text>
+  <text x="30" y="150" font-size="22" fill="#1a237e" font-weight="bold">RDP = 3389</text>
+</svg>

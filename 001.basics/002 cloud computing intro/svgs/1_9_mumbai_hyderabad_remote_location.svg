@@ -1,0 +1,13 @@
+<svg viewBox="0 0 620 280" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="620" height="280" fill="#ffffff"/>
+  <path d="M60,80 C 30,90 30,150 60,160 C 40,190 90,210 120,190 C 150,215 210,200 200,170 C 240,175 250,120 210,100 C 220,70 170,55 140,70 C 120,50 70,55 60,80 Z" fill="none" stroke="#7b241c" stroke-width="3"/>
+  <text x="90" y="140" font-size="17" fill="#7d3c98">Mumbai</text>
+  <text x="60" y="230" font-size="15" font-weight="bold" fill="#c0392b">Remote Location</text>
+
+  <path d="M430,80 C 400,90 400,150 430,160 C 410,190 460,210 490,190 C 520,215 580,200 570,170 C 610,175 620,120 580,100 C 590,70 540,55 510,70 C 490,50 440,55 430,80 Z" fill="none" stroke="#7b241c" stroke-width="3"/>
+  <text x="465" y="140" font-size="17" fill="#7d3c98">Hyd</text>
+  <text x="440" y="230" font-size="15" font-weight="bold" fill="#c0392b">Remote Location</text>
+
+  <line x1="205" y1="135" x2="425" y2="135" stroke="#2e86c1" stroke-width="4"/>
+  <text x="270" y="120" font-size="15" fill="#2e86c1">Internet</text>
+</svg>

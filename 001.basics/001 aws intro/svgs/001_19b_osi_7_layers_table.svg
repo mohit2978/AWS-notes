@@ -1,0 +1,37 @@
+<svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="720" height="420" fill="#222222"/>
+  <text x="360" y="35" text-anchor="middle" font-size="22" font-weight="bold" fill="#e67e22">7 Layers of the OSI Model</text>
+
+  <g font-size="15" font-weight="bold" fill="#ffffff">
+    <rect x="30" y="55" width="220" height="42" fill="#17a2a2"/><text x="45" y="82">Application</text>
+    <rect x="30" y="102" width="220" height="42" fill="#1abc9c"/><text x="45" y="129">Presentation</text>
+    <rect x="30" y="149" width="220" height="42" fill="#27ae60"/><text x="45" y="176">Session</text>
+    <rect x="30" y="196" width="220" height="42" fill="#52be80"/><text x="45" y="223">Transport</text>
+    <rect x="30" y="243" width="220" height="42" fill="#a9dfbf"/><text x="45" y="270" fill="#222">Network</text>
+    <rect x="30" y="290" width="220" height="42" fill="#f1c40f"/><text x="45" y="317" fill="#222">Data Link</text>
+    <rect x="30" y="337" width="220" height="42" fill="#e67e22"/><text x="45" y="364">Physical</text>
+  </g>
+
+  <g font-size="12" fill="#dddddd">
+    <text x="270" y="72">End User layer</text>
+    <text x="270" y="88">HTTP, FTP, IRC, SSH, DNS</text>
+
+    <text x="270" y="119">Syntax layer</text>
+    <text x="270" y="135">SSL, SSH, IMAP, FTP, MPEG, JPEG</text>
+
+    <text x="270" y="166">Synch &amp; send to port</text>
+    <text x="270" y="182">API's, Sockets, WinSock</text>
+
+    <text x="270" y="213">End-to-end connections</text>
+    <text x="270" y="229">TCP, UDP</text>
+
+    <text x="270" y="260">Packets</text>
+    <text x="270" y="276">IP, ICMP, IPSec, IGMP</text>
+
+    <text x="270" y="307">Frames</text>
+    <text x="270" y="323">Ethernet, PPP, Switch, Bridge</text>
+
+    <text x="270" y="354">Physical structure</text>
+    <text x="270" y="370">Coax, Fiber, Wireless, Hubs, Repeaters</text>
+  </g>
+</svg>

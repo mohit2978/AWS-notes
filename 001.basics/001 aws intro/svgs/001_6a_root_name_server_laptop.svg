@@ -1,0 +1,32 @@
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="700" height="420" fill="#ffffff"/>
+  <text x="130" y="30" font-size="13" font-weight="bold" fill="#c0392b">Root Name Server</text>
+  <text x="150" y="50" font-size="12" font-weight="bold" fill="#c0392b">RNS</text>
+  <path d="M270,150 C 250,90 200,50 155,30" stroke="#8e2418" stroke-width="2" fill="none" marker-end="url(#a6)"/>
+
+  <text x="90" y="150" font-size="12" fill="#2e4053">/etc/host</text>
+  <text x="175" y="150" font-size="12" fill="#2e4053">Local DNS has IP</text>
+  <text x="90" y="170" font-size="13" font-weight="bold" fill="#c0392b">Local DNS</text>
+  <path d="M100,220 L100,160" stroke="#c0392b" stroke-width="2" marker-end="url(#a6)"/>
+  <path d="M130,160 L130,220" stroke="#1e8449" stroke-width="2" marker-end="url(#a6)"/>
+
+  <rect x="70" y="220" width="140" height="90" fill="none" stroke="#000" stroke-width="2.5"/>
+  <text x="140" y="270" text-anchor="middle" font-size="14" fill="#1e8449">Browser</text>
+  <line x1="65" y1="310" x2="215" y2="310" stroke="#000" stroke-width="2"/>
+  <line x1="90" y1="310" x2="70" y2="330" stroke="#000" stroke-width="2"/>
+  <line x1="190" y1="310" x2="210" y2="330" stroke="#000" stroke-width="2"/>
+  <text x="140" y="355" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">Srinivas's Laptop</text>
+
+  <path d="M210,260 L330,260" stroke="#1a237e" stroke-width="1.5"/>
+  <text x="330" y="245" font-size="12" fill="#7d3c98">HostName</text>
+  <text x="330" y="263" font-size="12" fill="#7d3c98">google.com</text>
+  <text x="330" y="300" font-size="12" fill="#7d3c98">IP</text>
+
+  <text x="430" y="245" font-size="13" font-weight="bold">DNS = Domain Name Server</text>
+  <text x="430" y="270" font-size="12" fill="#2e86c1">It keeps track of all hostnames and IP address</text>
+  <text x="430" y="295" font-size="12" fill="#2e86c1">DNS will convert IP to Host and Host to IP</text>
+
+  <defs>
+    <marker id="a6" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#000"/></marker>
+  </defs>
+</svg>

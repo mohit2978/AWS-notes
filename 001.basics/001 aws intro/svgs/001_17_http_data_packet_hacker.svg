@@ -1,0 +1,25 @@
+<svg viewBox="0 0 620 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="620" height="400" fill="#ffffff"/>
+  <text x="60" y="35" font-size="16" fill="#2e86c1" font-weight="bold">HTTP</text>
+  <text x="330" y="25" font-size="13" font-weight="bold" fill="#c0392b">Hacker</text>
+  <path d="M325,32 L245,65" stroke="#c0392b" stroke-width="2" marker-end="url(#a17)"/>
+
+  <rect x="45" y="50" width="160" height="180" fill="none" stroke="#000" stroke-width="2.5"/>
+  <g font-size="15" fill="#7d3c98">
+    <text x="60" y="80">Src</text>
+    <text x="60" y="105">Dest</text>
+    <text x="60" y="130">Portocol</text>
+    <text x="60" y="155">Port</text>
+    <text x="60" y="180">Data</text>
+    <text x="60" y="205" fill="#c0392b">Secure : NOT</text>
+  </g>
+
+  <text x="245" y="90" font-size="15" fill="#2e86c1">HTTP</text>
+  <text x="245" y="115" font-size="15" fill="#1a237e">Plain Text  / Clear Text</text>
+
+  <text x="90" y="255" font-size="14" font-weight="bold" fill="#c0392b">Data Packets</text>
+
+  <defs>
+    <marker id="a17" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#c0392b"/></marker>
+  </defs>
+</svg>

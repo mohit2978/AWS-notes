@@ -1,0 +1,52 @@
+<svg viewBox="0 0 780 500" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="780" height="500" fill="#ffffff"/>
+  <text x="60" y="25" font-size="13" fill="#888">AWS</text>
+  <text x="130" y="25" font-size="13" fill="#2e86c1">VPC</text>
+
+  <rect x="40" y="40" width="700" height="420" rx="10" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="2,2"/>
+
+  <rect x="60" y="60" width="660" height="370" rx="8" fill="none" stroke="#e67e22" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="600" y="80" font-size="11" fill="#e67e22">Availability Zone</text>
+
+  <g font-size="12">
+    <circle cx="130" cy="230" r="20" fill="#888"/>
+    <text x="120" y="235" fill="#fff">&#128100;</text>
+    <text x="115" y="260" font-size="10">Users</text>
+  </g>
+
+  <circle cx="240" cy="230" r="25" fill="#e67e22"/>
+  <text x="240" y="236" text-anchor="middle" fill="#fff" font-size="14">&#9729;</text>
+  <text x="205" y="270" font-size="9">Internet</text>
+  <text x="205" y="282" font-size="9">Gateway</text>
+  <line x1="150" y1="230" x2="215" y2="230" stroke="#333" stroke-width="1.5" marker-end="url(#a3)"/>
+
+  <rect x="290" y="90" width="20" height="280" fill="#e67e22"/>
+  <text x="300" y="80" text-anchor="middle" font-size="9">Elastic IPs</text>
+  <line x1="265" y1="230" x2="290" y2="230" stroke="#333" stroke-width="1.5" marker-end="url(#a3)"/>
+
+  <rect x="340" y="95" width="150" height="270" fill="none" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="415" y="112" text-anchor="middle" font-size="11" fill="#c0392b">Public Subnet</text>
+  <rect x="370" y="150" width="90" height="50" fill="#e67e22"/>
+  <text x="415" y="172" text-anchor="middle" font-size="10" fill="#fff">Instance</text>
+  <text x="415" y="185" text-anchor="middle" font-size="9" fill="#fff">Web Server</text>
+  <line x1="310" y1="180" x2="370" y2="175" stroke="#333" stroke-width="1.2" marker-end="url(#a3)"/>
+  <text x="415" y="335" text-anchor="middle" font-size="9">10.0.0.0/24</text>
+  <text x="415" y="347" text-anchor="middle" font-size="9">DMZ</text>
+
+  <rect x="530" y="95" width="130" height="270" fill="none" stroke="#333" stroke-width="1.2"/>
+  <text x="595" y="112" text-anchor="middle" font-size="11">Database</text>
+  <path d="M595,145 l-10,15 v10 a10,10 0 0 0 20,0 v-10 z" fill="#2e86c1"/>
+  <text x="595" y="200" text-anchor="middle" font-size="9">Relational</text>
+  <text x="595" y="212" text-anchor="middle" font-size="9">Database</text>
+  <line x1="460" y1="175" x2="530" y2="175" stroke="#333" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <text x="595" y="330" text-anchor="middle" font-size="9">Private Subnet</text>
+  <text x="595" y="342" text-anchor="middle" font-size="9">10.0.3.0/24</text>
+  <text x="620" y="80" font-size="13" fill="#2e86c1">&#128274;</text>
+
+  <text x="380" y="450" text-anchor="middle" font-size="10">VPC - 10.0.0.0/16</text>
+  <text x="700" y="450" font-size="10">AWS Region</text>
+
+  <defs>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker>
+  </defs>
+</svg>

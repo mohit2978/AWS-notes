@@ -1,0 +1,59 @@
+<svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="80" y="30" font-size="16" font-weight="bold">Shared Model</text>
+
+  <g font-size="12" font-weight="bold" text-anchor="middle">
+    <text x="115" y="60">Private Cloud</text>
+    <text x="335" y="60">Infrastructure as a Service</text>
+    <text x="555" y="60">Platform as a Service</text>
+    <text x="775" y="60">Software as a Service</text>
+  </g>
+
+  <!-- rows -->
+  <g font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">
+  <!-- column 1: Private Cloud - all orange -->
+  <rect x="55" y="80" width="120" height="28" fill="#e07b28"/><text x="115" y="99">Applications</text>
+  <rect x="55" y="112" width="120" height="28" fill="#e07b28"/><text x="115" y="131">Data</text>
+  <rect x="55" y="144" width="120" height="28" fill="#e07b28"/><text x="115" y="163">OS</text>
+  <rect x="55" y="176" width="120" height="28" fill="#e07b28"/><text x="115" y="195">Virtualization</text>
+  <rect x="55" y="208" width="120" height="28" fill="#e07b28"/><text x="115" y="227">Servers</text>
+  <rect x="55" y="240" width="120" height="28" fill="#e07b28"/><text x="115" y="259">Storage</text>
+  <rect x="55" y="272" width="120" height="28" fill="#e07b28"/><text x="115" y="291">Networking</text>
+
+  <!-- column 2: IaaS - App/Data/OS orange, rest blue -->
+  <rect x="275" y="80" width="120" height="28" fill="#e07b28"/><text x="335" y="99">Applications</text>
+  <rect x="275" y="112" width="120" height="28" fill="#e07b28"/><text x="335" y="131">Data</text>
+  <rect x="275" y="144" width="120" height="28" fill="#e07b28"/><text x="335" y="163">OS</text>
+  <rect x="275" y="176" width="120" height="28" fill="#3f6fb0"/><text x="335" y="195">Virtualization</text>
+  <rect x="275" y="208" width="120" height="28" fill="#3f6fb0"/><text x="335" y="227">Servers</text>
+  <rect x="275" y="240" width="120" height="28" fill="#3f6fb0"/><text x="335" y="259">Storage</text>
+  <rect x="275" y="272" width="120" height="28" fill="#3f6fb0"/><text x="335" y="291">Networking</text>
+
+  <!-- column 3: PaaS - App/Data orange, rest blue -->
+  <rect x="495" y="80" width="120" height="28" fill="#e07b28"/><text x="555" y="99">Applications</text>
+  <rect x="495" y="112" width="120" height="28" fill="#e07b28"/><text x="555" y="131">Data</text>
+  <rect x="495" y="144" width="120" height="28" fill="#3f6fb0"/><text x="555" y="163">OS</text>
+  <rect x="495" y="176" width="120" height="28" fill="#3f6fb0"/><text x="555" y="195">Virtualization</text>
+  <rect x="495" y="208" width="120" height="28" fill="#3f6fb0"/><text x="555" y="227">Servers</text>
+  <rect x="495" y="240" width="120" height="28" fill="#3f6fb0"/><text x="555" y="259">Storage</text>
+  <rect x="495" y="272" width="120" height="28" fill="#3f6fb0"/><text x="555" y="291">Networking</text>
+
+  <!-- column 4: SaaS - all blue -->
+  <rect x="715" y="80" width="120" height="28" fill="#3f6fb0"/><text x="775" y="99">Applications</text>
+  <rect x="715" y="112" width="120" height="28" fill="#3f6fb0"/><text x="775" y="131">Data</text>
+  <rect x="715" y="144" width="120" height="28" fill="#3f6fb0"/><text x="775" y="163">OS</text>
+  <rect x="715" y="176" width="120" height="28" fill="#3f6fb0"/><text x="775" y="195">Virtualization</text>
+  <rect x="715" y="208" width="120" height="28" fill="#3f6fb0"/><text x="775" y="227">Servers</text>
+  <rect x="715" y="240" width="120" height="28" fill="#3f6fb0"/><text x="775" y="259">Storage</text>
+  <rect x="715" y="272" width="120" height="28" fill="#3f6fb0"/><text x="775" y="291">Networking</text>
+  </g>
+
+  <g font-size="11" fill="#333">
+    <text x="35" y="105" transform="rotate(-90 35 105)">Customer</text>
+    <text x="255" y="97" transform="rotate(-90 255 97)">Customer</text>
+    <text x="255" y="225" transform="rotate(-90 255 225)">Provider</text>
+    <text x="475" y="113" transform="rotate(-90 475 113)">Customer</text>
+    <text x="475" y="225" transform="rotate(-90 475 225)">Provider</text>
+    <text x="695" y="225" transform="rotate(-90 695 225)">Provider</text>
+  </g>
+</svg>

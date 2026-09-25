@@ -1,0 +1,27 @@
+<svg viewBox="0 0 700 340" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="700" height="340" fill="#ffffff"/>
+  <rect x="130" y="60" width="60" height="80" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="90" y="160" font-size="13">Primary</text>
+  <text x="90" y="176" font-size="13">Server</text>
+  <text x="150" y="105" text-anchor="middle" font-size="18" fill="#c0392b">&#10005;</text>
+
+  <rect x="500" y="60" width="60" height="80" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="555" y="160" font-size="13">Backup</text>
+  <text x="555" y="176" font-size="13">Server</text>
+
+  <path d="M330,190 C 280,170 280,130 330,110 C 320,80 380,70 400,95 C 440,70 490,90 480,125 C 520,130 515,180 480,185 C 490,215 435,230 410,205 C 375,230 325,210 330,190 Z" fill="none" stroke="#666" stroke-width="1.5"/>
+  <text x="345" y="150" font-size="15" font-weight="bold">Network / Internet</text>
+
+  <circle cx="120" cy="270" r="18" fill="#5b9bd5"/>
+  <text x="70" y="240" font-size="13">Network</text>
+  <text x="70" y="256" font-size="13">User</text>
+
+  <circle cx="580" cy="270" r="30" fill="#2e86c1"/>
+  <text x="530" y="230" font-size="13">Simple</text>
+  <text x="530" y="246" font-size="13">Failover</text>
+
+  <path d="M160,255 L320,170" stroke="#f4d03f" stroke-width="3"/>
+  <path d="M190,110 L490,110" stroke="#f4d03f" stroke-width="3"/>
+
+  <defs></defs>
+</svg>

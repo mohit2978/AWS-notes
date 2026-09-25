@@ -1,0 +1,57 @@
+<svg viewBox="0 0 780 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="780" height="400" fill="#ffffff"/>
+  <text x="270" y="30" text-anchor="middle" font-size="15" font-weight="bold">Public Cloud Model</text>
+
+  <ellipse cx="440" cy="220" rx="250" ry="150" fill="#3f8fc4"/>
+
+  <g font-size="12" fill="#000">
+    <text x="75" y="90">User A</text>
+    <text x="75" y="180">User B</text>
+    <text x="75" y="260">User C</text>
+    <text x="75" y="340">User D</text>
+  </g>
+  <g stroke="#000" stroke-width="1">
+    <line x1="120" y1="80" x2="370" y2="90"/>
+    <line x1="120" y1="170" x2="300" y2="140"/>
+    <line x1="120" y1="250" x2="300" y2="200"/>
+    <line x1="120" y1="330" x2="220" y2="260"/>
+    <line x1="120" y1="330" x2="300" y2="200"/>
+  </g>
+
+  <rect x="365" y="65" width="80" height="45" fill="#ffffff" stroke="#000"/>
+  <text x="405" y="85" text-anchor="middle" font-size="11">Compute</text>
+  <text x="405" y="100" text-anchor="middle" font-size="11">Services</text>
+
+  <rect x="290" y="110" width="85" height="45" fill="#ffffff" stroke="#000"/>
+  <text x="332" y="130" text-anchor="middle" font-size="11">Messaging</text>
+  <text x="332" y="145" text-anchor="middle" font-size="11">Services</text>
+
+  <rect x="220" y="155" width="85" height="45" fill="#ffffff" stroke="#000"/>
+  <text x="262" y="175" text-anchor="middle" font-size="11">Application</text>
+  <text x="262" y="190" text-anchor="middle" font-size="11">Services</text>
+
+  <rect x="255" y="220" width="80" height="45" fill="#ffffff" stroke="#000"/>
+  <text x="295" y="240" text-anchor="middle" font-size="11">Platform</text>
+  <text x="295" y="255" text-anchor="middle" font-size="11">Services</text>
+
+  <rect x="340" y="245" width="80" height="45" fill="#ffffff" stroke="#000"/>
+  <text x="380" y="265" text-anchor="middle" font-size="11">Storage</text>
+  <text x="380" y="280" text-anchor="middle" font-size="11">Services</text>
+
+  <text x="500" y="215" text-anchor="middle" font-size="12" font-weight="bold">Administrator</text>
+
+  <text x="560" y="60" font-size="13" font-weight="bold">BENEFITS</text>
+  <g font-size="11">
+    <text x="560" y="80">Cost Effective</text>
+    <text x="560" y="95">Reliability</text>
+    <text x="560" y="110">Flexibility</text>
+    <text x="560" y="125">Location Independence</text>
+    <text x="560" y="140">Utility Style Costing</text>
+    <text x="560" y="155">High Scalability</text>
+  </g>
+  <text x="560" y="185" font-size="13" font-weight="bold">DISADVANTAGES</text>
+  <g font-size="11">
+    <text x="560" y="205">Low Security</text>
+    <text x="560" y="220">Less customizable</text>
+  </g>
+</svg>

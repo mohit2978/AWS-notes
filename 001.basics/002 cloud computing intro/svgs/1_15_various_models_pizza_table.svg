@@ -1,0 +1,75 @@
+<svg viewBox="0 0 820 480" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="820" height="480" fill="#ffffff"/>
+  <g font-size="13" font-weight="bold" fill="#2e86c1">
+    <text x="80" y="30" text-anchor="middle">Home Made</text>
+    <text x="205" y="30" text-anchor="middle">Communal Kitchen</text>
+    <text x="330" y="30" text-anchor="middle">Bring your own</text>
+    <text x="460" y="30" text-anchor="middle">Takeaway</text>
+    <text x="590" y="30" text-anchor="middle">Restaurant</text>
+    <text x="715" y="30" text-anchor="middle">Party</text>
+  </g>
+
+  <!-- Home Made column (all green) -->
+  <g>
+    <rect x="25" y="45" width="110" height="30" fill="#c8e6c0"/><text x="80" y="65" text-anchor="middle" font-size="10">Conversation</text>
+    <rect x="25" y="80" width="110" height="30" fill="#c8e6c0"/><text x="80" y="100" text-anchor="middle" font-size="10">Friends</text>
+    <rect x="25" y="115" width="110" height="30" fill="#c8e6c0"/><text x="80" y="135" text-anchor="middle" font-size="10">Drink</text>
+    <rect x="25" y="150" width="110" height="30" fill="#c8e6c0"/><text x="80" y="170" text-anchor="middle" font-size="10">Pizza</text>
+    <rect x="25" y="185" width="110" height="30" fill="#c8e6c0"/><text x="80" y="205" text-anchor="middle" font-size="10">Fire</text>
+    <rect x="25" y="220" width="110" height="30" fill="#c8e6c0"/><text x="80" y="240" text-anchor="middle" font-size="10">Oven</text>
+    <rect x="25" y="255" width="110" height="30" fill="#c8e6c0"/><text x="80" y="275" text-anchor="middle" font-size="10">Electricity/Gas</text>
+  </g>
+  <!-- Communal Kitchen (Oven,Elec green too; all green per image) -->
+  <g>
+    <rect x="150" y="45" width="110" height="30" fill="#c8e6c0"/><text x="205" y="65" text-anchor="middle" font-size="10">Conversation</text>
+    <rect x="150" y="80" width="110" height="30" fill="#c8e6c0"/><text x="205" y="100" text-anchor="middle" font-size="10">Friends</text>
+    <rect x="150" y="115" width="110" height="30" fill="#c8e6c0"/><text x="205" y="135" text-anchor="middle" font-size="10">Drink</text>
+    <rect x="150" y="150" width="110" height="30" fill="#c8e6c0"/><text x="205" y="170" text-anchor="middle" font-size="10">Pizza</text>
+    <rect x="150" y="185" width="110" height="30" fill="#c8e6c0"/><text x="205" y="205" text-anchor="middle" font-size="10">Fire</text>
+    <rect x="150" y="220" width="110" height="30" fill="#f5c6bc"/><text x="205" y="240" text-anchor="middle" font-size="10">Oven</text>
+    <rect x="150" y="255" width="110" height="30" fill="#f5c6bc"/><text x="205" y="275" text-anchor="middle" font-size="10">Electricity/Gas</text>
+  </g>
+  <!-- Bring your own -->
+  <g>
+    <rect x="275" y="45" width="110" height="30" fill="#c8e6c0"/><text x="330" y="65" text-anchor="middle" font-size="10">Conversation</text>
+    <rect x="275" y="80" width="110" height="30" fill="#c8e6c0"/><text x="330" y="100" text-anchor="middle" font-size="10">Friends</text>
+    <rect x="275" y="115" width="110" height="30" fill="#c8e6c0"/><text x="330" y="135" text-anchor="middle" font-size="10">Drink</text>
+    <rect x="275" y="150" width="110" height="30" fill="#c8e6c0"/><text x="330" y="170" text-anchor="middle" font-size="10">Pizza</text>
+    <rect x="275" y="185" width="110" height="30" fill="#f5c6bc"/><text x="330" y="205" text-anchor="middle" font-size="10">Fire</text>
+    <rect x="275" y="220" width="110" height="30" fill="#f5c6bc"/><text x="330" y="240" text-anchor="middle" font-size="10">Oven</text>
+    <rect x="275" y="255" width="110" height="30" fill="#f5c6bc"/><text x="330" y="275" text-anchor="middle" font-size="10">Electricity/Gas</text>
+  </g>
+  <!-- Takeaway -->
+  <g>
+    <rect x="400" y="45" width="110" height="30" fill="#c8e6c0"/><text x="455" y="65" text-anchor="middle" font-size="10">Conversation</text>
+    <rect x="400" y="80" width="110" height="30" fill="#c8e6c0"/><text x="455" y="100" text-anchor="middle" font-size="10">Friends</text>
+    <rect x="400" y="115" width="110" height="30" fill="#c8e6c0"/><text x="455" y="135" text-anchor="middle" font-size="10">Drink</text>
+    <rect x="400" y="150" width="110" height="30" fill="#f5c6bc"/><text x="455" y="170" text-anchor="middle" font-size="10">Pizza</text>
+    <rect x="400" y="185" width="110" height="30" fill="#f5c6bc"/><text x="455" y="205" text-anchor="middle" font-size="10">Fire</text>
+    <rect x="400" y="220" width="110" height="30" fill="#f5c6bc"/><text x="455" y="240" text-anchor="middle" font-size="10">Oven</text>
+    <rect x="400" y="255" width="110" height="30" fill="#f5c6bc"/><text x="455" y="275" text-anchor="middle" font-size="10">Electricity/Gas</text>
+  </g>
+  <!-- Restaurant -->
+  <g>
+    <rect x="525" y="45" width="110" height="30" fill="#c8e6c0"/><text x="580" y="65" text-anchor="middle" font-size="10">Conversation</text>
+    <rect x="525" y="80" width="110" height="30" fill="#c8e6c0"/><text x="580" y="100" text-anchor="middle" font-size="10">Friends</text>
+    <rect x="525" y="115" width="110" height="30" fill="#f5c6bc"/><text x="580" y="135" text-anchor="middle" font-size="10">Drink</text>
+    <rect x="525" y="150" width="110" height="30" fill="#f5c6bc"/><text x="580" y="170" text-anchor="middle" font-size="10">Pizza</text>
+    <rect x="525" y="185" width="110" height="30" fill="#f5c6bc"/><text x="580" y="205" text-anchor="middle" font-size="10">Fire</text>
+    <rect x="525" y="220" width="110" height="30" fill="#f5c6bc"/><text x="580" y="240" text-anchor="middle" font-size="10">Oven</text>
+    <rect x="525" y="255" width="110" height="30" fill="#f5c6bc"/><text x="580" y="275" text-anchor="middle" font-size="10">Electricity/Gas</text>
+  </g>
+  <!-- Party -->
+  <g>
+    <rect x="650" y="45" width="110" height="30" fill="#f5c6bc"/><text x="705" y="65" text-anchor="middle" font-size="10">Conversation</text>
+    <rect x="650" y="80" width="110" height="30" fill="#f5c6bc"/><text x="705" y="100" text-anchor="middle" font-size="10">Friends</text>
+    <rect x="650" y="115" width="110" height="30" fill="#f5c6bc"/><text x="705" y="135" text-anchor="middle" font-size="10">Drink</text>
+    <rect x="650" y="150" width="110" height="30" fill="#f5c6bc"/><text x="705" y="170" text-anchor="middle" font-size="10">Pizza</text>
+    <rect x="650" y="185" width="110" height="30" fill="#f5c6bc"/><text x="705" y="205" text-anchor="middle" font-size="10">Fire</text>
+    <rect x="650" y="220" width="110" height="30" fill="#f5c6bc"/><text x="705" y="240" text-anchor="middle" font-size="10">Oven</text>
+    <rect x="650" y="255" width="110" height="30" fill="#f5c6bc"/><text x="705" y="275" text-anchor="middle" font-size="10">Electricity/Gas</text>
+  </g>
+
+  <rect x="280" y="320" width="120" height="30" fill="#f5c6bc"/><text x="340" y="340" text-anchor="middle" font-size="12">Vendor Manages</text>
+  <rect x="420" y="320" width="110" height="30" fill="#c8e6c0"/><text x="475" y="340" text-anchor="middle" font-size="12">We manage</text>
+</svg>

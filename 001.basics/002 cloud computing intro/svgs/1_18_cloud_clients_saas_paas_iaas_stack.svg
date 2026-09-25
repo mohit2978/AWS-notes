@@ -1,0 +1,29 @@
+<svg viewBox="0 0 620 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="620" height="380" fill="#ffffff"/>
+  <rect x="140" y="20" width="340" height="60" fill="#3f6fb0"/>
+  <text x="310" y="42" text-anchor="middle" font-size="15" fill="#fff">Cloud Clients</text>
+  <text x="310" y="62" text-anchor="middle" font-size="11" fill="#fff">Web browser, mobile app, thin client</text>
+
+  <line x1="310" y1="80" x2="310" y2="110" stroke="#333" stroke-width="2" marker-end="url(#ar18)"/>
+  <line x1="300" y1="110" x2="300" y2="80" stroke="#333" stroke-width="2" marker-end="url(#ar18)"/>
+
+  <text x="60" y="145" font-size="12">Application</text>
+  <rect x="150" y="120" width="320" height="55" fill="#3f6fb0"/>
+  <text x="310" y="140" text-anchor="middle" font-size="14" fill="#fff">SaaS</text>
+  <text x="310" y="158" text-anchor="middle" font-size="10" fill="#fff">CRM, Email, games, virtual desktop</text>
+
+  <text x="65" y="200" font-size="12">Platform</text>
+  <rect x="150" y="175" width="320" height="55" fill="#5686c9"/>
+  <text x="310" y="195" text-anchor="middle" font-size="14" fill="#fff">PaaS</text>
+  <text x="310" y="212" text-anchor="middle" font-size="10" fill="#fff">Database, web server, deployment tools</text>
+
+  <text x="45" y="260" font-size="12">Infrastructure</text>
+  <rect x="150" y="230" width="320" height="60" fill="#8aa9d6"/>
+  <text x="310" y="252" text-anchor="middle" font-size="14" fill="#fff">IaaS</text>
+  <text x="310" y="270" text-anchor="middle" font-size="10" fill="#fff">Virtual machines, servers, storage,</text>
+  <text x="310" y="283" text-anchor="middle" font-size="10" fill="#fff">networks</text>
+
+  <defs>
+    <marker id="ar18" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker>
+  </defs>
+</svg>

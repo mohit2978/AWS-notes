@@ -1,0 +1,23 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="800" height="420" fill="#ffffff"/>
+  <text x="400" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#c0392b">Client Server Architecture</text>
+
+  <text x="200" y="90" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">Client = Which request a resource</text>
+  <text x="600" y="90" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">Server = Which respond to the resource</text>
+
+  <rect x="110" y="140" width="180" height="140" fill="none" stroke="#000000" stroke-width="3"/>
+  <text x="200" y="195" text-anchor="middle" font-size="16" fill="#1e8449">google.com</text>
+  <text x="200" y="245" text-anchor="middle" font-size="16" fill="#1e8449">Browser</text>
+
+  <rect x="500" y="140" width="180" height="140" fill="none" stroke="#000000" stroke-width="3"/>
+  <text x="590" y="215" text-anchor="middle" font-size="16" fill="#c0392b">Server</text>
+
+  <path d="M290,180 C 400,140 480,140 500,180" fill="none" stroke="#7b241c" stroke-width="3" marker-end="url(#arrow1)"/>
+  <path d="M500,250 C 400,300 300,300 290,250" fill="none" stroke="#7b241c" stroke-width="3" marker-end="url(#arrow1)"/>
+
+  <defs>
+    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7b241c"/>
+    </marker>
+  </defs>
+</svg>

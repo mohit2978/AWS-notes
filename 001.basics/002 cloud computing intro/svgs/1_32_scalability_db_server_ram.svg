@@ -1,0 +1,19 @@
+<svg viewBox="0 0 620 260" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="620" height="260" fill="#ffffff"/>
+  <text x="420" y="30" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">Scalability</text>
+
+  <rect x="40" y="60" width="180" height="120" fill="none" stroke="#000" stroke-width="2.5"/>
+  <text x="130" y="100" text-anchor="middle" font-size="16">DB Server</text>
+  <text x="130" y="135" text-anchor="middle" font-size="14" fill="#7d3c98">100 DB's</text>
+  <text x="130" y="165" text-anchor="middle" font-size="14" fill="#7d3c98">10TB</text>
+
+  <text x="400" y="80" text-anchor="middle" font-size="15" fill="#1a237e">32 GB RAM</text>
+  <line x1="400" y1="160" x2="400" y2="95" stroke="#7b241c" stroke-width="3" marker-end="url(#a30)"/>
+  <text x="400" y="180" text-anchor="middle" font-size="15" fill="#1a237e">8GB RAM</text>
+
+  <text x="310" y="230" text-anchor="middle" font-size="13" fill="#2e86c1">Increasing the capacity of the server is called Scalability</text>
+
+  <defs>
+    <marker id="a30" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7b241c"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,17 @@
+<svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="600" height="260" fill="#ffffff"/>
+  <g font-size="16" fill="#7d3c98">
+    <text x="20" y="40">http://192.168.10.20:80</text>
+    <text x="20" y="75">http://192.168.10.20:8080</text>
+    <text x="255" y="75" fill="#1e8449" font-size="18">&#10003;</text>
+    <text x="20" y="110" fill="#2e86c1">http://192.168.10.20</text>
+  </g>
+
+  <rect x="330" y="20" width="220" height="150" fill="none" stroke="#000" stroke-width="2.5"/>
+  <text x="440" y="60" text-anchor="middle" font-size="17" fill="#c0392b">Application</text>
+  <text x="440" y="100" text-anchor="middle" font-size="17" fill="#c0392b">tomcat</text>
+  <text x="480" y="135" text-anchor="middle" font-size="17" fill="#c0392b">8080</text>
+
+  <text x="380" y="205" text-anchor="middle" font-size="16" font-weight="bold" fill="#c0392b">Server</text>
+  <text x="480" y="205" font-size="16" font-weight="bold">192.168.10.20</text>
+</svg>

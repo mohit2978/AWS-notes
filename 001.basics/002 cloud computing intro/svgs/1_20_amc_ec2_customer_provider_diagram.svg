@@ -1,0 +1,58 @@
+<svg viewBox="0 0 980 320" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="980" height="320" fill="#ffffff"/>
+  <text x="150" y="20" font-size="11" fill="#c0392b">Amazon Management Console</text>
+  <text x="150" y="35" font-size="10" fill="#7d3c98">AWS is a group of Services</text>
+  <text x="150" y="50" font-size="10" fill="#7d3c98">Elastic Compute Cloud</text>
+  <text x="150" y="65" font-size="10" fill="#1a5276">In EC2, we create VM's</text>
+  <text x="150" y="80" font-size="10" fill="#1a5276">VM's = Instances</text>
+  <text x="150" y="95" font-size="9" fill="#1e8449">EC2 is a AWS web service</text>
+  <text x="150" y="108" font-size="9" fill="#1e8449">where you can create VM's</text>
+
+  <circle cx="180" cy="190" r="22" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <line x1="180" y1="212" x2="180" y2="255" stroke="#c0392b" stroke-width="2"/>
+  <line x1="180" y1="225" x2="160" y2="245" stroke="#c0392b" stroke-width="2"/>
+  <line x1="180" y1="225" x2="200" y2="245" stroke="#c0392b" stroke-width="2"/>
+  <line x1="180" y1="255" x2="165" y2="280" stroke="#c0392b" stroke-width="2"/>
+  <line x1="180" y1="255" x2="195" y2="280" stroke="#c0392b" stroke-width="2"/>
+  <text x="155" y="295" font-size="11" fill="#c0392b">SaiKiran</text>
+  <text x="165" y="310" font-size="11" fill="#2e86c1">Client</text>
+  <text x="205" y="155" font-size="11" fill="#2e86c1">.zip</text>
+  <text x="195" y="170" font-size="11" fill="#2e86c1">java, .net</text>
+  <text x="180" y="190" font-size="11">Application</text>
+
+  <path d="M205,200 C 320,150 380,150 500,175" stroke="#c0392b" stroke-width="1.5" fill="none" marker-end="url(#a20)"/>
+  <text x="345" y="155" font-size="11" fill="#c0392b">AMC</text>
+
+  <text x="500" y="135" font-size="10">Customer</text>
+  <text x="500" y="150" font-size="10">Responsibility</text>
+  <text x="500" y="205" font-size="10">Provider</text>
+
+  <rect x="585" y="95" width="100" height="130" fill="none" stroke="#000" stroke-width="1.5"/>
+  <text x="635" y="115" text-anchor="middle" font-size="11" fill="#c0392b">Application</text>
+  <line x1="585" y1="123" x2="685" y2="123" stroke="#000"/>
+  <text x="635" y="140" text-anchor="middle" font-size="11" fill="#c0392b">Data</text>
+  <line x1="585" y1="148" x2="685" y2="148" stroke="#000"/>
+  <text x="635" y="165" text-anchor="middle" font-size="11" fill="#c0392b">OS</text>
+  <line x1="585" y1="173" x2="685" y2="173" stroke="#000"/>
+  <text x="635" y="190" text-anchor="middle" font-size="11" fill="#c0392b">Virtualization</text>
+  <line x1="585" y1="198" x2="685" y2="198" stroke="#000"/>
+  <text x="635" y="215" text-anchor="middle" font-size="11" fill="#c0392b">Network, DC</text>
+
+  <text x="700" y="140" font-size="11" fill="#2e86c1">IAAS</text>
+  <text x="700" y="155" font-size="11" fill="#e67e22">AWS</text>
+  <text x="740" y="120" font-size="11" fill="#2e86c1">EC2</text>
+
+  <path d="M685,115 C 750,85 800,85 850,100" stroke="#c0392b" stroke-width="1.5" fill="none" marker-end="url(#a20)"/>
+
+  <rect x="850" y="95" width="100" height="120" fill="none" stroke="#000" stroke-width="1.5"/>
+  <text x="900" y="115" text-anchor="middle" font-size="10">VM VM VM VM VM</text>
+  <line x1="850" y1="155" x2="950" y2="155" stroke="#000"/>
+  <text x="900" y="145" text-anchor="middle" font-size="10" fill="#1a5276">Hypervisor</text>
+  <line x1="850" y1="180" x2="950" y2="180" stroke="#000"/>
+  <text x="900" y="170" text-anchor="middle" font-size="10" fill="#1a5276">Hardware</text>
+  <text x="900" y="235" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">Physical Host Machine</text>
+
+  <defs>
+    <marker id="a20" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#c0392b"/></marker>
+  </defs>
+</svg>

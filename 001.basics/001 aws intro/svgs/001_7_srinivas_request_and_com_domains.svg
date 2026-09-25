@@ -1,0 +1,35 @@
+<svg viewBox="0 0 780 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="780" height="380" fill="#ffffff"/>
+
+  <text x="110" y="160" font-size="12" font-weight="bold" fill="#c0392b">Srinivas Request</text>
+  <path d="M115,175 Q 140,140 165,175 T 215,175" fill="none" stroke="#7b241c" stroke-width="2"/>
+  <line x1="215" y1="130" x2="215" y2="220" stroke="#7d3c98" stroke-width="2"/>
+  <text x="200" y="125" font-size="11" fill="#7d3c98">Local DNS</text>
+
+  <path d="M215,175 Q 250,140 285,175 T 340,175" fill="none" stroke="#7b241c" stroke-width="2"/>
+  <line x1="340" y1="130" x2="340" y2="220" stroke="#7d3c98" stroke-width="2"/>
+  <text x="330" y="120" font-size="11" fill="#7d3c98">RNS</text>
+
+  <path d="M340,175 Q 400,130 460,175 T 545,175" fill="none" stroke="#7b241c" stroke-width="2"/>
+  <text x="460" y="150" font-size="11" fill="#2e4053">TLD</text>
+  <text x="470" y="205" font-size="11" fill="#1a237e">Request</text>
+
+  <circle cx="655" cy="245" r="170" fill="none" stroke="#000" stroke-width="1.5"/>
+  <g font-size="11" fill="#1e8449">
+    <text x="610" y="95">amazon.com</text>
+    <text x="655" y="112">gmail.com</text>
+    <text x="565" y="125">facebook.com</text>
+    <text x="695" y="150">flipkart.com</text>
+    <text x="555" y="163">yahoo.com</text>
+    <text x="640" y="185" fill="#2e86c1">google.com</text>
+    <text x="710" y="185">alibaba.com</text>
+    <text x="530" y="200">nareshit.com</text>
+    <text x="700" y="220">netflix.com</text>
+    <text x="555" y="235">twitter.com</text>
+    <text x="695" y="252">zomato.com</text>
+    <text x="565" y="260">bookmyshow.com</text>
+    <text x="620" y="290">irctc.com</text>
+    <text x="600" y="315">Many Many</text>
+  </g>
+  <text x="640" y="410" font-size="12" fill="#000">.com</text>
+</svg>

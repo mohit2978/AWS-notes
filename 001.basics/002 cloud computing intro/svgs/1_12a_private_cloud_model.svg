@@ -1,0 +1,40 @@
+<svg viewBox="0 0 780 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="780" height="380" fill="#ffffff"/>
+  <text x="240" y="30" text-anchor="middle" font-size="15" font-weight="bold">Private Cloud Model</text>
+  <ellipse cx="230" cy="220" rx="220" ry="150" fill="none" stroke="#888" stroke-width="1.5"/>
+
+  <polygon points="70,90 380,90 400,115 380,140 70,140 90,115" fill="#3f8fc4"/>
+  <text x="225" y="118" text-anchor="middle" font-size="12" fill="#fff">Your application</text>
+
+  <polygon points="70,150 380,150 400,175 380,200 70,200 90,175" fill="#3f8fc4"/>
+  <text x="225" y="178" text-anchor="middle" font-size="12" fill="#fff">Your information</text>
+
+  <rect x="80" y="215" width="300" height="35" fill="#3f8fc4"/>
+  <text x="230" y="230" text-anchor="middle" font-size="10" fill="#fff">Enterprise IT Resources</text>
+  <text x="230" y="243" text-anchor="middle" font-size="9" fill="#fff">virtualized infrastructure</text>
+
+  <rect x="110" y="250" width="240" height="20" fill="#ffffff" stroke="#3f8fc4"/>
+  <text x="230" y="264" text-anchor="middle" font-size="10">Cloud Internetwork</text>
+
+  <rect x="70" y="275" width="150" height="35" fill="#ffffff" stroke="#3f8fc4"/>
+  <text x="145" y="290" text-anchor="middle" font-size="9">Enterprise Infrastructure</text>
+  <text x="145" y="303" text-anchor="middle" font-size="9">Network-server-storage</text>
+
+  <rect x="240" y="275" width="150" height="35" fill="#ffffff" stroke="#3f8fc4"/>
+  <text x="315" y="290" text-anchor="middle" font-size="9">Provider Infrastructure</text>
+  <text x="315" y="303" text-anchor="middle" font-size="9">Network-server-storage</text>
+
+  <text x="530" y="60" font-size="13" font-weight="bold">BENEFITS</text>
+  <g font-size="11">
+    <text x="530" y="80">Higher Security and Privacy</text>
+    <text x="530" y="95">More Control</text>
+    <text x="530" y="110">Cost and energy efficiency</text>
+  </g>
+  <text x="530" y="140" font-size="13" font-weight="bold">DISADVANTAGES</text>
+  <g font-size="11">
+    <text x="530" y="160">Restricted Area</text>
+    <text x="530" y="175">Inflexible Pricing</text>
+    <text x="530" y="190">Limited Scalability</text>
+    <text x="530" y="205">Additional Skills</text>
+  </g>
+</svg>

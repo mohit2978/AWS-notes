@@ -1,0 +1,47 @@
+<svg viewBox="0 0 820 720" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="820" height="720" fill="#ffffff"/>
+
+  <text x="290" y="30" font-size="14" font-weight="bold" fill="#c0392b">1a</text>
+  <rect x="80" y="40" width="310" height="180" rx="15" fill="none" stroke="#000" stroke-width="3"/>
+  <text x="245" y="130" text-anchor="middle" font-size="13" fill="#1e8449">VPC (green)</text>
+  <rect x="115" y="90" width="60" height="60" fill="none" stroke="#1e8449" stroke-width="3"/>
+  <rect x="260" y="150" width="45" height="45" fill="none" stroke="#1a237e" stroke-width="3"/>
+  <text x="280" y="140" text-anchor="middle" font-size="11" fill="#1a237e">VPC (blue)</text>
+
+  <text x="720" y="30" font-size="14" font-weight="bold" fill="#c0392b">1b</text>
+  <rect x="510" y="40" width="310" height="180" rx="15" fill="none" stroke="#000" stroke-width="3"/>
+  <rect x="620" y="90" width="60" height="60" fill="none" stroke="#1e8449" stroke-width="3"/>
+  <rect x="720" y="150" width="45" height="45" fill="none" stroke="#1a237e" stroke-width="3"/>
+
+  <text x="480" y="690" font-size="14" font-weight="bold" fill="#c0392b">1c</text>
+  <rect x="270" y="500" width="310" height="180" rx="15" fill="none" stroke="#000" stroke-width="3"/>
+  <rect x="380" y="550" width="60" height="60" fill="none" stroke="#1e8449" stroke-width="3"/>
+  <rect x="480" y="610" width="45" height="45" fill="none" stroke="#1a237e" stroke-width="3"/>
+
+  <!-- red lines connecting AZ boxes -->
+  <line x1="390" y1="130" x2="510" y2="130" stroke="#c0392b" stroke-width="3"/>
+  <line x1="205" y1="220" x2="425" y2="530" stroke="#c0392b" stroke-width="3"/>
+  <line x1="680" y1="220" x2="440" y2="570" stroke="#c0392b" stroke-width="3"/>
+
+  <!-- green freeform VPC region spanning all 3 AZ boxes -->
+  <path d="M110,70 C 220,40 330,70 330,120 C 400,140 430,180 380,220 C 460,260 430,340 350,330
+           C 420,420 470,520 400,580 C 440,640 420,690 360,680 C 300,700 260,670 280,620
+           C 200,600 180,560 220,520
+           C 180,440 190,340 250,300
+           C 200,260 180,200 220,160
+           C 170,140 150,100 110,70 Z"
+        fill="none" stroke="#1e8449" stroke-width="2.5"/>
+
+  <!-- blue freeform VPC region spanning all 3 AZ boxes -->
+  <path d="M170,140 C 260,110 330,150 300,200 C 420,180 560,150 620,120 C 700,140 760,170 730,220
+           C 780,260 750,330 690,320
+           C 720,420 700,520 650,560 C 620,610 560,640 520,620
+           C 480,650 440,630 460,590
+           C 400,560 380,500 420,470
+           C 320,440 260,360 300,320
+           C 240,300 190,220 170,140 Z"
+        fill="none" stroke="#1a237e" stroke-width="2.5"/>
+
+  <text x="80" y="710" font-size="12" fill="#1e8449">Green VPC's EC2 instances span AZ 1a, 1b and 1c</text>
+  <text x="470" y="710" font-size="12" fill="#1a237e">Blue VPC's EC2 instances also span 1a, 1b and 1c</text>
+</svg>

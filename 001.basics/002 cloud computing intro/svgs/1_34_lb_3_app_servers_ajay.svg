@@ -1,0 +1,41 @@
+<svg viewBox="0 0 780 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="780" height="420" fill="#ffffff"/>
+  <g font-size="11" fill="#7d3c98">
+    <text x="30" y="40">http://192.168.10.20/index.html</text>
+    <text x="30" y="58">http://192.168.10.21/index.html</text>
+    <text x="30" y="76">http://192.168.10.22/index.html</text>
+  </g>
+  <text x="30" y="115" font-size="13" fill="#c0392b">http://ajay.com</text>
+
+  <rect x="330" y="30" width="70" height="290" fill="none" stroke="#000" stroke-width="2.5"/>
+  <text x="365" y="335" text-anchor="middle" font-size="13">LB</text>
+
+  <rect x="490" y="50" width="105" height="65" fill="none" stroke="#000" stroke-width="1.5"/>
+  <text x="542" y="75" text-anchor="middle" font-size="11" fill="#c0392b">Application</text>
+  <text x="542" y="92" text-anchor="middle" font-size="11" fill="#7d3c98">index.html</text>
+  <text x="542" y="112" text-anchor="middle" font-size="10">Server</text>
+  <text x="605" y="78" font-size="10">192.168.10.20</text>
+  <text x="605" y="93" font-size="10" fill="#2e86c1">IP</text>
+
+  <rect x="490" y="145" width="105" height="65" fill="none" stroke="#000" stroke-width="1.5"/>
+  <text x="542" y="170" text-anchor="middle" font-size="11" fill="#c0392b">Application</text>
+  <text x="542" y="187" text-anchor="middle" font-size="11" fill="#7d3c98">index.html</text>
+  <text x="542" y="207" text-anchor="middle" font-size="10">Server</text>
+  <text x="605" y="173" font-size="10">192.168.10.21</text>
+  <text x="605" y="188" font-size="10" fill="#2e86c1">IP</text>
+
+  <rect x="490" y="240" width="105" height="65" fill="none" stroke="#000" stroke-width="1.5"/>
+  <text x="542" y="265" text-anchor="middle" font-size="11" fill="#c0392b">Application</text>
+  <text x="542" y="282" text-anchor="middle" font-size="11" fill="#7d3c98">index.html</text>
+  <text x="542" y="302" text-anchor="middle" font-size="10">Server</text>
+  <text x="605" y="268" font-size="10">192.168.10.22</text>
+  <text x="605" y="283" font-size="10" fill="#2e86c1">IP</text>
+
+  <path d="M400,150 L490,82" stroke="#000" stroke-width="1.5" marker-end="url(#a31)"/>
+  <path d="M400,180 L490,177" stroke="#000" stroke-width="1.5" marker-end="url(#a31)"/>
+  <path d="M400,210 L490,272" stroke="#000" stroke-width="1.5" marker-end="url(#a31)"/>
+
+  <defs>
+    <marker id="a31" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#000"/></marker>
+  </defs>
+</svg>

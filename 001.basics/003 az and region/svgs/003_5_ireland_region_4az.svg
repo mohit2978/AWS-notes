@@ -1,0 +1,27 @@
+<svg viewBox="0 0 620 480" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="620" height="480" fill="#ffffff"/>
+  <text x="330" y="70" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">eu-west-1</text>
+  <ellipse cx="330" cy="270" rx="240" ry="220" fill="none" stroke="#000" stroke-width="2.5"/>
+
+  <rect x="190" y="155" width="90" height="60" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <text x="235" y="145" text-anchor="middle" font-size="13" fill="#c0392b">1a</text>
+  <rect x="390" y="155" width="90" height="60" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <text x="435" y="145" text-anchor="middle" font-size="13" fill="#c0392b">1b</text>
+  <rect x="190" y="345" width="90" height="60" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <text x="235" y="415" text-anchor="middle" font-size="13" fill="#c0392b">1c</text>
+  <rect x="390" y="345" width="90" height="60" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <text x="435" y="415" text-anchor="middle" font-size="13" fill="#c0392b">1d</text>
+
+  <g stroke="#1e8449" stroke-width="1.8">
+    <line x1="280" y1="185" x2="390" y2="185"/>
+    <line x1="235" y1="215" x2="235" y2="345"/>
+    <line x1="435" y1="215" x2="435" y2="345"/>
+    <line x1="280" y1="375" x2="390" y2="375"/>
+    <line x1="280" y1="185" x2="435" y2="375"/>
+    <line x1="390" y1="185" x2="235" y2="375"/>
+  </g>
+
+  <text x="235" y="455" text-anchor="middle" font-size="13" fill="#c0392b">Ireland</text>
+  <text x="500" y="440" font-size="12" fill="#7d3c98">Another</text>
+  <text x="500" y="455" font-size="12" fill="#7d3c98">Region</text>
+</svg>

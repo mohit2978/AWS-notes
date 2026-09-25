@@ -1,0 +1,38 @@
+<svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="720" height="320" fill="#ffffff"/>
+  <text x="210" y="30" text-anchor="middle" font-size="15" font-weight="bold">Hybrid Cloud Model</text>
+
+  <rect x="50" y="60" width="230" height="130" fill="none" stroke="#000" stroke-width="1.5"/>
+  <text x="60" y="80" font-size="12">Hybrid</text>
+  <ellipse cx="105" cy="140" rx="45" ry="35" fill="none" stroke="#3f8fc4" stroke-width="1.5"/>
+  <text x="105" y="135" text-anchor="middle" font-size="10">Private/</text>
+  <text x="105" y="150" text-anchor="middle" font-size="10">Internal</text>
+
+  <ellipse cx="220" cy="140" rx="40" ry="32" fill="#ffffff" stroke="#3f8fc4" stroke-width="1.5"/>
+  <text x="220" y="135" text-anchor="middle" font-size="9">Public/</text>
+  <text x="220" y="148" text-anchor="middle" font-size="9">external</text>
+  <line x1="150" y1="140" x2="180" y2="140" stroke="#3f8fc4" stroke-width="1.5"/>
+
+  <path d="M330,150 C 300,110 340,60 400,70 C 420,40 480,45 490,80 C 540,70 570,120 540,150 C 560,190 510,220 470,210 C 450,240 390,235 380,205 C 340,210 310,180 330,150 Z" fill="#3f8fc4"/>
+  <text x="440" y="150" text-anchor="middle" font-size="13" fill="#fff">The Cloud</text>
+  <circle cx="405" cy="110" r="20" fill="#fff"/>
+  <circle cx="460" cy="105" r="16" fill="#fff"/>
+  <circle cx="380" cy="170" r="14" fill="#fff"/>
+  <circle cx="430" cy="180" r="20" fill="#fff"/>
+
+  <line x1="260" y1="140" x2="330" y2="145" stroke="#333" stroke-width="1"/>
+
+  <text x="530" y="60" font-size="13" font-weight="bold">BENEFITS</text>
+  <g font-size="11">
+    <text x="530" y="80">Higher Security and Privacy</text>
+    <text x="530" y="95">More Control</text>
+    <text x="530" y="110">Cost and energy efficiency</text>
+  </g>
+  <text x="530" y="140" font-size="13" font-weight="bold">DISADVANTAGES</text>
+  <g font-size="11">
+    <text x="530" y="160">Restricted Area</text>
+    <text x="530" y="175">Inflexible Pricing</text>
+    <text x="530" y="190">Limited Scalability</text>
+    <text x="530" y="205">Additional Skills</text>
+  </g>
+</svg>

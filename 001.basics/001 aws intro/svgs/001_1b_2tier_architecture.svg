@@ -1,0 +1,69 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#c0392b">2-Tier Architecture</text>
+
+  <text x="150" y="60" font-size="14" font-weight="bold" fill="#2471a3">Client Layer</text>
+  <text x="600" y="60" font-size="14" font-weight="bold" fill="#2471a3">Server Layer</text>
+
+  <!-- 8 client boxes -->
+  <g font-size="13" fill="#000000">
+    <g id="clients">
+      <rect x="110" y="80" width="90" height="30" fill="none" stroke="#000" stroke-width="2"/>
+      <text x="155" y="100" text-anchor="middle">Client</text>
+      <rect x="110" y="125" width="90" height="30" fill="none" stroke="#000" stroke-width="2"/>
+      <text x="155" y="145" text-anchor="middle">Client</text>
+      <rect x="110" y="170" width="90" height="30" fill="none" stroke="#000" stroke-width="2"/>
+      <text x="155" y="190" text-anchor="middle">Client</text>
+      <rect x="110" y="215" width="90" height="30" fill="none" stroke="#000" stroke-width="2"/>
+      <text x="155" y="235" text-anchor="middle">Client</text>
+      <rect x="110" y="260" width="90" height="30" fill="none" stroke="#000" stroke-width="2"/>
+      <text x="155" y="280" text-anchor="middle">Client</text>
+      <rect x="110" y="305" width="90" height="30" fill="none" stroke="#000" stroke-width="2"/>
+      <text x="155" y="325" text-anchor="middle">Client</text>
+      <rect x="110" y="350" width="90" height="30" fill="none" stroke="#000" stroke-width="2"/>
+      <text x="155" y="370" text-anchor="middle">Client</text>
+      <rect x="110" y="395" width="90" height="30" fill="none" stroke="#000" stroke-width="2"/>
+      <text x="155" y="415" text-anchor="middle">Client</text>
+    </g>
+  </g>
+
+  <!-- server box -->
+  <rect x="500" y="80" width="290" height="345" fill="none" stroke="#000" stroke-width="3"/>
+  <text x="645" y="115" text-anchor="middle" font-size="13" fill="#7d3c98">(java, .net, python etc)</text>
+  <text x="645" y="133" text-anchor="middle" font-size="14" fill="#7d3c98">Application</text>
+  <line x1="645" y1="140" x2="645" y2="180" stroke="#2e86c1" stroke-width="2" marker-end="url(#arrow2)"/>
+  <text x="645" y="200" text-anchor="middle" font-size="14" fill="#7d3c98">Database</text>
+  <text x="645" y="218" text-anchor="middle" font-size="12" fill="#7d3c98">(Mysql, Oracle, MSSQL etc)</text>
+
+  <line x1="500" y1="240" x2="790" y2="240" stroke="#000" stroke-width="2"/>
+  <text x="645" y="265" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">Operating System</text>
+  <line x1="500" y1="280" x2="790" y2="280" stroke="#000" stroke-width="2"/>
+  <text x="645" y="305" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">Hardware</text>
+  <line x1="500" y1="320" x2="790" y2="320" stroke="#000" stroke-width="2"/>
+  <text x="645" y="345" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">Server</text>
+
+  <text x="805" y="215" font-size="12" fill="#000">4GB RAM</text>
+  <text x="805" y="230" font-size="12" fill="#000">2 CPU</text>
+  <text x="805" y="245" font-size="12" fill="#000">50GB HDD</text>
+
+  <!-- arrows from clients to server -->
+  <g stroke="#c0392b" stroke-width="1.5" fill="none" marker-end="url(#arrow2r)">
+    <path d="M200,95 C 350,95 400,95 500,150"/>
+    <path d="M200,140 C 350,140 400,140 500,160"/>
+    <path d="M200,185 C 350,185 400,185 500,170"/>
+    <path d="M200,230 C 350,230 400,220 500,185"/>
+    <path d="M200,275 C 350,275 420,230 500,195"/>
+    <path d="M200,320 C 350,320 430,240 500,205"/>
+    <path d="M200,365 C 350,365 440,250 500,215"/>
+    <path d="M200,410 C 350,410 450,260 500,225"/>
+  </g>
+
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2e86c1"/>
+    </marker>
+    <marker id="arrow2r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+</svg>

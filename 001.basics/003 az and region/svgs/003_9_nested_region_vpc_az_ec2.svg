@@ -1,0 +1,20 @@
+<svg viewBox="0 0 700 460" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="700" height="460" fill="#ffffff"/>
+  <rect x="30" y="30" width="640" height="400" fill="none" stroke="#000" stroke-width="3"/>
+  <text x="620" y="410" font-size="18" font-weight="bold" fill="#c0392b">AWS</text>
+
+  <rect x="70" y="70" width="560" height="320" fill="none" stroke="#000" stroke-width="3"/>
+  <text x="580" y="360" font-size="18" font-weight="bold" fill="#c0392b">Region</text>
+
+  <rect x="110" y="110" width="480" height="240" fill="none" stroke="#000" stroke-width="3"/>
+  <text x="540" y="315" font-size="18" font-weight="bold" fill="#c0392b">VPC</text>
+
+  <rect x="150" y="150" width="400" height="160" fill="none" stroke="#000" stroke-width="3"/>
+  <text x="420" y="270" font-size="18" font-weight="bold" fill="#c0392b">AZ's</text>
+
+  <rect x="200" y="185" width="90" height="90" fill="none" stroke="#000" stroke-width="3"/>
+  <text x="245" y="235" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a237e">EC2</text>
+
+  <rect x="320" y="185" width="90" height="90" fill="none" stroke="#000" stroke-width="3"/>
+  <text x="365" y="235" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a237e">EC2</text>
+</svg>

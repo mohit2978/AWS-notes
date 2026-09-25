@@ -1,0 +1,91 @@
+<svg viewBox="0 0 950 500" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="950" height="500" fill="#ffffff"/>
+  <text x="475" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#c0392b">3-Tier Architecture</text>
+
+  <text x="130" y="55" font-size="13" font-weight="bold" fill="#1e8449">Client Layer</text>
+  <text x="440" y="55" font-size="13" font-weight="bold" fill="#1e8449">Application Layer</text>
+  <text x="750" y="55" font-size="13" font-weight="bold" fill="#1e8449">Database Layer</text>
+  <text x="330" y="70" font-size="11" fill="#1e8449">Public</text>
+  <text x="560" y="70" font-size="11" fill="#1e8449">Private</text>
+  <text x="820" y="70" font-size="11" fill="#1e8449">Private</text>
+
+  <!-- clients -->
+  <g font-size="12">
+    <rect x="80" y="90" width="80" height="26" fill="none" stroke="#000" stroke-width="2"/><text x="120" y="108" text-anchor="middle">Client</text>
+    <rect x="80" y="125" width="80" height="26" fill="none" stroke="#000" stroke-width="2"/><text x="120" y="143" text-anchor="middle">Client</text>
+    <rect x="80" y="160" width="80" height="26" fill="none" stroke="#000" stroke-width="2"/><text x="120" y="178" text-anchor="middle">Client</text>
+    <rect x="80" y="195" width="80" height="26" fill="none" stroke="#000" stroke-width="2"/><text x="120" y="213" text-anchor="middle">Client</text>
+    <rect x="80" y="230" width="80" height="26" fill="none" stroke="#000" stroke-width="2"/><text x="120" y="248" text-anchor="middle">Client</text>
+    <rect x="80" y="265" width="80" height="26" fill="none" stroke="#000" stroke-width="2"/><text x="120" y="283" text-anchor="middle">Client</text>
+    <rect x="80" y="300" width="80" height="26" fill="none" stroke="#000" stroke-width="2"/><text x="120" y="318" text-anchor="middle">Client</text>
+    <rect x="80" y="335" width="80" height="26" fill="none" stroke="#000" stroke-width="2"/><text x="120" y="353" text-anchor="middle">Client</text>
+  </g>
+
+  <!-- webserver box -->
+  <rect x="255" y="90" width="120" height="230" fill="none" stroke="#7d3c98" stroke-width="2"/>
+  <text x="315" y="115" text-anchor="middle" font-size="11">Takes the requests</text>
+  <text x="315" y="130" text-anchor="middle" font-size="11">and redirect to the</text>
+  <text x="315" y="145" text-anchor="middle" font-size="11">application server</text>
+  <text x="315" y="200" text-anchor="middle" font-size="11" font-weight="bold">NO CODE</text>
+  <text x="270" y="310" font-size="11" fill="#c0392b">WebServer</text>
+
+  <!-- application server box -->
+  <rect x="440" y="90" width="200" height="180" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="540" y="112" text-anchor="middle" font-size="11" fill="#2e86c1">(java, .net, python etc)</text>
+  <text x="540" y="128" text-anchor="middle" font-size="12" fill="#2e86c1">Application</text>
+  <text x="540" y="144" text-anchor="middle" font-size="12" fill="#2e86c1">Code</text>
+  <line x1="440" y1="155" x2="640" y2="155" stroke="#000"/>
+  <text x="540" y="178" text-anchor="middle" font-size="12" fill="#c0392b">Operating System</text>
+  <line x1="440" y1="190" x2="640" y2="190" stroke="#000"/>
+  <text x="540" y="212" text-anchor="middle" font-size="12" fill="#c0392b">Hardware</text>
+  <text x="540" y="260" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">Application Server</text>
+  <text x="655" y="112" font-size="10">4GB RAM</text>
+  <text x="655" y="126" font-size="10" fill="#2e86c1">IP</text>
+  <text x="655" y="140" font-size="10" fill="#2e86c1">Hostname</text>
+
+  <!-- database box -->
+  <rect x="720" y="90" width="200" height="180" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="820" y="130" text-anchor="middle" font-size="13" fill="#2e86c1">Database</text>
+  <text x="820" y="148" text-anchor="middle" font-size="12" fill="#2e86c1">Data</text>
+  <line x1="720" y1="155" x2="920" y2="155" stroke="#000"/>
+  <text x="820" y="178" text-anchor="middle" font-size="12" fill="#c0392b">Operating System</text>
+  <line x1="720" y1="190" x2="920" y2="190" stroke="#000"/>
+  <text x="820" y="212" text-anchor="middle" font-size="12" fill="#c0392b">Hardware</text>
+  <text x="820" y="260" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">Database Server</text>
+  <text x="935" y="112" font-size="10">4GB RAM</text>
+  <text x="935" y="126" font-size="10" fill="#2e86c1">IP</text>
+  <text x="935" y="140" font-size="10" fill="#2e86c1">Hostname</text>
+
+  <path d="M640,155 L720,155" stroke="#1a237e" stroke-width="2" marker-end="url(#a4)"/>
+  <path d="M720,175 L640,175" stroke="#1a237e" stroke-width="2" marker-end="url(#a4)"/>
+
+  <g stroke="#c0392b" stroke-width="1.2" fill="none" marker-end="url(#a4r)">
+    <path d="M160,103 C 200,103 220,120 255,150"/>
+    <path d="M160,138 C 200,138 220,140 255,155"/>
+    <path d="M160,173 C 200,173 220,165 255,165"/>
+    <path d="M160,208 C 200,208 220,180 255,175"/>
+    <path d="M160,243 C 200,243 220,200 255,185"/>
+    <path d="M160,278 C 200,260 220,210 255,195"/>
+    <path d="M160,313 C 200,280 220,220 255,205"/>
+    <path d="M160,348 C 200,300 220,230 255,215"/>
+  </g>
+
+  <g font-size="11" fill="#2e4053">
+    <text x="480" y="370">Application Server = The Server which has application hosted is called Application Server</text>
+    <text x="465" y="390">Database Server = The Server which has database installed / the server which stores the data is called Database Server</text>
+    <text x="470" y="410">Devices communicate with each other in the network with IP and HostName</text>
+    <text x="470" y="430">IP = Internet Protocol = IP is a unique identifier for a device in the network</text>
+    <text x="470" y="450">HostName = Name of the Server</text>
+    <text x="470" y="470">WebServer = Which takes the requests and redirect to the application Server</text>
+    <text x="470" y="490">Application Server should be always in Private Network</text>
+  </g>
+
+  <defs>
+    <marker id="a4" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1a237e"/>
+    </marker>
+    <marker id="a4r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+</svg>

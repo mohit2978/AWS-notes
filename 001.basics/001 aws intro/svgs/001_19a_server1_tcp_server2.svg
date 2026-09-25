@@ -1,0 +1,22 @@
+<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <rect width="680" height="320" fill="#ffffff"/>
+  <text x="40" y="30" font-size="13" font-weight="bold" fill="#c0392b">HTTP Over TCP / IP</text>
+  <text x="40" y="55" font-size="13" font-weight="bold" fill="#1a237e">Transmission Control Protocol</text>
+
+  <rect x="60" y="90" width="160" height="150" fill="none" stroke="#000" stroke-width="2.5"/>
+  <text x="140" y="170" text-anchor="middle" font-size="14" fill="#c0392b">Server 1</text>
+  <text x="65" y="260" font-size="13" font-weight="bold" fill="#c0392b">HOST</text>
+  <text x="185" y="260" font-size="13" font-weight="bold" fill="#1a237e">IP</text>
+
+  <rect x="460" y="90" width="160" height="150" fill="none" stroke="#000" stroke-width="2.5"/>
+  <text x="540" y="170" text-anchor="middle" font-size="14" fill="#c0392b">Server 2</text>
+  <text x="465" y="260" font-size="13" font-weight="bold" fill="#c0392b">HOST</text>
+  <text x="585" y="260" font-size="13" font-weight="bold" fill="#1a237e">IP</text>
+
+  <line x1="220" y1="150" x2="460" y2="150" stroke="#1a237e" stroke-width="2"/>
+  <text x="340" y="135" text-anchor="middle" font-size="13" fill="#7d3c98">http / https</text>
+  <text x="340" y="170" text-anchor="middle" font-size="13" fill="#1a237e">TCP</text>
+
+  <text x="40" y="295" font-size="13" fill="#7d3c98">TCP establish the connection between 2 hosts</text>
+  <text x="40" y="315" font-size="13" fill="#7d3c98">TCP is like a bridge</text>
+</svg>
