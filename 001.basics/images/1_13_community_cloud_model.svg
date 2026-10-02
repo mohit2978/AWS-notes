@@ -1,0 +1,85 @@
+<svg height="400" width="880" viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes reverse-flow {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 24; }
+      }
+      .flow-blue { stroke: #2563eb; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-green { stroke: #16a34a; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-red { stroke: #dc2626; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-purple { stroke: #9333ea; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-amber { stroke: #d97706; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+    </style>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="400" fill="#f8fafc" rx="12"/>
+  <text x="440" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Community Cloud Model</text>
+  <text x="440" y="58" text-anchor="middle" font-size="13" fill="#64748b">Shared cloud infrastructure tailored for a specific community of organizations</text>
+
+  <!-- Left: Org 1 -->
+  <g transform="translate(50, 110)">
+    <rect width="180" height="130" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect width="180" height="28" rx="8" fill="#dbeafe"/>
+    <text x="90" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Organization A</text>
+    <text x="90" y="65" text-anchor="middle" font-size="11" fill="#475569">Hospital / Healthcare</text>
+    <rect x="15" y="80" width="150" height="26" rx="4" fill="#eff6ff"/>
+    <text x="90" y="97" text-anchor="middle" font-size="10" font-weight="bold" fill="#2563eb">Shares patient registry</text>
+  </g>
+
+  <!-- Animated flow into Community Cloud -->
+  <path d="M 235 175 L 325 210" class="flow-blue" marker-end="url(#arr-blue)"/>
+
+  <!-- Center: Community Cloud -->
+  <g transform="translate(330, 95)">
+    <rect width="240" height="220" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <rect width="240" height="32" rx="12" fill="#dcfce7"/>
+    <text x="120" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">&#128101; Community Cloud</text>
+    <text x="120" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">Common Mission &amp; Security</text>
+    <rect x="20" y="75" width="200" height="40" rx="6" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="120" y="95" text-anchor="middle" font-size="10" font-weight="bold" fill="#166534">Shared Datacenter &amp; DB</text>
+    <text x="120" y="108" text-anchor="middle" font-size="9" fill="#64748b">Common HIPAA Compliance</text>
+
+    <text x="120" y="145" text-anchor="middle" font-size="10" fill="#475569">Joint Governance &amp; Costs</text>
+    <rect x="20" y="160" width="200" height="36" rx="4" fill="#fef2f2" stroke="#fca5a5"/>
+    <text x="120" y="176" text-anchor="middle" font-size="9" font-weight="bold" fill="#991b1b">&#9888; Shared Responsibility Issue:</text>
+    <text x="120" y="188" text-anchor="middle" font-size="8" fill="#991b1b">Allocating security / cost accountability</text>
+  </g>
+
+  <!-- Right: Org 2 -->
+  <g transform="translate(650, 110)">
+    <rect width="180" height="130" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="2"/>
+    <rect width="180" height="28" rx="8" fill="#f3e8ff"/>
+    <text x="90" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#7e22ce">Organization B</text>
+    <text x="90" y="65" text-anchor="middle" font-size="11" fill="#475569">Research University</text>
+    <rect x="15" y="80" width="150" height="26" rx="4" fill="#faf5ff"/>
+    <text x="90" y="97" text-anchor="middle" font-size="10" font-weight="bold" fill="#9333ea">Accesses Clinical Data</text>
+  </g>
+
+  <!-- Animated flow Org 2 into Community Cloud -->
+  <path d="M 645 175 L 575 210" class="flow-purple" marker-end="url(#arr-purple)"/>
+
+  <!-- Footer -->
+  <rect x="180" y="340" width="520" height="32" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="440" y="361" text-anchor="middle" font-size="12" fill="#475569">Community Cloud delivers cost sharing while maintaining industry-specific compliance.</text>
+</svg>

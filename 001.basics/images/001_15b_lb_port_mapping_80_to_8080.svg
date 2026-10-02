@@ -1,0 +1,106 @@
+<svg height="380" width="900" viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes reverse-flow {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 24; }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.7; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.05); }
+      }
+      .flow-blue { stroke: #2563eb; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-green { stroke: #16a34a; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-red { stroke: #dc2626; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-purple { stroke: #9333ea; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-amber { stroke: #d97706; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-gray { stroke: #64748b; stroke-width: 2; stroke-dasharray: 6 4; animation: flow 1.4s linear infinite; fill: none; }
+    </style>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="380" fill="#f8fafc" rx="12"/>
+  <text x="450" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#16a34a">✓ The CORRECT Way: Load Balancer Port Mapping (80 → 8080)</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#64748b">Customer uses default port 80 • LB transparently translates to port 8080 on App servers</text>
+
+  <!-- Client side -->
+  <g transform="translate(40, 110)">
+    <rect width="210" height="160" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <rect width="210" height="30" rx="8" fill="#dcfce7"/>
+    <text x="105" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#166534">✓ Clean Default URL</text>
+    <rect x="15" y="45" width="180" height="35" rx="4" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="105" y="67" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">http://boom.com</text>
+    <text x="105" y="105" text-anchor="middle" font-size="11" fill="#475569">Implicit Port 80 (HTTP)</text>
+    <text x="105" y="125" text-anchor="middle" font-size="11" fill="#16a34a">✓ No port number needed!</text>
+  </g>
+
+  <!-- Inbound Traffic Arrow (Port 80) -->
+  <path d="M 255 160 L 335 160" class="flow-blue" marker-end="url(#arr-blue)"/>
+  <rect x="260" y="135" width="70" height="20" rx="4" fill="#dbeafe"/>
+  <text x="295" y="149" text-anchor="middle" font-size="9" font-weight="bold" fill="#1e40af">Port 80 In</text>
+
+  <!-- Outbound Return Arrow (Port 80) -->
+  <path d="M 335 220 L 255 220" class="flow-green" marker-end="url(#arr-green)"/>
+  <rect x="260" y="228" width="70" height="20" rx="4" fill="#dcfce7"/>
+  <text x="295" y="242" text-anchor="middle" font-size="9" font-weight="bold" fill="#166534">Port 80 Out</text>
+
+  <!-- Load Balancer with Port Translation -->
+  <g transform="translate(340, 85)">
+    <rect width="180" height="210" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+    <rect width="180" height="32" rx="10" fill="#fef3c7"/>
+    <text x="90" y="21" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">LOAD BALANCER</text>
+    
+    <!-- Translation Engine Box -->
+    <rect x="15" y="45" width="150" height="65" rx="6" fill="#fffbeb" stroke="#fcd34d"/>
+    <text x="90" y="65" text-anchor="middle" font-size="11" font-weight="bold" fill="#b45309">PORT TRANSLATION</text>
+    <text x="90" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#2563eb">80 → 8080</text>
+    <text x="90" y="100" text-anchor="middle" font-size="10" fill="#16a34a">(Return: 8080 → 80)</text>
+
+    <text x="90" y="140" text-anchor="middle" font-size="11" fill="#475569">Public Interface: :80</text>
+    <text x="90" y="160" text-anchor="middle" font-size="11" fill="#475569">Backend Targets: :8080</text>
+    <rect x="15" y="172" width="150" height="22" rx="4" fill="#eff6ff"/>
+    <text x="90" y="187" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">Automatic Remapping</text>
+  </g>
+
+  <!-- Arrows to App Servers (Port 8080) -->
+  <!-- App 1 -->
+  <rect x="600" y="85" width="260" height="55" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
+  <text x="730" y="108" text-anchor="middle" font-size="12" font-weight="bold" fill="#7e22ce">Tomcat App Server #1</text>
+  <text x="730" y="125" text-anchor="middle" font-size="10" fill="#64748b">Port :8080 (Private VPC)</text>
+  <path d="M 525 150 C 555 150, 565 112, 595 112" class="flow-purple" marker-end="url(#arr-purple)"/>
+
+  <!-- App 2 -->
+  <rect x="600" y="160" width="260" height="55" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
+  <text x="730" y="183" text-anchor="middle" font-size="12" font-weight="bold" fill="#7e22ce">Tomcat App Server #2</text>
+  <text x="730" y="200" text-anchor="middle" font-size="10" fill="#64748b">Port :8080 (Private VPC)</text>
+  <path d="M 525 190 L 595 190" class="flow-purple" marker-end="url(#arr-purple)"/>
+
+  <!-- App 3 -->
+  <rect x="600" y="235" width="260" height="55" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
+  <text x="730" y="258" text-anchor="middle" font-size="12" font-weight="bold" fill="#7e22ce">Tomcat App Server #3</text>
+  <text x="730" y="275" text-anchor="middle" font-size="10" fill="#64748b">Port :8080 (Private VPC)</text>
+  <path d="M 525 230 C 555 230, 565 262, 595 262" class="flow-purple" marker-end="url(#arr-purple)"/>
+
+  <!-- Bottom explanation -->
+  <rect x="180" y="325" width="540" height="32" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="450" y="346" text-anchor="middle" font-size="12" fill="#475569">App servers run on any internal port (8080, 3000, 5000); LB always exposes standard 80/443.</text>
+</svg>

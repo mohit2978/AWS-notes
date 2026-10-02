@@ -1,0 +1,150 @@
+<svg height="380" width="860" viewBox="0 0 860 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.04); opacity: 0.9; }
+      }
+      .flow-blue {
+        stroke: #2563eb;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-green {
+        stroke: #16a34a;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-amber {
+        stroke: #d97706;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-purple {
+        stroke: #9333ea;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-red {
+        stroke: #dc2626;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-cyan {
+        stroke: #0284c7;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+    </style>
+    <filter id="drop-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-cyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7"/>
+    </marker>
+  </defs>
+
+  <rect width="860" height="380" fill="#f8fafc" rx="16"/>
+
+  <text x="430" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">OSI Layer 1: The Physical Layer (Host-to-Host Transmission)</text>
+  <text x="430" y="52" text-anchor="middle" font-size="12" fill="#64748b">Raw bitstream transmission (electrical, optical, radio waves) connecting Network Interface Cards (NICs)</text>
+
+  <!-- Network Boundary Box -->
+  <rect x="25" y="70" width="810" height="255" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#drop-shadow)"/>
+  <rect x="25" y="70" width="810" height="28" rx="14" fill="#f1f5f9"/>
+  <text x="40" y="89" font-size="11" font-weight="bold" fill="#475569">LOCAL AREA NETWORK (ETHERNET / 802.3)</text>
+  <text x="820" y="89" text-anchor="end" font-size="10" font-weight="bold" fill="#2563eb">PHYSICAL LAYER 1</text>
+
+  <!-- Left: Host 1 (Boy) -->
+  <g transform="translate(60, 115)">
+    <rect width="190" height="175" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <rect width="190" height="28" rx="12" fill="#2563eb"/>
+    <text x="95" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">HOST 1 (Sender / Boy)</text>
+    
+    <circle cx="95" cy="65" r="24" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <text x="95" y="73" text-anchor="middle" font-size="24">👦</text>
+
+    <text x="95" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Application / OS Stack</text>
+    <text x="95" y="120" text-anchor="middle" font-size="10" fill="#64748b">IP: 192.168.1.10</text>
+
+    <!-- NIC Port -->
+    <g transform="translate(130, 132)">
+      <rect width="50" height="30" rx="4" fill="#1e293b"/>
+      <text x="25" y="18" text-anchor="middle" font-size="9" font-weight="bold" fill="#38bdf8">RJ45</text>
+      <text x="25" y="27" text-anchor="middle" font-size="7" fill="#94a3b8">NIC Port</text>
+    </g>
+  </g>
+
+  <!-- Physical Cable (Animated Ethernet / Optical Flow) -->
+  <path d="M 240,262 L 610,262" class="flow-blue" stroke-width="4"/>
+  <path d="M 610,268 L 240,268" class="flow-cyan" stroke-width="2"/>
+
+  <!-- Physical Medium Badge Center -->
+  <g transform="translate(345, 175)">
+    <rect width="170" height="90" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#drop-shadow)"/>
+    <rect width="170" height="22" rx="10" fill="#0284c7"/>
+    <text x="85" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Physical Transmission</text>
+    
+    <text x="85" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#0369a1">Cat6 Copper / Fiber</text>
+    <text x="85" y="58" text-anchor="middle" font-size="10" font-family="Courier, monospace" font-weight="bold" fill="#2563eb">10110010 01101001</text>
+    <text x="85" y="74" text-anchor="middle" font-size="9" fill="#64748b">Voltages / Light Pulses</text>
+  </g>
+
+  <!-- Right: Host 2 (Girl) -->
+  <g transform="translate(610, 115)">
+    <rect width="190" height="175" rx="12" fill="#faf5ff" stroke="#9333ea" stroke-width="2"/>
+    <rect width="190" height="28" rx="12" fill="#9333ea"/>
+    <text x="95" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">HOST 2 (Receiver / Girl)</text>
+    
+    <circle cx="95" cy="65" r="24" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.5"/>
+    <text x="95" y="73" text-anchor="middle" font-size="24">👧</text>
+
+    <text x="95" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#7e22ce">Application / OS Stack</text>
+    <text x="95" y="120" text-anchor="middle" font-size="10" fill="#64748b">IP: 192.168.1.20</text>
+
+    <!-- NIC Port -->
+    <g transform="translate(10, 132)">
+      <rect width="50" height="30" rx="4" fill="#1e293b"/>
+      <text x="25" y="18" text-anchor="middle" font-size="9" font-weight="bold" fill="#38bdf8">RJ45</text>
+      <text x="25" y="27" text-anchor="middle" font-size="7" fill="#94a3b8">NIC Port</text>
+    </g>
+  </g>
+
+  <!-- Bottom Legend -->
+  <rect x="180" y="340" width="500" height="26" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="430" y="357" text-anchor="middle" font-size="11" font-weight="500" fill="#334155">
+    Layer 1 defines cables, connectors, pinouts, voltages, and data rates (e.g. 1 Gbps / 10 Gbps)
+  </text>
+</svg>

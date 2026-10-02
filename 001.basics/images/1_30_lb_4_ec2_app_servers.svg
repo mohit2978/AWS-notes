@@ -1,0 +1,114 @@
+<svg height="440" width="860" viewBox="0 0 860 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes reverse-flow {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 24; }
+      }
+      .flow-blue { stroke: #2563eb; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-green { stroke: #16a34a; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-red { stroke: #dc2626; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-purple { stroke: #9333ea; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-amber { stroke: #d97706; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+    </style>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="860" height="440" fill="#f8fafc" rx="12"/>
+  <text x="430" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Load Balancer Fanning Out to 4 EC2 Instances</text>
+  <text x="430" y="58" text-anchor="middle" font-size="13" fill="#64748b">Normal baseline load: 4 homogeneous EC2 application servers (4GB RAM each)</text>
+
+  <!-- Load Balancer -->
+  <g transform="translate(60, 95)">
+    <rect width="130" height="280" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+    <rect width="130" height="35" rx="10" fill="#fef3c7"/>
+    <text x="65" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400e">LOAD BALANCER</text>
+    <text x="65" y="70" text-anchor="middle" font-size="12" font-weight="bold" fill="#0f172a">AWS ELB</text>
+    <text x="65" y="90" text-anchor="middle" font-size="10" fill="#64748b">Port 80/443</text>
+    
+    <rect x="15" y="115" width="100" height="40" rx="4" fill="#fffbeb" stroke="#fcd34d"/>
+    <text x="65" y="132" text-anchor="middle" font-size="10" font-weight="bold" fill="#b45309">Traffic Policy</text>
+    <text x="65" y="146" text-anchor="middle" font-size="9" fill="#16a34a">Round Robin</text>
+
+    <text x="65" y="195" text-anchor="middle" font-size="10" fill="#64748b">Monitors health</text>
+    <text x="65" y="210" text-anchor="middle" font-size="10" fill="#64748b">every 30s</text>
+    <rect x="15" y="230" width="100" height="26" rx="4" fill="#dcfce7"/>
+    <text x="65" y="247" text-anchor="middle" font-size="10" font-weight="bold" fill="#166534">4 Healthy Nodes</text>
+  </g>
+
+  <!-- 4 EC2 Servers on Right -->
+
+  <!-- EC2 Server 1 -->
+  <g transform="translate(480, 90)">
+    <rect width="320" height="58" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="15" y="11" width="36" height="36" rx="4" fill="#dbeafe"/>
+    <text x="33" y="34" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">1</text>
+    
+    <text x="140" y="28" font-size="12" font-weight="bold" fill="#1e40af">EC2 Application Server #1</text>
+    <text x="140" y="46" font-size="11" fill="#64748b">4GB RAM • 2 vCPU • 192.168.10.20</text>
+  </g>
+
+  <!-- Animated flow from LB to EC2 1 -->
+  <path d="M 195 235 C 320 235, 360 119, 475 119" class="flow-blue" marker-end="url(#arr-blue)"/>
+
+  <!-- EC2 Server 2 -->
+  <g transform="translate(480, 162)">
+    <rect width="320" height="58" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="15" y="11" width="36" height="36" rx="4" fill="#dbeafe"/>
+    <text x="33" y="34" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">2</text>
+    
+    <text x="140" y="28" font-size="12" font-weight="bold" fill="#1e40af">EC2 Application Server #2</text>
+    <text x="140" y="46" font-size="11" fill="#64748b">4GB RAM • 2 vCPU • 192.168.10.21</text>
+  </g>
+
+  <!-- Animated flow from LB to EC2 2 -->
+  <path d="M 195 235 C 320 235, 360 191, 475 191" class="flow-blue" marker-end="url(#arr-blue)"/>
+
+  <!-- EC2 Server 3 -->
+  <g transform="translate(480, 234)">
+    <rect width="320" height="58" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="15" y="11" width="36" height="36" rx="4" fill="#dbeafe"/>
+    <text x="33" y="34" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">3</text>
+    
+    <text x="140" y="28" font-size="12" font-weight="bold" fill="#1e40af">EC2 Application Server #3</text>
+    <text x="140" y="46" font-size="11" fill="#64748b">4GB RAM • 2 vCPU • 192.168.10.22</text>
+  </g>
+
+  <!-- Animated flow from LB to EC2 3 -->
+  <path d="M 195 235 C 320 235, 360 263, 475 263" class="flow-blue" marker-end="url(#arr-blue)"/>
+
+  <!-- EC2 Server 4 -->
+  <g transform="translate(480, 306)">
+    <rect width="320" height="58" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="15" y="11" width="36" height="36" rx="4" fill="#dbeafe"/>
+    <text x="33" y="34" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">4</text>
+    
+    <text x="140" y="28" font-size="12" font-weight="bold" fill="#1e40af">EC2 Application Server #4</text>
+    <text x="140" y="46" font-size="11" fill="#64748b">4GB RAM • 2 vCPU • 192.168.10.23</text>
+  </g>
+
+  <!-- Animated flow from LB to EC2 4 -->
+  <path d="M 195 235 C 320 235, 360 335, 475 335" class="flow-blue" marker-end="url(#arr-blue)"/>
+
+  <rect x="220" y="395" width="460" height="32" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="450" y="416" text-anchor="middle" font-size="12" fill="#475569">All instances use identical specs to guarantee consistent response times.</text>
+</svg>

@@ -1,0 +1,164 @@
+<svg height="320" width="940" viewBox="0 0 940 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.04); opacity: 0.9; }
+      }
+      .flow-blue {
+        stroke: #2563eb;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-green {
+        stroke: #16a34a;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-amber {
+        stroke: #d97706;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-purple {
+        stroke: #9333ea;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-red {
+        stroke: #dc2626;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-cyan {
+        stroke: #0284c7;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+    </style>
+    <filter id="drop-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-cyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7"/>
+    </marker>
+  </defs>
+
+  <rect width="940" height="320" fill="#f8fafc" rx="16"/>
+
+  <text x="470" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">AWS Availability Zones: Clusters of Distinct Datacenters</text>
+  <text x="470" y="48" text-anchor="middle" font-size="12" fill="#64748b">An Availability Zone (AZ) is not a single building; it is a cluster of discrete physical datacenters</text>
+
+  <!-- AZ 1a Card -->
+  <g transform="translate(30, 75)">
+    <rect width="270" height="185" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2" filter="url(#drop-shadow)"/>
+    <rect width="270" height="30" rx="12" fill="#2563eb"/>
+    <text x="135" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Availability Zone 1a (ap-south-1a)</text>
+
+    <!-- DC 1 -->
+    <g transform="translate(15, 42)">
+      <rect width="240" height="38" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="15" y="24" font-size="11" font-weight="bold" fill="#1e40af">🏢 Datacenter 1: Dadar Facility</text>
+    </g>
+    <!-- DC 2 -->
+    <g transform="translate(15, 86)">
+      <rect width="240" height="38" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="15" y="24" font-size="11" font-weight="bold" fill="#1e40af">🏢 Datacenter 2: Andheri Facility</text>
+    </g>
+    <!-- DC 3 -->
+    <g transform="translate(15, 130)">
+      <rect width="240" height="38" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="15" y="24" font-size="11" font-weight="bold" fill="#1e40af">🏢 Datacenter 3: Airoli Facility</text>
+    </g>
+  </g>
+
+  <!-- Sync Fiber between 1a and 1b -->
+  <path d="M 300,165 L 340,165" class="flow-purple" stroke-width="2.5"/>
+
+  <!-- AZ 1b Card -->
+  <g transform="translate(335, 75)">
+    <rect width="270" height="185" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2" filter="url(#drop-shadow)"/>
+    <rect width="270" height="30" rx="12" fill="#16a34a"/>
+    <text x="135" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Availability Zone 1b (ap-south-1b)</text>
+
+    <!-- DC 1 -->
+    <g transform="translate(15, 42)">
+      <rect width="240" height="38" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="15" y="24" font-size="11" font-weight="bold" fill="#15803d">🏢 Datacenter 1: Juhu Facility</text>
+    </g>
+    <!-- DC 2 -->
+    <g transform="translate(15, 86)">
+      <rect width="240" height="38" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="15" y="24" font-size="11" font-weight="bold" fill="#15803d">🏢 Datacenter 2: Thane Facility</text>
+    </g>
+    <!-- DC 3 -->
+    <g transform="translate(15, 130)">
+      <rect width="240" height="38" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="15" y="24" font-size="11" font-weight="bold" fill="#15803d">🏢 Datacenter 3: Kalyan Facility</text>
+    </g>
+  </g>
+
+  <!-- Sync Fiber between 1b and 1c -->
+  <path d="M 605,165 L 640,165" class="flow-purple" stroke-width="2.5"/>
+
+  <!-- AZ 1c Card -->
+  <g transform="translate(640, 75)">
+    <rect width="270" height="185" rx="12" fill="#ffffff" stroke="#ca8a04" stroke-width="2" filter="url(#drop-shadow)"/>
+    <rect width="270" height="30" rx="12" fill="#ca8a04"/>
+    <text x="135" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Availability Zone 1c (ap-south-1c)</text>
+
+    <!-- DC 1 -->
+    <g transform="translate(15, 42)">
+      <rect width="240" height="38" rx="6" fill="#fefce8" stroke="#fef08a" stroke-width="1"/>
+      <text x="15" y="24" font-size="11" font-weight="bold" fill="#854d0e">🏢 Datacenter 1: Kurla Facility</text>
+    </g>
+    <!-- DC 2 -->
+    <g transform="translate(15, 86)">
+      <rect width="240" height="38" rx="6" fill="#fefce8" stroke="#fef08a" stroke-width="1"/>
+      <text x="15" y="24" font-size="11" font-weight="bold" fill="#854d0e">🏢 Datacenter 2: Churchgate Facility</text>
+    </g>
+    <!-- DC 3 -->
+    <g transform="translate(15, 130)">
+      <rect width="240" height="38" rx="6" fill="#fefce8" stroke="#fef08a" stroke-width="1"/>
+      <text x="15" y="24" font-size="11" font-weight="bold" fill="#854d0e">🏢 Datacenter 3: Dharavi Facility</text>
+    </g>
+  </g>
+
+  <!-- Bottom Legend -->
+  <rect x="200" y="278" width="540" height="26" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="470" y="295" text-anchor="middle" font-size="11" font-weight="500" fill="#334155">
+    Each AZ has independent power feeds, backup generators, and flood defense; connected by &lt;1ms dark fiber
+  </text>
+</svg>

@@ -1,0 +1,102 @@
+<svg height="460" width="940" viewBox="0 0 940 460" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes reverse-flow {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 24; }
+      }
+      .flow-blue { stroke: #2563eb; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-green { stroke: #16a34a; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-red { stroke: #dc2626; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-purple { stroke: #9333ea; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-amber { stroke: #d97706; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+    </style>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="940" height="460" fill="#f8fafc" rx="12"/>
+  <text x="470" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">AWS Shared Responsibility Model for EC2 (IaaS)</text>
+  <text x="470" y="60" text-anchor="middle" font-size="13" fill="#64748b">Security IN the Cloud (Customer) vs. Security OF the Cloud (AWS)</text>
+
+  <!-- Left: Developer -->
+  <g transform="translate(40, 130)">
+    <rect width="140" height="160" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect width="140" height="28" rx="8" fill="#dbeafe"/>
+    <text x="70" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Customer</text>
+    <text x="70" y="65" text-anchor="middle" font-size="11" fill="#475569">Application Code</text>
+    <rect x="15" y="80" width="110" height="28" rx="4" fill="#eff6ff"/>
+    <text x="70" y="98" text-anchor="middle" font-size="10" font-weight="bold" fill="#2563eb">app.zip</text>
+    <text x="70" y="130" text-anchor="middle" font-size="10" fill="#64748b">Responsible for Data</text>
+  </g>
+
+  <path d="M 185 210 L 265 210" class="flow-blue" marker-end="url(#arr-blue)"/>
+
+  <!-- Center Stack: Layered Responsibilities -->
+  <g transform="translate(270, 95)">
+    <!-- Customer Zone -->
+    <rect width="360" height="150" rx="8" fill="#fdf4ff" stroke="#a21caf" stroke-width="2"/>
+    <rect width="360" height="26" rx="8" fill="#fae8ff"/>
+    <text x="180" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#86198f">&#128100; CUSTOMER RESPONSIBILITY (Security IN the Cloud)</text>
+    
+    <rect x="20" y="38" width="320" height="30" rx="4" fill="#ffffff" stroke="#f0abfc"/>
+    <text x="180" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="#a21caf">Customer Data &amp; Credentials</text>
+
+    <rect x="20" y="74" width="320" height="30" rx="4" fill="#ffffff" stroke="#f0abfc"/>
+    <text x="180" y="94" text-anchor="middle" font-size="11" font-weight="bold" fill="#a21caf">Application Code, Libraries &amp; Configurations</text>
+
+    <rect x="20" y="110" width="320" height="30" rx="4" fill="#ffffff" stroke="#f0abfc"/>
+    <text x="180" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#a21caf">Operating System Updates &amp; Security Patches</text>
+
+    <!-- AWS Zone -->
+    <g transform="translate(0, 160)">
+      <rect width="360" height="150" rx="8" fill="#ecfdf5" stroke="#16a34a" stroke-width="2"/>
+      <rect width="360" height="26" rx="8" fill="#dcfce7"/>
+      <text x="180" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#166534">&#9729; AWS RESPONSIBILITY (Security OF the Cloud)</text>
+      
+      <rect x="20" y="38" width="320" height="30" rx="4" fill="#ffffff" stroke="#86efac"/>
+      <text x="180" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="#166534">Virtualization &amp; Hypervisor Security</text>
+
+      <rect x="20" y="74" width="320" height="30" rx="4" fill="#ffffff" stroke="#86efac"/>
+      <text x="180" y="94" text-anchor="middle" font-size="11" font-weight="bold" fill="#166534">Physical Network, Routers &amp; Facilities</text>
+
+      <rect x="20" y="110" width="320" height="30" rx="4" fill="#ffffff" stroke="#86efac"/>
+      <text x="180" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#166534">Physical Datacenters, Hardware &amp; Power</text>
+    </g>
+  </g>
+
+  <!-- Right: Apartment Analogy Callout -->
+  <g transform="translate(660, 130)">
+    <rect width="240" height="230" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <rect width="240" height="30" rx="10" fill="#f8fafc"/>
+    <text x="120" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#0f172a">&#127960; Apartment Analogy</text>
+    <g font-size="11" fill="#475569" transform="translate(15, 45)">
+      <text y="15" font-weight="bold" fill="#b45309">• AWS = Building Builder</text>
+      <text y="32">Constructs walls, elevators,</text>
+      <text y="48">security gate &amp; roof.</text>
+      <text y="75" font-weight="bold" fill="#1e40af">• You = Apartment Tenant</text>
+      <text y="92">If you leave the flat door</text>
+      <text y="108">open and a thief enters,</text>
+      <text y="125">it is NOT the builder's fault!</text>
+      <text y="150" font-weight="bold" fill="#dc2626">✓ Lock your VM!</text>
+    </g>
+  </g>
+</svg>

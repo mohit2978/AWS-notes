@@ -1,0 +1,99 @@
+<svg height="360" width="800" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes reverse-flow {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 24; }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.7; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.05); }
+      }
+      .flow-blue { stroke: #2563eb; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-green { stroke: #16a34a; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-red { stroke: #dc2626; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-purple { stroke: #9333ea; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-amber { stroke: #d97706; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-gray { stroke: #64748b; stroke-width: 2; stroke-dasharray: 6 4; animation: flow 1.4s linear infinite; fill: none; }
+    </style>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="360" fill="#f8fafc" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">HTTP Over TCP/IP: The Reliable Connection Bridge</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#64748b">TCP 3-Way Handshake establishes reliable track before HTTP application packets flow</text>
+
+  <!-- Server 1 -->
+  <g transform="translate(60, 95)">
+    <rect width="180" height="170" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect width="180" height="30" rx="10" fill="#dbeafe"/>
+    <text x="90" y="21" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">Host 1 (Client / Server)</text>
+    <text x="90" y="65" text-anchor="middle" font-size="12" fill="#475569">IP: 192.168.1.10</text>
+    <rect x="20" y="85" width="140" height="30" rx="4" fill="#f1f5f9"/>
+    <text x="90" y="105" text-anchor="middle" font-size="11" font-weight="bold" fill="#334155">TCP Socket</text>
+    <text x="90" y="145" text-anchor="middle" font-size="11" fill="#64748b">Initiates Handshake</text>
+  </g>
+
+  <!-- Center Bridge (TCP) -->
+  <g transform="translate(290, 85)">
+    <!-- Bridge background -->
+    <rect width="220" height="190" rx="10" fill="#ffffff" stroke="#9333ea" stroke-width="1.5"/>
+    <rect width="220" height="26" rx="10" fill="#f3e8ff"/>
+    <text x="110" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#7e22ce">TCP 3-Way Handshake Bridge</text>
+
+    <!-- Handshake arrows -->
+    <!-- 1. SYN -->
+    <path d="M 20 50 L 195 50" class="flow-blue" marker-end="url(#arr-blue)"/>
+    <text x="110" y="44" text-anchor="middle" font-size="10" font-weight="bold" fill="#2563eb">1. SYN →</text>
+
+    <!-- 2. SYN-ACK -->
+    <path d="M 195 90 L 20 90" class="flow-green" marker-end="url(#arr-green)"/>
+    <text x="110" y="84" text-anchor="middle" font-size="10" font-weight="bold" fill="#166534">← 2. SYN-ACK</text>
+
+    <!-- 3. ACK -->
+    <path d="M 20 130 L 195 130" class="flow-purple" marker-end="url(#arr-purple)"/>
+    <text x="110" y="124" text-anchor="middle" font-size="10" font-weight="bold" fill="#9333ea">3. ACK (Connected) →</text>
+
+    <!-- HTTP Payload train -->
+    <rect x="30" y="150" width="160" height="24" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="110" y="166" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">HTTP Packets Transit Here</text>
+  </g>
+
+  <!-- Connection to Server 1 &amp; Server 2 -->
+  <path d="M 240 180 L 290 180" class="flow-gray"/>
+  <path d="M 510 180 L 560 180" class="flow-gray"/>
+
+  <!-- Server 2 -->
+  <g transform="translate(560, 95)">
+    <rect width="180" height="170" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <rect width="180" height="30" rx="10" fill="#dcfce7"/>
+    <text x="90" y="21" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">Host 2 (Target Server)</text>
+    <text x="90" y="65" text-anchor="middle" font-size="12" fill="#475569">IP: 142.250.190.46</text>
+    <rect x="20" y="85" width="140" height="30" rx="4" fill="#f1f5f9"/>
+    <text x="90" y="105" text-anchor="middle" font-size="11" font-weight="bold" fill="#334155">TCP Socket</text>
+    <text x="90" y="145" text-anchor="middle" font-size="11" fill="#64748b">Acknowledges &amp; Listens</text>
+  </g>
+
+  <!-- Analogy footer -->
+  <rect x="150" y="300" width="500" height="32" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="400" y="321" text-anchor="middle" font-size="12" fill="#475569">Analogy: TCP is the railway track / bridge; HTTP packets are the trains crossing it.</text>
+</svg>

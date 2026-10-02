@@ -1,0 +1,120 @@
+<svg height="380" width="900" viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes reverse-flow {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 24; }
+      }
+      .flow-blue { stroke: #2563eb; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-green { stroke: #16a34a; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-red { stroke: #dc2626; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-purple { stroke: #9333ea; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-amber { stroke: #d97706; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+    </style>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="380" fill="#f8fafc" rx="12"/>
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">DNS Traversal: Reaching google.com among .com Domains</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#64748b">Request chain: Laptop → Local DNS → RNS → .com TLD → Authoritative Domain Registry</text>
+
+  <!-- Laptop -->
+  <g transform="translate(40, 110)">
+    <rect width="130" height="150" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect width="130" height="28" rx="8" fill="#dbeafe"/>
+    <text x="65" y="19" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">Srinivas's Laptop</text>
+    <text x="65" y="60" text-anchor="middle" font-size="11" fill="#475569">Browser</text>
+    <rect x="15" y="80" width="100" height="24" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="65" y="96" text-anchor="middle" font-size="10" font-weight="bold" fill="#2563eb">google.com</text>
+  </g>
+
+  <!-- Arrow 1: Laptop -> Local DNS -->
+  <path d="M 175 185 L 225 185" class="flow-blue" marker-end="url(#arr-blue)"/>
+  <text x="200" y="175" text-anchor="middle" font-size="10" font-weight="bold" fill="#2563eb">1. Query</text>
+
+  <!-- Local DNS -->
+  <g transform="translate(230, 110)">
+    <rect width="130" height="150" rx="8" fill="#ffffff" stroke="#9333ea" stroke-width="2"/>
+    <rect width="130" height="28" rx="8" fill="#f3e8ff"/>
+    <text x="65" y="19" text-anchor="middle" font-size="11" font-weight="bold" fill="#7e22ce">Local DNS</text>
+    <text x="65" y="60" text-anchor="middle" font-size="11" fill="#475569">Resolver</text>
+    <text x="65" y="80" text-anchor="middle" font-size="10" fill="#64748b">Cache Miss</text>
+    <rect x="15" y="100" width="100" height="24" rx="4" fill="#faf5ff" stroke="#e9d5ff"/>
+    <text x="65" y="116" text-anchor="middle" font-size="10" font-weight="bold" fill="#9333ea">Recursive</text>
+  </g>
+
+  <!-- Arrow 2: Local DNS -> RNS -->
+  <path d="M 365 185 L 415 185" class="flow-purple" marker-end="url(#arr-purple)"/>
+  <text x="390" y="175" text-anchor="middle" font-size="10" font-weight="bold" fill="#9333ea">2. Forward</text>
+
+  <!-- Root Name Server -->
+  <g transform="translate(420, 110)">
+    <rect width="130" height="150" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    <rect width="130" height="28" rx="8" fill="#fee2e2"/>
+    <text x="65" y="19" text-anchor="middle" font-size="11" font-weight="bold" fill="#991b1b">Root Name Server</text>
+    <text x="65" y="60" text-anchor="middle" font-size="11" fill="#475569">Top Root (.)</text>
+    <text x="65" y="80" text-anchor="middle" font-size="10" fill="#64748b">Matches suffix</text>
+    <rect x="15" y="100" width="100" height="24" rx="4" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="65" y="116" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc2626">.com TLD</text>
+  </g>
+
+  <!-- Arrow 3: RNS -> TLD -->
+  <path d="M 555 185 L 605 185" class="flow-red" marker-end="url(#arr-red)"/>
+  <text x="580" y="175" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc2626">3. Delegate</text>
+
+  <!-- .com TLD Server -->
+  <g transform="translate(610, 110)">
+    <rect width="130" height="150" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+    <rect width="130" height="28" rx="8" fill="#fef3c7"/>
+    <text x="65" y="19" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400e">.com TLD</text>
+    <text x="65" y="60" text-anchor="middle" font-size="11" fill="#475569">TLD Registry</text>
+    <text x="65" y="80" text-anchor="middle" font-size="10" fill="#64748b">Nameserver db</text>
+    <rect x="15" y="100" width="100" height="24" rx="4" fill="#fffbeb" stroke="#fde68a"/>
+    <text x="65" y="116" text-anchor="middle" font-size="10" font-weight="bold" fill="#d97706">Find google</text>
+  </g>
+
+  <!-- Arrow 4: TLD -> Target Domain Set -->
+  <path d="M 745 185 L 785 185" class="flow-amber" marker-end="url(#arr-amber)"/>
+
+  <!-- .com Domains Group -->
+  <g transform="translate(790, 80)">
+    <rect width="90" height="210" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <text x="45" y="24" text-anchor="middle" font-size="11" font-weight="bold" fill="#166534">.com Domains</text>
+    <rect x="10" y="38" width="70" height="22" rx="4" fill="#f1f5f9"/>
+    <text x="45" y="53" text-anchor="middle" font-size="9" fill="#64748b">yahoo.com</text>
+    
+    <rect x="10" y="68" width="70" height="26" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="45" y="85" text-anchor="middle" font-size="9" font-weight="bold" fill="#166534">google.com ✓</text>
+
+    <rect x="10" y="102" width="70" height="22" rx="4" fill="#f1f5f9"/>
+    <text x="45" y="117" text-anchor="middle" font-size="9" fill="#64748b">amazon.com</text>
+    
+    <rect x="10" y="132" width="70" height="22" rx="4" fill="#f1f5f9"/>
+    <text x="45" y="147" text-anchor="middle" font-size="9" fill="#64748b">apple.com</text>
+    
+    <text x="45" y="185" text-anchor="middle" font-size="10" fill="#94a3b8">• • •</text>
+  </g>
+
+  <!-- Bottom takeaway -->
+  <rect x="180" y="315" width="540" height="35" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="450" y="337" text-anchor="middle" font-size="12" fill="#475569">Among millions of .com domains, the TLD directs the query to the Name Server for google.com</text>
+</svg>

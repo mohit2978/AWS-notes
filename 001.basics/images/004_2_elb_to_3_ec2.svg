@@ -1,0 +1,170 @@
+<svg height="420" width="860" viewBox="0 0 860 420" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.04); opacity: 0.9; }
+      }
+      .flow-blue {
+        stroke: #2563eb;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-green {
+        stroke: #16a34a;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-amber {
+        stroke: #d97706;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-purple {
+        stroke: #9333ea;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-red {
+        stroke: #dc2626;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-cyan {
+        stroke: #0284c7;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-reverse {
+        stroke: #64748b;
+        stroke-width: 1.8;
+        stroke-dasharray: 6 4;
+        animation: flow 1.5s linear infinite reverse;
+        fill: none;
+      }
+    </style>
+    <filter id="drop-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-cyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arr-slate" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#64748b"/>
+    </marker>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="860" height="420" fill="#f8fafc" rx="16"/>
+
+  <text x="430" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">AWS Elastic Load Balancer (ELB) Traffic Distribution</text>
+  <text x="430" y="52" text-anchor="middle" font-size="12" fill="#64748b">Single DNS entry point balancing incoming user requests evenly across 3 Availability Zones</text>
+
+  <!-- Left: Client Inbound Request -->
+  <g transform="translate(40, 160)">
+    <rect width="120" height="90" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" filter="url(#drop-shadow)"/>
+    <circle cx="60" cy="35" r="18" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+    <text x="60" y="42" text-anchor="middle" font-size="18">🌐</text>
+    <text x="60" y="68" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">Client Requests</text>
+    <text x="60" y="82" text-anchor="middle" font-size="9" fill="#64748b">HTTP / HTTPS</text>
+  </g>
+
+  <!-- Request to ELB -->
+  <path d="M 160,205 L 235,205" class="flow-blue" stroke-width="3" marker-end="url(#arr-blue)"/>
+
+  <!-- Center: Elastic Load Balancer (ELB) -->
+  <g transform="translate(240, 110)">
+    <rect width="160" height="190" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2" filter="url(#drop-shadow)"/>
+    <rect width="160" height="32" rx="12" fill="#2563eb"/>
+    <text x="80" y="21" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">AWS ELB / ALB</text>
+    
+    <circle cx="80" cy="72" r="24" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <text x="80" y="79" text-anchor="middle" font-size="20">⚖️</text>
+    <text x="80" y="114" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Load Balancer</text>
+    <text x="80" y="130" text-anchor="middle" font-size="10" fill="#64748b">Health Checks</text>
+    <text x="80" y="145" text-anchor="middle" font-size="10" fill="#64748b">Round-Robin Algorithm</text>
+
+    <rect x="25" y="158" width="110" height="20" rx="10" fill="#dcfce7"/>
+    <text x="80" y="172" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">● 3 Targets Healthy</text>
+  </g>
+
+  <!-- Balanced Flow Lines ELB to 3 EC2 Instances -->
+  <path d="M 400,170 C 460,170 480,115 540,115" class="flow-green" stroke-width="2.5" marker-end="url(#arr-green)"/>
+  <path d="M 400,205 L 540,205" class="flow-cyan" stroke-width="2.5" marker-end="url(#arr-cyan)"/>
+  <path d="M 400,240 C 460,240 480,295 540,295" class="flow-purple" stroke-width="2.5" marker-end="url(#arr-purple)"/>
+
+  <!-- Right: 3 EC2 Instances across 3 AZs -->
+  <!-- EC2 Instance 1 (AZ 1a) -->
+  <g transform="translate(545, 75)">
+    <rect width="255" height="80" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5" filter="url(#drop-shadow)"/>
+    <rect width="255" height="22" rx="10" fill="#16a34a"/>
+    <text x="127" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">EC2 Instance • Availability Zone 1a</text>
+    <rect x="15" y="32" width="36" height="36" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+    <text x="33" y="55" text-anchor="middle" font-size="18">🖥️</text>
+    <text x="60" y="47" font-size="12" font-weight="bold" fill="#15803d">Target 1: ap-south-1a</text>
+    <text x="60" y="63" font-size="10" fill="#64748b">Port 8080 • Healthy • Weight: 33%</text>
+  </g>
+
+  <!-- EC2 Instance 2 (AZ 1b) -->
+  <g transform="translate(545, 165)">
+    <rect width="255" height="80" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#drop-shadow)"/>
+    <rect width="255" height="22" rx="10" fill="#0284c7"/>
+    <text x="127" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">EC2 Instance • Availability Zone 1b</text>
+    <rect x="15" y="32" width="36" height="36" rx="6" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+    <text x="33" y="55" text-anchor="middle" font-size="18">🖥️</text>
+    <text x="60" y="47" font-size="12" font-weight="bold" fill="#0369a1">Target 2: ap-south-1b</text>
+    <text x="60" y="63" font-size="10" fill="#64748b">Port 8080 • Healthy • Weight: 33%</text>
+  </g>
+
+  <!-- EC2 Instance 3 (AZ 1c) -->
+  <g transform="translate(545, 255)">
+    <rect width="255" height="80" rx="10" fill="#ffffff" stroke="#9333ea" stroke-width="1.5" filter="url(#drop-shadow)"/>
+    <rect width="255" height="22" rx="10" fill="#9333ea"/>
+    <text x="127" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">EC2 Instance • Availability Zone 1c</text>
+    <rect x="15" y="32" width="36" height="36" rx="6" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1"/>
+    <text x="33" y="55" text-anchor="middle" font-size="18">🖥️</text>
+    <text x="60" y="47" font-size="12" font-weight="bold" fill="#7e22ce">Target 3: ap-south-1c</text>
+    <text x="60" y="63" font-size="10" fill="#64748b">Port 8080 • Healthy • Weight: 33%</text>
+  </g>
+
+  <!-- Bottom Legend -->
+  <rect x="160" y="370" width="540" height="26" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="430" y="387" text-anchor="middle" font-size="11" font-weight="500" fill="#334155">
+    High Availability Guaranteed: If an instance or AZ drops, ELB re-routes traffic instantly
+  </text>
+</svg>

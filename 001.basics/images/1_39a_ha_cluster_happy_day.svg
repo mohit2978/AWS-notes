@@ -1,0 +1,213 @@
+<svg height="430" width="940" viewBox="0 0 940 430" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.04); opacity: 0.9; }
+      }
+      .flow-blue {
+        stroke: #2563eb;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-green {
+        stroke: #16a34a;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-amber {
+        stroke: #d97706;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-purple {
+        stroke: #9333ea;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-red {
+        stroke: #dc2626;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-cyan {
+        stroke: #0284c7;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-reverse {
+        stroke: #64748b;
+        stroke-width: 1.8;
+        stroke-dasharray: 6 4;
+        animation: flow 1.5s linear infinite reverse;
+        fill: none;
+      }
+    </style>
+    <filter id="drop-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-cyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arr-slate" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#64748b"/>
+    </marker>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="940" height="430" fill="#f8fafc" rx="16"/>
+
+  <text x="470" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">High Availability Multi-Tier Cluster — Happy Day (Normal Operation)</text>
+  <text x="470" y="52" text-anchor="middle" font-size="12" fill="#64748b">100% of components are healthy; all traffic flows through primary active paths with active-active databases</text>
+
+  <!-- User Node -->
+  <g transform="translate(35, 175)">
+    <rect width="100" height="80" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" filter="url(#drop-shadow)"/>
+    <text x="50" y="32" text-anchor="middle" font-size="20">👥</text>
+    <text x="50" y="52" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Users</text>
+    <text x="50" y="68" text-anchor="middle" font-size="10" fill="#64748b">Public Web</text>
+  </g>
+
+  <!-- Flow User to LB1 -->
+  <path d="M 135,215 C 160,215 165,130 190,130" class="flow-blue" marker-end="url(#arr-blue)"/>
+
+  <!-- TIER 1: Web LB Cluster -->
+  <g transform="translate(190, 75)">
+    <rect width="125" height="85" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#drop-shadow)"/>
+    <rect width="125" height="22" rx="8" fill="#2563eb"/>
+    <text x="62" y="15" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">lb1 (HAProxy)</text>
+    <rect x="27" y="30" width="70" height="18" rx="9" fill="#dcfce7"/>
+    <text x="62" y="43" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">● ACTIVE</text>
+    <text x="62" y="65" text-anchor="middle" font-size="10" fill="#334155">Master VIP</text>
+    <text x="62" y="78" text-anchor="middle" font-size="9" fill="#64748b">Port 80 / 443</text>
+  </g>
+  <g transform="translate(190, 255)">
+    <rect width="125" height="85" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <rect width="125" height="22" rx="8" fill="#64748b"/>
+    <text x="62" y="15" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">lb2 (HAProxy)</text>
+    <rect x="27" y="30" width="70" height="18" rx="9" fill="#f1f5f9"/>
+    <text x="62" y="43" text-anchor="middle" font-size="10" font-weight="bold" fill="#64748b">STANDBY</text>
+    <text x="62" y="65" text-anchor="middle" font-size="10" fill="#64748b">Backup VIP</text>
+    <text x="62" y="78" text-anchor="middle" font-size="9" fill="#94a3b8">Hot Standby</text>
+  </g>
+  <text x="252" y="360" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">App Load Balancer Tier</text>
+
+  <!-- Flow LB1 to App Servers -->
+  <path d="M 315,120 L 375,120" class="flow-green" marker-end="url(#arr-green)"/>
+  <path d="M 315,130 C 345,130 350,290 375,290" class="flow-green" marker-end="url(#arr-green)"/>
+
+  <!-- TIER 2: App Cluster -->
+  <g transform="translate(375, 75)">
+    <rect width="125" height="85" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#drop-shadow)"/>
+    <rect width="125" height="22" rx="8" fill="#16a34a"/>
+    <text x="62" y="15" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">app1 (Apache)</text>
+    <rect x="27" y="30" width="70" height="18" rx="9" fill="#dcfce7"/>
+    <text x="62" y="43" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">● ACTIVE</text>
+    <text x="62" y="65" text-anchor="middle" font-size="10" fill="#334155">Backend Worker 1</text>
+    <text x="62" y="78" text-anchor="middle" font-size="9" fill="#64748b">Port 8080</text>
+  </g>
+  <g transform="translate(375, 255)">
+    <rect width="125" height="85" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#drop-shadow)"/>
+    <rect width="125" height="22" rx="8" fill="#16a34a"/>
+    <text x="62" y="15" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">app2 (Apache)</text>
+    <rect x="27" y="30" width="70" height="18" rx="9" fill="#dcfce7"/>
+    <text x="62" y="43" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">● ACTIVE</text>
+    <text x="62" y="65" text-anchor="middle" font-size="10" fill="#334155">Backend Worker 2</text>
+    <text x="62" y="78" text-anchor="middle" font-size="9" fill="#64748b">Port 8080</text>
+  </g>
+  <text x="437" y="360" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">Application Cluster Tier</text>
+
+  <!-- Flow App Servers to DB LB3 -->
+  <path d="M 500,120 L 560,120" class="flow-purple" marker-end="url(#arr-purple)"/>
+  <path d="M 500,290 C 530,290 535,130 560,130" class="flow-purple" marker-end="url(#arr-purple)"/>
+
+  <!-- TIER 3: Database LB Cluster -->
+  <g transform="translate(560, 75)">
+    <rect width="125" height="85" rx="8" fill="#faf5ff" stroke="#9333ea" stroke-width="2" filter="url(#drop-shadow)"/>
+    <rect width="125" height="22" rx="8" fill="#9333ea"/>
+    <text x="62" y="15" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">lb3 (DB-HAProxy)</text>
+    <rect x="27" y="30" width="70" height="18" rx="9" fill="#dcfce7"/>
+    <text x="62" y="43" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">● ACTIVE</text>
+    <text x="62" y="65" text-anchor="middle" font-size="10" fill="#334155">DB Router VIP</text>
+    <text x="62" y="78" text-anchor="middle" font-size="9" fill="#64748b">Port 3306</text>
+  </g>
+  <g transform="translate(560, 255)">
+    <rect width="125" height="85" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <rect width="125" height="22" rx="8" fill="#64748b"/>
+    <text x="62" y="15" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">lb4 (DB-HAProxy)</text>
+    <rect x="27" y="30" width="70" height="18" rx="9" fill="#f1f5f9"/>
+    <text x="62" y="43" text-anchor="middle" font-size="10" font-weight="bold" fill="#64748b">STANDBY</text>
+    <text x="62" y="65" text-anchor="middle" font-size="10" fill="#64748b">DB Backup VIP</text>
+    <text x="62" y="78" text-anchor="middle" font-size="9" fill="#94a3b8">Hot Standby</text>
+  </g>
+  <text x="622" y="360" text-anchor="middle" font-size="11" font-weight="bold" fill="#7e22ce">Database LB Tier</text>
+
+  <!-- Flow LB3 to Databases -->
+  <path d="M 685,115 L 750,115" class="flow-amber" marker-end="url(#arr-amber)"/>
+  <path d="M 685,125 C 715,125 720,295 750,295" class="flow-amber" marker-end="url(#arr-amber)"/>
+
+  <!-- TIER 4: Database Cluster -->
+  <g transform="translate(750, 75)">
+    <rect width="135" height="85" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="2" filter="url(#drop-shadow)"/>
+    <rect width="135" height="22" rx="8" fill="#ca8a04"/>
+    <text x="67" y="15" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">db1 (MySQL)</text>
+    <rect x="32" y="30" width="70" height="18" rx="9" fill="#dcfce7"/>
+    <text x="67" y="43" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">● ACTIVE</text>
+    <text x="67" y="65" text-anchor="middle" font-size="10" fill="#334155">Master Read/Write</text>
+    <text x="67" y="78" text-anchor="middle" font-size="9" fill="#854d0e">Port 3306</text>
+  </g>
+  <g transform="translate(750, 255)">
+    <rect width="135" height="85" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="2" filter="url(#drop-shadow)"/>
+    <rect width="135" height="22" rx="8" fill="#ca8a04"/>
+    <text x="67" y="15" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">db2 (MySQL)</text>
+    <rect x="32" y="30" width="70" height="18" rx="9" fill="#dcfce7"/>
+    <text x="67" y="43" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">● ACTIVE</text>
+    <text x="67" y="65" text-anchor="middle" font-size="10" fill="#334155">Master Read/Write</text>
+    <text x="67" y="78" text-anchor="middle" font-size="9" fill="#854d0e">Port 3306</text>
+  </g>
+  <text x="817" y="360" text-anchor="middle" font-size="11" font-weight="bold" fill="#a16207">Database Cluster Tier</text>
+
+  <!-- DB Replication Link -->
+  <path d="M 817,160 L 817,255" class="flow-purple" stroke-width="2"/>
+  <rect x="742" y="196" width="150" height="22" rx="4" fill="#ffffff" stroke="#ca8a04" stroke-width="1"/>
+  <text x="817" y="211" text-anchor="middle" font-size="9" font-weight="bold" fill="#854d0e">⇄ Master-Master Replication</text>
+
+  <!-- Footnote -->
+  <rect x="220" y="390" width="500" height="26" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="470" y="407" text-anchor="middle" font-size="11" font-weight="600" fill="#166534">Normal State: Balanced load, redundant standby units, active replication</text>
+</svg>

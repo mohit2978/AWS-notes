@@ -1,0 +1,166 @@
+<svg height="490" width="920" viewBox="0 0 920 490" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.04); opacity: 0.9; }
+      }
+      .flow-blue {
+        stroke: #2563eb;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-green {
+        stroke: #16a34a;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-amber {
+        stroke: #d97706;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-purple {
+        stroke: #9333ea;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-red {
+        stroke: #dc2626;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-cyan {
+        stroke: #0284c7;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+    </style>
+    <filter id="drop-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-cyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7"/>
+    </marker>
+  </defs>
+
+  <rect width="920" height="490" fill="#f8fafc" rx="16"/>
+
+  <text x="460" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">AWS Hierarchical Containment Model</text>
+  <text x="460" y="48" text-anchor="middle" font-size="12" fill="#64748b">Global AWS Account ➔ Region ➔ Virtual Private Cloud (VPC) ➔ Availability Zones (AZ) ➔ EC2 Instances</text>
+
+  <!-- Outer Level 1: Global AWS Account -->
+  <g transform="translate(30, 65)">
+    <rect width="860" height="385" rx="14" fill="#ffffff" stroke="#f97316" stroke-width="2.5" filter="url(#drop-shadow)"/>
+    <rect width="860" height="30" rx="14" fill="#fff7ed"/>
+    <text x="20" y="20" font-size="12" font-weight="bold" fill="#c2410c">LEVEL 1: AWS GLOBAL ACCOUNT INFRASTRUCTURE</text>
+    <rect x="730" y="5" width="115" height="20" rx="10" fill="#fed7aa"/>
+    <text x="787" y="19" text-anchor="middle" font-size="10" font-weight="bold" fill="#9a3412">GLOBAL CLOUD</text>
+
+    <!-- Outer Level 2: Region (ap-south-1) -->
+    <g transform="translate(25, 40)">
+      <rect width="810" height="320" rx="12" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+      <rect width="810" height="28" rx="12" fill="#eff6ff"/>
+      <text x="15" y="19" font-size="11" font-weight="bold" fill="#1e40af">LEVEL 2: AWS REGION — Mumbai (ap-south-1)</text>
+
+      <!-- Outer Level 3: VPC -->
+      <g transform="translate(25, 38)">
+        <rect width="760" height="255" rx="10" fill="#ffffff" stroke="#9333ea" stroke-width="2"/>
+        <rect width="760" height="26" rx="10" fill="#faf5ff"/>
+        <text x="15" y="18" font-size="11" font-weight="bold" fill="#7e22ce">LEVEL 3: VIRTUAL PRIVATE CLOUD (VPC) — 10.0.0.0/16</text>
+
+        <!-- Outer Level 4: Availability Zones -->
+        <!-- AZ 1a -->
+        <g transform="translate(25, 36)">
+          <rect width="335" height="190" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+          <rect width="335" height="24" rx="8" fill="#16a34a"/>
+          <text x="167" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">LEVEL 4: Availability Zone 1a (ap-south-1a)</text>
+
+          <!-- Level 5: EC2 Instances inside AZ 1a -->
+          <g transform="translate(20, 42)">
+            <rect width="135" height="85" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.2" filter="url(#drop-shadow)"/>
+            <text x="67" y="24" text-anchor="middle" font-size="16">⚙️</text>
+            <text x="67" y="44" text-anchor="middle" font-size="11" font-weight="bold" fill="#14532d">EC2 Instance A1</text>
+            <text x="67" y="60" text-anchor="middle" font-size="9" fill="#166534">10.0.1.20 (Private)</text>
+            <rect x="25" y="66" width="85" height="14" rx="7" fill="#dcfce7"/>
+            <text x="67" y="77" text-anchor="middle" font-size="8" font-weight="bold" fill="#15803d">● RUNNING</text>
+          </g>
+
+          <g transform="translate(180, 42)">
+            <rect width="135" height="85" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.2" filter="url(#drop-shadow)"/>
+            <text x="67" y="24" text-anchor="middle" font-size="16">⚙️</text>
+            <text x="67" y="44" text-anchor="middle" font-size="11" font-weight="bold" fill="#14532d">EC2 Instance A2</text>
+            <text x="67" y="60" text-anchor="middle" font-size="9" fill="#166534">10.0.1.21 (Private)</text>
+            <rect x="25" y="66" width="85" height="14" rx="7" fill="#dcfce7"/>
+            <text x="67" y="77" text-anchor="middle" font-size="8" font-weight="bold" fill="#15803d">● RUNNING</text>
+          </g>
+
+          <text x="167" y="155" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">Subnet: 10.0.1.0/24 (Public)</text>
+        </g>
+
+        <!-- AZ 1b -->
+        <g transform="translate(395, 36)">
+          <rect width="335" height="190" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.8"/>
+          <rect width="335" height="24" rx="8" fill="#16a34a"/>
+          <text x="167" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">LEVEL 4: Availability Zone 1b (ap-south-1b)</text>
+
+          <!-- Level 5: EC2 Instances inside AZ 1b -->
+          <g transform="translate(20, 42)">
+            <rect width="135" height="85" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.2" filter="url(#drop-shadow)"/>
+            <text x="67" y="24" text-anchor="middle" font-size="16">⚙️</text>
+            <text x="67" y="44" text-anchor="middle" font-size="11" font-weight="bold" fill="#14532d">EC2 Instance B1</text>
+            <text x="67" y="60" text-anchor="middle" font-size="9" fill="#166534">10.0.2.20 (Private)</text>
+            <rect x="25" y="66" width="85" height="14" rx="7" fill="#dcfce7"/>
+            <text x="67" y="77" text-anchor="middle" font-size="8" font-weight="bold" fill="#15803d">● RUNNING</text>
+          </g>
+
+          <g transform="translate(180, 42)">
+            <rect width="135" height="85" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.2" filter="url(#drop-shadow)"/>
+            <text x="67" y="24" text-anchor="middle" font-size="16">⚙️</text>
+            <text x="67" y="44" text-anchor="middle" font-size="11" font-weight="bold" fill="#14532d">EC2 Instance B2</text>
+            <text x="67" y="60" text-anchor="middle" font-size="9" fill="#166534">10.0.2.21 (Private)</text>
+            <rect x="25" y="66" width="85" height="14" rx="7" fill="#dcfce7"/>
+            <text x="67" y="77" text-anchor="middle" font-size="8" font-weight="bold" fill="#15803d">● RUNNING</text>
+          </g>
+
+          <text x="167" y="155" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">Subnet: 10.0.2.0/24 (Public)</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Animated Boundary Pulse Link -->
+  <path d="M 390,270 L 420,270" class="flow-purple" stroke-width="2"/>
+</svg>

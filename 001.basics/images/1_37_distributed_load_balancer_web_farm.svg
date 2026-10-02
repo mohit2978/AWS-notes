@@ -1,0 +1,216 @@
+<svg height="440" width="940" viewBox="0 0 940 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.04); opacity: 0.9; }
+      }
+      .flow-blue {
+        stroke: #2563eb;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-green {
+        stroke: #16a34a;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-amber {
+        stroke: #d97706;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-purple {
+        stroke: #9333ea;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-red {
+        stroke: #dc2626;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-cyan {
+        stroke: #0284c7;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-reverse {
+        stroke: #64748b;
+        stroke-width: 1.8;
+        stroke-dasharray: 6 4;
+        animation: flow 1.5s linear infinite reverse;
+        fill: none;
+      }
+    </style>
+    <filter id="drop-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-cyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arr-slate" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#64748b"/>
+    </marker>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="940" height="440" fill="#f8fafc" rx="16"/>
+  
+  <text x="470" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Distributed Client Load with High-Availability Web Server Farm</text>
+  <text x="470" y="52" text-anchor="middle" font-size="12" fill="#64748b">Dynamic concurrent traffic distribution through Internet Gateway and Active Load Balancer</text>
+
+  <!-- Left: 6 Distributed Clients -->
+  <g transform="translate(40, 75)">
+    <rect x="0" y="0" width="160" height="320" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#drop-shadow)"/>
+    <rect x="0" y="0" width="160" height="30" rx="12" fill="#f1f5f9"/>
+    <text x="80" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#334155">Distributed Clients</text>
+    
+    <g transform="translate(15, 42)">
+      <rect width="130" height="36" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <circle cx="20" cy="18" r="7" fill="#3b82f6"/>
+      <text x="20" y="22" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">1</text>
+      <text x="35" y="22" font-size="12" font-weight="600" fill="#1e40af">Client 1 (US)</text>
+    </g>
+    <g transform="translate(15, 86)">
+      <rect width="130" height="36" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <circle cx="20" cy="18" r="7" fill="#3b82f6"/>
+      <text x="20" y="22" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">2</text>
+      <text x="35" y="22" font-size="12" font-weight="600" fill="#1e40af">Client 2 (EU)</text>
+    </g>
+    <g transform="translate(15, 130)">
+      <rect width="130" height="36" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <circle cx="20" cy="18" r="7" fill="#3b82f6"/>
+      <text x="20" y="22" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">3</text>
+      <text x="35" y="22" font-size="12" font-weight="600" fill="#1e40af">Client 3 (Asia)</text>
+    </g>
+    <g transform="translate(15, 174)">
+      <rect width="130" height="36" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <circle cx="20" cy="18" r="7" fill="#3b82f6"/>
+      <text x="20" y="22" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">4</text>
+      <text x="35" y="22" font-size="12" font-weight="600" fill="#1e40af">Client 4 (Mobile)</text>
+    </g>
+    <g transform="translate(15, 218)">
+      <rect width="130" height="36" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <circle cx="20" cy="18" r="7" fill="#3b82f6"/>
+      <text x="20" y="22" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">5</text>
+      <text x="35" y="22" font-size="12" font-weight="600" fill="#1e40af">Client 5 (API)</text>
+    </g>
+    <g transform="translate(15, 262)">
+      <rect width="130" height="36" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <circle cx="20" cy="18" r="7" fill="#3b82f6"/>
+      <text x="20" y="22" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">6</text>
+      <text x="35" y="22" font-size="12" font-weight="600" fill="#1e40af">Client 6 (Web)</text>
+    </g>
+  </g>
+
+  <!-- Center: Internet Cloud -->
+  <g transform="translate(290, 150)">
+    <path d="M 40,70 C 10,70 0,45 20,25 C 20,0 55,-5 75,10 C 95,-10 135,-5 145,20 C 170,10 185,35 175,60 C 190,80 170,110 140,105 C 130,125 80,125 65,105 C 40,115 15,95 40,70 Z" fill="url(#cloudGrad)" stroke="#93c5fd" stroke-width="2" filter="url(#drop-shadow)"/>
+    <text x="100" y="55" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e40af">Public</text>
+    <text x="100" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">Internet</text>
+  </g>
+
+  <!-- Flow Client to Internet -->
+  <path d="M 185,135 C 235,135 240,190 300,195" class="flow-blue" marker-end="url(#arr-blue)"/>
+  <path d="M 185,180 C 235,180 250,200 300,205" class="flow-cyan" marker-end="url(#arr-cyan)"/>
+  <path d="M 185,220 C 235,220 250,215 300,215" class="flow-purple" marker-end="url(#arr-purple)"/>
+  <path d="M 185,260 C 235,260 250,225 300,220" class="flow-amber" marker-end="url(#arr-amber)"/>
+  <path d="M 185,305 C 240,305 250,235 300,230" class="flow-green" marker-end="url(#arr-green)"/>
+  <path d="M 185,350 C 245,350 255,245 300,235" class="flow-blue" marker-end="url(#arr-blue)"/>
+
+  <!-- Flow Internet to Load Balancer -->
+  <path d="M 480,210 L 535,210" class="flow-blue" stroke-width="3" marker-end="url(#arr-blue)"/>
+
+  <!-- Load Balancer Node -->
+  <g transform="translate(540, 155)">
+    <rect width="130" height="110" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2" filter="url(#drop-shadow)"/>
+    <rect width="130" height="32" rx="12" fill="#2563eb"/>
+    <text x="65" y="21" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Active LB</text>
+    <rect x="25" y="42" width="80" height="20" rx="10" fill="#dcfce7" stroke="#86efac" stroke-width="1"/>
+    <text x="65" y="56" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">● HEALTHY</text>
+    <text x="65" y="80" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">HAProxy / ELB</text>
+    <text x="65" y="98" text-anchor="middle" font-size="10" fill="#64748b">Port 80 / 443</text>
+  </g>
+
+  <!-- Flow LB to Servers -->
+  <path d="M 670,180 C 705,180 710,120 745,120" class="flow-green" marker-end="url(#arr-green)"/>
+  <path d="M 670,195 C 705,195 710,180 745,180" class="flow-cyan" marker-end="url(#arr-cyan)"/>
+  <path d="M 670,215 C 705,215 710,240 745,240" class="flow-purple" marker-end="url(#arr-purple)"/>
+  <path d="M 670,230 C 705,230 710,300 745,300" class="flow-amber" marker-end="url(#arr-amber)"/>
+
+  <!-- Right: Web Farm (4 Servers) -->
+  <g transform="translate(740, 75)">
+    <rect x="0" y="0" width="165" height="320" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4 3" filter="url(#drop-shadow)"/>
+    <rect x="0" y="0" width="165" height="30" rx="12" fill="#dcfce7"/>
+    <text x="82" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803d">Web Server Farm</text>
+
+    <g transform="translate(15, 42)">
+      <rect width="135" height="48" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+      <rect x="10" y="10" width="28" height="28" rx="4" fill="#22c55e"/>
+      <text x="24" y="28" text-anchor="middle" font-size="16" fill="#fff">⚙</text>
+      <text x="45" y="22" font-size="12" font-weight="bold" fill="#14532d">Server 1</text>
+      <text x="45" y="38" font-size="10" fill="#15803d">Port 8080 • Active</text>
+    </g>
+    <g transform="translate(15, 102)">
+      <rect width="135" height="48" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+      <rect x="10" y="10" width="28" height="28" rx="4" fill="#22c55e"/>
+      <text x="24" y="28" text-anchor="middle" font-size="16" fill="#fff">⚙</text>
+      <text x="45" y="22" font-size="12" font-weight="bold" fill="#14532d">Server 2</text>
+      <text x="45" y="38" font-size="10" fill="#15803d">Port 8080 • Active</text>
+    </g>
+    <g transform="translate(15, 162)">
+      <rect width="135" height="48" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+      <rect x="10" y="10" width="28" height="28" rx="4" fill="#22c55e"/>
+      <text x="24" y="28" text-anchor="middle" font-size="16" fill="#fff">⚙</text>
+      <text x="45" y="22" font-size="12" font-weight="bold" fill="#14532d">Server 3</text>
+      <text x="45" y="38" font-size="10" fill="#15803d">Port 8080 • Active</text>
+    </g>
+    <g transform="translate(15, 222)">
+      <rect width="135" height="48" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+      <rect x="10" y="10" width="28" height="28" rx="4" fill="#22c55e"/>
+      <text x="24" y="28" text-anchor="middle" font-size="16" fill="#fff">⚙</text>
+      <text x="45" y="22" font-size="12" font-weight="bold" fill="#14532d">Server 4</text>
+      <text x="45" y="38" font-size="10" fill="#15803d">Port 8080 • Active</text>
+    </g>
+  </g>
+
+  <!-- Bottom Summary Footnote -->
+  <rect x="250" y="405" width="440" height="26" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="470" y="422" text-anchor="middle" font-size="11" font-weight="500" fill="#475569">Round-robin / Least-connection algorithm distributes load evenly with zero downtime</text>
+</svg>

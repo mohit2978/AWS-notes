@@ -1,0 +1,95 @@
+<svg height="440" width="940" viewBox="0 0 940 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes reverse-flow {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 24; }
+      }
+      .flow-blue { stroke: #2563eb; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-green { stroke: #16a34a; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-red { stroke: #dc2626; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-purple { stroke: #9333ea; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-amber { stroke: #d97706; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+    </style>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="940" height="440" fill="#f8fafc" rx="12"/>
+  <text x="470" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Deployment via Amazon Management Console (AMC) into IaaS</text>
+  <text x="470" y="60" text-anchor="middle" font-size="13" fill="#64748b">Developer packages code (.zip) → configures via AMC → EC2 instance launched on host</text>
+
+  <!-- Developer -->
+  <g transform="translate(40, 110)">
+    <rect width="160" height="170" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect width="160" height="28" rx="8" fill="#dbeafe"/>
+    <text x="80" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Developer (SaiKiran)</text>
+    <text x="80" y="65" text-anchor="middle" font-size="11" fill="#475569">Source Code Bundle:</text>
+    <rect x="20" y="80" width="120" height="30" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="80" y="100" text-anchor="middle" font-size="11" font-weight="bold" fill="#2563eb">app.zip (Java / .NET)</text>
+    <text x="80" y="140" text-anchor="middle" font-size="10" fill="#64748b">Uploads via Web Console</text>
+  </g>
+
+  <!-- Arrow to AMC -->
+  <path d="M 205 195 L 285 195" class="flow-blue" marker-end="url(#arr-blue)"/>
+
+  <!-- AMC Portal -->
+  <g transform="translate(290, 110)">
+    <rect width="180" height="170" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+    <rect width="180" height="28" rx="8" fill="#fef3c7"/>
+    <text x="90" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">Amazon Console (AMC)</text>
+    <text x="90" y="65" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">Management Interface</text>
+    <g font-size="10" fill="#475569" transform="translate(15, 80)">
+      <text y="15">• Selects Region (Mumbai)</text>
+      <text y="35">• Picks Instance Type (t3.micro)</text>
+      <text y="55">• Configures Security Group</text>
+      <text y="75">• Launches EC2 Instance</text>
+    </g>
+  </g>
+
+  <!-- Arrow to AWS IaaS Stack -->
+  <path d="M 475 195 L 555 195" class="flow-amber" marker-end="url(#arr-amber)"/>
+
+  <!-- AWS IaaS / Physical Host Machine -->
+  <g transform="translate(560, 95)">
+    <rect width="340" height="230" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <rect width="340" height="30" rx="10" fill="#dcfce7"/>
+    <text x="170" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">AWS Infrastructure (Physical Host)</text>
+
+    <!-- VM inside -->
+    <rect x="25" y="45" width="290" height="50" rx="6" fill="#fdf4ff" stroke="#e879f9"/>
+    <text x="170" y="68" text-anchor="middle" font-size="12" font-weight="bold" fill="#86198f">EC2 Virtual Machine (Instance)</text>
+    <text x="170" y="85" text-anchor="middle" font-size="10" fill="#64748b">Hosts customer code &amp; runtime OS</text>
+
+    <!-- Hypervisor -->
+    <rect x="25" y="105" width="290" height="45" rx="6" fill="#eff6ff" stroke="#93c5fd"/>
+    <text x="170" y="132" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Xen / Nitro Hypervisor</text>
+
+    <!-- Physical Hardware -->
+    <rect x="25" y="160" width="290" height="50" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="170" y="185" text-anchor="middle" font-size="12" font-weight="bold" fill="#0f172a">AWS Datacenter Hardware</text>
+    <text x="170" y="200" text-anchor="middle" font-size="10" fill="#64748b">Physical CPU, RAM, NVMe Storage</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="180" y="360" width="580" height="32" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="470" y="381" text-anchor="middle" font-size="12" fill="#475569">IaaS delivers virtualized compute, storage, and networking on demand without managing physical hardware.</text>
+</svg>

@@ -1,0 +1,193 @@
+<svg height="450" width="940" viewBox="0 0 940 450" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.04); opacity: 0.9; }
+      }
+      .flow-blue {
+        stroke: #2563eb;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-green {
+        stroke: #16a34a;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-amber {
+        stroke: #d97706;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-purple {
+        stroke: #9333ea;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-red {
+        stroke: #dc2626;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-cyan {
+        stroke: #0284c7;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+    </style>
+    <filter id="drop-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-cyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7"/>
+    </marker>
+  </defs>
+
+  <rect width="940" height="450" fill="#f8fafc" rx="16"/>
+
+  <text x="470" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Cloud Service Models: SaaS, PaaS, and IaaS</text>
+  <text x="470" y="52" text-anchor="middle" font-size="12" fill="#64748b">Hierarchy of abstraction layers, underlying technical scopes, and intended consumer personas</text>
+
+  <!-- Left Side: Technical Scope Cards -->
+  <g transform="translate(40, 80)">
+    <!-- SaaS Scope -->
+    <g transform="translate(0, 0)">
+      <rect width="250" height="85" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" filter="url(#drop-shadow)"/>
+      <rect width="250" height="24" rx="10" fill="#eff6ff"/>
+      <text x="125" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">SaaS Scope</text>
+      <text x="15" y="42" font-size="11" font-weight="600" fill="#334155">• Fully Packaged Software</text>
+      <text x="15" y="58" font-size="10" fill="#64748b">• Automated Managed Service</text>
+      <text x="15" y="74" font-size="10" fill="#64748b">• Web browser / Mobile App access</text>
+    </g>
+
+    <!-- PaaS Scope -->
+    <g transform="translate(0, 115)">
+      <rect width="250" height="85" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5" filter="url(#drop-shadow)"/>
+      <rect width="250" height="24" rx="10" fill="#f0fdf4"/>
+      <text x="125" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">PaaS Scope</text>
+      <text x="15" y="42" font-size="11" font-weight="600" fill="#334155">• OS &amp; Application Stack</text>
+      <text x="15" y="58" font-size="10" fill="#64748b">• Runtime, Database, Middleware</text>
+      <text x="15" y="74" font-size="10" fill="#64748b">• Developer deploys code only</text>
+    </g>
+
+    <!-- IaaS Scope -->
+    <g transform="translate(0, 230)">
+      <rect width="250" height="85" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5" filter="url(#drop-shadow)"/>
+      <rect width="250" height="24" rx="10" fill="#fffbeb"/>
+      <text x="125" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#b45309">IaaS Scope</text>
+      <text x="15" y="42" font-size="11" font-weight="600" fill="#334155">• Servers, Storage, &amp; Networking</text>
+      <text x="15" y="58" font-size="10" fill="#64748b">• Raw virtual compute instances</text>
+      <text x="15" y="74" font-size="10" fill="#64748b">• User installs OS &amp; software</text>
+    </g>
+  </g>
+
+  <!-- Connectors Left Scope to Pyramid -->
+  <path d="M 290,122 L 350,122" class="flow-blue" marker-end="url(#arr-blue)"/>
+  <path d="M 290,237 L 330,237" class="flow-green" marker-end="url(#arr-green)"/>
+  <path d="M 290,352 L 310,352" class="flow-amber" marker-end="url(#arr-amber)"/>
+
+  <!-- Center: Elegant Tiered Pyramid -->
+  <!-- Top Tier: SaaS -->
+  <g transform="translate(320, 80)">
+    <polygon points="150,0 70,85 230,85" fill="#3b82f6" filter="url(#drop-shadow)"/>
+    <text x="150" y="60" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">SaaS</text>
+    <text x="150" y="76" text-anchor="middle" font-size="9" font-weight="bold" fill="#dbeafe">Software as a Service</text>
+  </g>
+
+  <!-- Middle Tier: PaaS -->
+  <g transform="translate(320, 172)">
+    <polygon points="65,0 235,0 290,95 10,95" fill="#16a34a" filter="url(#drop-shadow)"/>
+    <text x="150" y="55" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">PaaS</text>
+    <text x="150" y="74" text-anchor="middle" font-size="10" font-weight="bold" fill="#dcfce7">Platform as a Service</text>
+  </g>
+
+  <!-- Bottom Tier: IaaS -->
+  <g transform="translate(320, 274)">
+    <polygon points="5,0 295,0 350,95 -50,95" fill="#f59e0b" filter="url(#drop-shadow)"/>
+    <text x="150" y="55" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">IaaS</text>
+    <text x="150" y="74" text-anchor="middle" font-size="10" font-weight="bold" fill="#fef3c7">Infrastructure as a Service</text>
+  </g>
+
+  <!-- Connectors Pyramid to Right Personas -->
+  <path d="M 550,122 L 630,122" class="flow-blue" marker-end="url(#arr-blue)"/>
+  <path d="M 610,237 L 630,237" class="flow-green" marker-end="url(#arr-green)"/>
+  <path d="M 670,352 L 630,352" class="flow-amber" marker-end="url(#arr-amber)"/>
+
+  <!-- Right Side: Target Consumers Personas -->
+  <g transform="translate(635, 80)">
+    <!-- End Users -->
+    <g transform="translate(0, 0)">
+      <rect width="265" height="85" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" filter="url(#drop-shadow)"/>
+      <rect width="265" height="24" rx="10" fill="#eff6ff"/>
+      <text x="132" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">Primary Consumer</text>
+      
+      <circle cx="35" cy="54" r="18" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="35" y="61" text-anchor="middle" font-size="18">👤</text>
+      <text x="65" y="50" font-size="13" font-weight="bold" fill="#1e40af">End Users</text>
+      <text x="65" y="66" font-size="10" fill="#64748b">e.g. Gmail, Office 365, Salesforce</text>
+    </g>
+
+    <!-- Developers -->
+    <g transform="translate(0, 115)">
+      <rect width="265" height="85" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5" filter="url(#drop-shadow)"/>
+      <rect width="265" height="24" rx="10" fill="#f0fdf4"/>
+      <text x="132" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">Primary Consumer</text>
+      
+      <circle cx="35" cy="54" r="18" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+      <text x="35" y="61" text-anchor="middle" font-size="18">💻</text>
+      <text x="65" y="50" font-size="13" font-weight="bold" fill="#15803d">Software Developers</text>
+      <text x="65" y="66" font-size="10" fill="#64748b">e.g. Elastic Beanstalk, Heroku</text>
+    </g>
+
+    <!-- Architects / SysAdmins -->
+    <g transform="translate(0, 230)">
+      <rect width="265" height="85" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5" filter="url(#drop-shadow)"/>
+      <rect width="265" height="24" rx="10" fill="#fffbeb"/>
+      <text x="132" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#b45309">Primary Consumer</text>
+      
+      <circle cx="35" cy="54" r="18" fill="#fffbeb" stroke="#fde68a" stroke-width="1"/>
+      <text x="35" y="61" text-anchor="middle" font-size="18">🛠️</text>
+      <text x="65" y="50" font-size="13" font-weight="bold" fill="#b45309">SysAdmins &amp; Architects</text>
+      <text x="65" y="66" font-size="10" fill="#64748b">e.g. Amazon EC2, S3, VPC</text>
+    </g>
+  </g>
+
+  <!-- Bottom Legend -->
+  <rect x="220" y="405" width="500" height="26" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="470" y="422" text-anchor="middle" font-size="11" font-weight="500" fill="#475569">
+    Higher up the pyramid: Less operational maintenance, less configuration control
+  </text>
+</svg>

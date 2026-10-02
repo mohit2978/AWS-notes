@@ -1,0 +1,217 @@
+<svg height="440" width="940" viewBox="0 0 940 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.04); opacity: 0.9; }
+      }
+      .flow-blue {
+        stroke: #2563eb;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-green {
+        stroke: #16a34a;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-amber {
+        stroke: #d97706;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-purple {
+        stroke: #9333ea;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-red {
+        stroke: #dc2626;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-cyan {
+        stroke: #0284c7;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-reverse {
+        stroke: #64748b;
+        stroke-width: 1.8;
+        stroke-dasharray: 6 4;
+        animation: flow 1.5s linear infinite reverse;
+        fill: none;
+      }
+    </style>
+    <filter id="drop-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-cyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arr-slate" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#64748b"/>
+    </marker>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="940" height="440" fill="#f8fafc" rx="16"/>
+
+  <text x="470" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#0f172a">Floating IP (Elastic IP) Failover Architecture</text>
+  <text x="470" y="48" text-anchor="middle" font-size="11" fill="#64748b">Zero-downtime active-passive failover with automatic IP reassignment and database replication</text>
+
+  <!-- Datacenter Box -->
+  <rect x="20" y="65" width="900" height="325" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#drop-shadow)"/>
+  <rect x="20" y="65" width="900" height="30" rx="14" fill="#f1f5f9"/>
+  <text x="40" y="85" font-size="11" font-weight="bold" fill="#475569">DATACENTER REGION: NYC3 / us-east-1</text>
+  <rect x="790" y="70" width="115" height="20" rx="10" fill="#dbeafe"/>
+  <text x="847" y="84" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">HIGH AVAILABILITY</text>
+
+  <!-- Client / User -->
+  <g transform="translate(40, 160)">
+    <rect width="115" height="90" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <text x="57" y="32" text-anchor="middle" font-size="20">💻</text>
+    <text x="57" y="52" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Client</text>
+    <text x="57" y="70" text-anchor="middle" font-size="10" fill="#2563eb">http://example.com</text>
+  </g>
+
+  <!-- Floating IP Box -->
+  <g transform="translate(195, 155)">
+    <rect width="145" height="100" rx="10" fill="#fdf4ff" stroke="#c084fc" stroke-width="2"/>
+    <rect width="145" height="24" rx="10" fill="#a855f7"/>
+    <text x="72" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Floating IP Address</text>
+    <text x="72" y="48" text-anchor="middle" font-size="12" font-weight="bold" fill="#7e22ce">192.0.2.100</text>
+    <text x="72" y="68" text-anchor="middle" font-size="9" fill="#9333ea">Reassignable Virtual IP</text>
+    <rect x="25" y="76" width="95" height="16" rx="8" fill="#ede9fe"/>
+    <text x="72" y="88" text-anchor="middle" font-size="9" font-weight="bold" fill="#6b21a8">Routes to Active LB</text>
+  </g>
+
+  <!-- User to Floating IP -->
+  <path d="M 155,205 L 195,205" class="flow-purple" marker-end="url(#arr-purple)"/>
+
+  <!-- Load Balancers Column -->
+  <!-- Primary LB (Active) -->
+  <g transform="translate(385, 105)">
+    <rect width="130" height="85" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <rect width="130" height="22" rx="8" fill="#2563eb"/>
+    <text x="65" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Primary LB (Active)</text>
+    <text x="65" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">HAProxy Master</text>
+    <text x="65" y="58" text-anchor="middle" font-size="9" fill="#2563eb">Holds Floating IP</text>
+    <rect x="35" y="64" width="60" height="15" rx="7" fill="#dcfce7"/>
+    <text x="65" y="75" text-anchor="middle" font-size="9" font-weight="bold" fill="#15803d">● HEALTHY</text>
+  </g>
+
+  <!-- Secondary LB (Passive Standby) -->
+  <g transform="translate(385, 255)">
+    <rect width="130" height="85" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <rect width="130" height="22" rx="8" fill="#64748b"/>
+    <text x="65" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Secondary LB (Standby)</text>
+    <text x="65" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#475569">HAProxy Backup</text>
+    <text x="65" y="58" text-anchor="middle" font-size="9" fill="#64748b">Passive Standby Node</text>
+    <rect x="35" y="64" width="60" height="15" rx="7" fill="#f1f5f9"/>
+    <text x="65" y="75" text-anchor="middle" font-size="9" font-weight="bold" fill="#64748b">STANDBY</text>
+  </g>
+
+  <!-- Floating IP to LBs -->
+  <path d="M 340,190 C 360,190 365,145 385,145" class="flow-blue" marker-end="url(#arr-blue)"/>
+  <path d="M 340,220 C 360,220 365,295 385,295" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 3" fill="none" marker-end="url(#arr-slate)"/>
+
+  <!-- Health Check / Corosync between LBs -->
+  <path d="M 450,190 L 450,255" class="flow-amber" stroke-width="1.5"/>
+  <rect x="400" y="210" width="100" height="18" rx="4" fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+  <text x="450" y="222" text-anchor="middle" font-size="9" font-weight="bold" fill="#b45309">⚡ Health Check</text>
+
+  <!-- App Servers Column -->
+  <g transform="translate(560, 105)">
+    <rect width="130" height="85" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+    <rect width="130" height="22" rx="8" fill="#16a34a"/>
+    <text x="65" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">App Server 1</text>
+    <text x="65" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">Node.js / Java</text>
+    <text x="65" y="62" text-anchor="middle" font-size="9" fill="#15803d">Port 8080 • Active</text>
+    <text x="65" y="76" text-anchor="middle" font-size="9" fill="#166534">Read / Write Operations</text>
+  </g>
+
+  <g transform="translate(560, 255)">
+    <rect width="130" height="85" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+    <rect width="130" height="22" rx="8" fill="#16a34a"/>
+    <text x="65" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">App Server 2</text>
+    <text x="65" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">Node.js / Java</text>
+    <text x="65" y="62" text-anchor="middle" font-size="9" fill="#15803d">Port 8080 • Active</text>
+    <text x="65" y="76" text-anchor="middle" font-size="9" fill="#166534">Read / Write Operations</text>
+  </g>
+
+  <!-- Primary LB to App Servers -->
+  <path d="M 515,145 L 560,145" class="flow-green" marker-end="url(#arr-green)"/>
+  <path d="M 515,155 C 535,155 540,295 560,295" class="flow-green" marker-end="url(#arr-green)"/>
+
+  <!-- Database Column (Master-Master) -->
+  <g transform="translate(735, 105)">
+    <rect width="145" height="85" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
+    <rect width="145" height="22" rx="8" fill="#ca8a04"/>
+    <text x="72" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Database Master 1</text>
+    <text x="72" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#854d0e">MySQL / Postgres</text>
+    <text x="72" y="62" text-anchor="middle" font-size="9" fill="#a16207">Primary Read/Write</text>
+    <text x="72" y="76" text-anchor="middle" font-size="9" fill="#854d0e">Port 3306 • Synced</text>
+  </g>
+
+  <g transform="translate(735, 255)">
+    <rect width="145" height="85" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
+    <rect width="145" height="22" rx="8" fill="#ca8a04"/>
+    <text x="72" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Database Master 2</text>
+    <text x="72" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#854d0e">MySQL / Postgres</text>
+    <text x="72" y="62" text-anchor="middle" font-size="9" fill="#a16207">Active-Active Replica</text>
+    <text x="72" y="76" text-anchor="middle" font-size="9" fill="#854d0e">Port 3306 • Synced</text>
+  </g>
+
+  <!-- App Servers to DB -->
+  <path d="M 690,145 L 735,145" class="flow-amber" marker-end="url(#arr-amber)"/>
+  <path d="M 690,295 L 735,295" class="flow-amber" marker-end="url(#arr-amber)"/>
+
+  <!-- Master-Master DB Replication Link -->
+  <path d="M 808,190 L 808,255" class="flow-purple" stroke-width="2"/>
+  <rect x="745" y="210" width="125" height="20" rx="4" fill="#faf5ff" stroke="#c084fc" stroke-width="1"/>
+  <text x="808" y="223" text-anchor="middle" font-size="9" font-weight="bold" fill="#7e22ce">⇄ Master Replication</text>
+
+  <!-- Steps Footer -->
+  <rect x="70" y="398" width="800" height="26" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="470" y="415" text-anchor="middle" font-size="11" fill="#334155">
+    <tspan font-weight="bold" fill="#2563eb">Step 1:</tspan> Floating IP directs to Primary LB  |  
+    <tspan font-weight="bold" fill="#dc2626">Step 2:</tspan> If Primary LB fails health check  |  
+    <tspan font-weight="bold" fill="#16a34a">Step 3:</tspan> Cloud API reassigns Floating IP to Secondary LB in seconds
+  </text>
+</svg>

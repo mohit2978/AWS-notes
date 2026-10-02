@@ -1,0 +1,87 @@
+<svg height="340" width="780" viewBox="0 0 780 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes reverse-flow {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 24; }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.7; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.05); }
+      }
+      .flow-blue { stroke: #2563eb; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-green { stroke: #16a34a; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-red { stroke: #dc2626; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-purple { stroke: #9333ea; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-amber { stroke: #d97706; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-gray { stroke: #64748b; stroke-width: 2; stroke-dasharray: 6 4; animation: flow 1.4s linear infinite; fill: none; }
+    </style>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="780" height="340" fill="#f8fafc" rx="12"/>
+  <text x="390" y="36" text-anchor="middle" font-size="19" font-weight="bold" fill="#0f172a">Transport Layer Analogy: Connection Establishment</text>
+  <text x="390" y="58" text-anchor="middle" font-size="13" fill="#64748b">TCP acts as a reliable trusted friend to establish the session before communication</text>
+
+  <!-- Host 1: Boy -->
+  <g transform="translate(60, 100)">
+    <rect width="180" height="150" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect width="180" height="30" rx="10" fill="#dbeafe"/>
+    <text x="90" y="21" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">Boy (Host 1)</text>
+    <text x="90" y="65" text-anchor="middle" font-size="12" fill="#475569">Physical: At Bus Stop</text>
+    <text x="90" y="85" text-anchor="middle" font-size="11" fill="#64748b">Same Network</text>
+    <rect x="20" y="102" width="140" height="26" rx="4" fill="#eff6ff"/>
+    <text x="90" y="119" text-anchor="middle" font-size="10" font-weight="bold" fill="#2563eb">Wants Connection</text>
+  </g>
+
+  <!-- Trusted Friend: TCP -->
+  <g transform="translate(300, 90)">
+    <rect width="180" height="170" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <rect width="180" height="30" rx="10" fill="#dcfce7"/>
+    <text x="90" y="21" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">Friend (TCP)</text>
+    <text x="90" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">Reliable / Trusted</text>
+    <text x="90" y="80" text-anchor="middle" font-size="10" fill="#64748b">Handshake &amp; Ack</text>
+    
+    <rect x="15" y="98" width="150" height="45" rx="4" fill="#fef2f2" stroke="#fca5a5"/>
+    <text x="90" y="116" text-anchor="middle" font-size="10" font-weight="bold" fill="#991b1b">If UDP Friend:</text>
+    <text x="90" y="132" text-anchor="middle" font-size="9" fill="#991b1b">Untrusted • May drop connection</text>
+  </g>
+
+  <!-- Host 2: Girl -->
+  <g transform="translate(540, 100)">
+    <rect width="180" height="150" rx="10" fill="#ffffff" stroke="#db2777" stroke-width="2"/>
+    <rect width="180" height="30" rx="10" fill="#fce7f3"/>
+    <text x="90" y="21" text-anchor="middle" font-size="13" font-weight="bold" fill="#9d174d">Girl (Host 2)</text>
+    <text x="90" y="65" text-anchor="middle" font-size="12" fill="#475569">Physical: Same Bus Stop</text>
+    <text x="90" y="85" text-anchor="middle" font-size="11" fill="#64748b">Same Network</text>
+    <rect x="20" y="102" width="140" height="26" rx="4" fill="#fdf2f8"/>
+    <text x="90" y="119" text-anchor="middle" font-size="10" font-weight="bold" fill="#db2777">Session Established</text>
+  </g>
+
+  <!-- Animated connection arrows -->
+  <path d="M 240 160 L 300 160" class="flow-blue" marker-end="url(#arr-blue)"/>
+  <path d="M 480 160 L 540 160" class="flow-green" marker-end="url(#arr-green)"/>
+
+  <!-- Footer -->
+  <rect x="140" y="285" width="500" height="32" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="390" y="306" text-anchor="middle" font-size="12" fill="#475569">Once TCP friend establishes connection, a private session begins (Session Layer).</text>
+</svg>

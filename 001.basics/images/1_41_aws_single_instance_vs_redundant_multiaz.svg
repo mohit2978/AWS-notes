@@ -1,0 +1,242 @@
+<svg height="540" width="940" viewBox="0 0 940 540" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.04); opacity: 0.9; }
+      }
+      .flow-blue {
+        stroke: #2563eb;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-green {
+        stroke: #16a34a;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-amber {
+        stroke: #d97706;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-purple {
+        stroke: #9333ea;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-red {
+        stroke: #dc2626;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-cyan {
+        stroke: #0284c7;
+        stroke-width: 2.2;
+        stroke-dasharray: 8 5;
+        animation: flow 1.2s linear infinite;
+        fill: none;
+      }
+      .flow-reverse {
+        stroke: #64748b;
+        stroke-width: 1.8;
+        stroke-dasharray: 6 4;
+        animation: flow 1.5s linear infinite reverse;
+        fill: none;
+      }
+    </style>
+    <filter id="drop-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-cyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7"/>
+    </marker>
+    <marker id="arr-slate" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#64748b"/>
+    </marker>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="940" height="540" fill="#f8fafc" rx="16"/>
+
+  <text x="470" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">AWS Architecture: Single Instance (SPOF) vs. High Availability Multi-AZ</text>
+  <text x="470" y="50" text-anchor="middle" font-size="12" fill="#64748b">Comparison between vulnerable single-AZ deployment and resilient fault-tolerant multi-AZ redundancy</text>
+
+  <!-- LEFT PANEL: Single Instance (Single AZ SPOF) -->
+  <g transform="translate(30, 75)">
+    <rect width="415" height="430" rx="12" fill="#ffffff" stroke="#ef4444" stroke-width="2" filter="url(#drop-shadow)"/>
+    <rect width="415" height="34" rx="12" fill="#fee2e2"/>
+    <text x="207" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">❌ Single Instance Deployment (High Risk)</text>
+
+    <!-- Client Laptop -->
+    <g transform="translate(145, 50)">
+      <rect width="125" height="60" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="62" y="26" text-anchor="middle" font-size="16">💻</text>
+      <text x="62" y="46" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">Client Laptop</text>
+    </g>
+
+    <!-- DNS Lookup Flow -->
+    <path d="M 207,110 L 207,150" class="flow-blue" marker-end="url(#arr-blue)"/>
+    <rect x="155" y="150" width="105" height="24" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="207" y="166" text-anchor="middle" font-size="10" font-weight="bold" fill="#475569">Route 53 DNS</text>
+
+    <!-- Single AZ Boundary -->
+    <g transform="translate(35, 190)">
+      <rect width="345" height="175" rx="8" fill="#fff1f2" stroke="#fda4af" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <rect width="180" height="20" rx="4" fill="#fecdd3"/>
+      <text x="90" y="14" text-anchor="middle" font-size="10" font-weight="bold" fill="#9f1239">Availability Zone 1a (SPOF)</text>
+
+      <!-- Flow DNS to EC2 -->
+      <path d="M 172,0 L 172,35" class="flow-red" marker-end="url(#arr-red)"/>
+
+      <!-- Single EC2 Instance -->
+      <g transform="translate(35, 45)">
+        <rect width="120" height="85" rx="6" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+        <rect width="120" height="20" rx="6" fill="#ef4444"/>
+        <text x="60" y="14" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Single EC2</text>
+        <text x="60" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#334155">Web / App</text>
+        <text x="60" y="60" text-anchor="middle" font-size="9" fill="#dc2626">⚠ Single Point</text>
+        <text x="60" y="74" text-anchor="middle" font-size="9" fill="#dc2626">of Failure!</text>
+      </g>
+
+      <!-- Flow EC2 to RDS -->
+      <path d="M 155,87 L 185,87" class="flow-red" marker-end="url(#arr-red)"/>
+
+      <!-- Single RDS Instance -->
+      <g transform="translate(190, 45)">
+        <rect width="120" height="85" rx="6" fill="#ffffff" stroke="#ef4444" stroke-width="1.5"/>
+        <rect width="120" height="20" rx="6" fill="#ef4444"/>
+        <text x="60" y="14" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Single RDS</text>
+        <text x="60" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#334155">MySQL Master</text>
+        <text x="60" y="60" text-anchor="middle" font-size="9" fill="#dc2626">⚠ No Replica</text>
+        <text x="60" y="74" text-anchor="middle" font-size="9" fill="#dc2626">No Standby DB</text>
+      </g>
+    </g>
+
+    <!-- Warning Footer -->
+    <rect x="25" y="380" width="365" height="36" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+    <text x="207" y="396" text-anchor="middle" font-size="10" font-weight="bold" fill="#b91c1c">⚠ DOWNTIME GUARANTEED IF AZ-1a FAILS</text>
+    <text x="207" y="409" text-anchor="middle" font-size="9" fill="#7f1d1d">Zero redundancy; hardware outage leads to complete data loss</text>
+  </g>
+
+  <!-- RIGHT PANEL: Redundant Multi-AZ -->
+  <g transform="translate(495, 75)">
+    <rect width="415" height="430" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="2" filter="url(#drop-shadow)"/>
+    <rect width="415" height="34" rx="12" fill="#dcfce7"/>
+    <text x="207" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#14532d">✔ High-Availability Multi-AZ (99.99%)</text>
+
+    <!-- DNS / ELB Row -->
+    <g transform="translate(30, 48)">
+      <rect width="105" height="45" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+      <text x="52" y="20" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">Route 53 DNS</text>
+      <text x="52" y="34" text-anchor="middle" font-size="9" fill="#2563eb">Health Routed</text>
+
+      <path d="M 105,22 L 140,22" class="flow-blue" marker-end="url(#arr-blue)"/>
+
+      <rect x="145" y="0" width="210" height="45" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="250" y="20" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">Elastic Load Balancer (ELB)</text>
+      <text x="250" y="35" text-anchor="middle" font-size="9" fill="#3b82f6">Distributes across Availability Zones</text>
+    </g>
+
+    <!-- Flow ELB to AZs -->
+    <path d="M 275,93 C 275,108 120,108 120,125" class="flow-green" marker-end="url(#arr-green)"/>
+    <path d="M 285,93 C 285,108 290,108 290,125" class="flow-green" marker-end="url(#arr-green)"/>
+
+    <!-- AZ 1a Box -->
+    <g transform="translate(25, 130)">
+      <rect width="175" height="235" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+      <rect width="175" height="22" rx="8" fill="#16a34a"/>
+      <text x="87" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Availability Zone 1a</text>
+
+      <!-- EC2 1a -->
+      <g transform="translate(15, 32)">
+        <rect width="145" height="60" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.2"/>
+        <text x="72" y="24" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">EC2 Instance (1a)</text>
+        <text x="72" y="42" text-anchor="middle" font-size="9" fill="#166534">Web/App Active</text>
+      </g>
+
+      <!-- Flow EC2 to DB Master -->
+      <path d="M 87,92 L 87,130" class="flow-amber" marker-end="url(#arr-amber)"/>
+
+      <!-- RDS Master (1a) -->
+      <g transform="translate(15, 135)">
+        <rect width="145" height="75" rx="6" fill="#ffffff" stroke="#ca8a04" stroke-width="1.5"/>
+        <rect width="145" height="18" rx="6" fill="#ca8a04"/>
+        <text x="72" y="13" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">RDS Master DB (1a)</text>
+        <text x="72" y="38" text-anchor="middle" font-size="10" font-weight="bold" fill="#854d0e">Primary Read/Write</text>
+        <text x="72" y="54" text-anchor="middle" font-size="9" fill="#15803d">● Synchronous Link</text>
+        <text x="72" y="68" text-anchor="middle" font-size="8" fill="#a16207">Auto Failover Target</text>
+      </g>
+    </g>
+
+    <!-- AZ 1b Box -->
+    <g transform="translate(215, 130)">
+      <rect width="175" height="235" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+      <rect width="175" height="22" rx="8" fill="#16a34a"/>
+      <text x="87" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Availability Zone 1b</text>
+
+      <!-- EC2 1b -->
+      <g transform="translate(15, 32)">
+        <rect width="145" height="60" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.2"/>
+        <text x="72" y="24" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">EC2 Instance (1b)</text>
+        <text x="72" y="42" text-anchor="middle" font-size="9" fill="#166534">Web/App Active</text>
+      </g>
+
+      <!-- Flow EC2 to DB Standby -->
+      <path d="M 87,92 L 87,130" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
+
+      <!-- RDS Standby Replica (1b) -->
+      <g transform="translate(15, 135)">
+        <rect width="145" height="75" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+        <rect width="145" height="18" rx="6" fill="#0284c7"/>
+        <text x="72" y="13" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">RDS Standby (1b)</text>
+        <text x="72" y="38" text-anchor="middle" font-size="10" font-weight="bold" fill="#0369a1">Synchronous Standby</text>
+        <text x="72" y="54" text-anchor="middle" font-size="9" fill="#0284c7">Auto-Promote in 60s</text>
+        <text x="72" y="68" text-anchor="middle" font-size="8" fill="#64748b">Zero Data Loss</text>
+      </g>
+    </g>
+
+    <!-- Synchronous Replication Between AZs -->
+    <path d="M 160,305 L 230,305" class="flow-purple" stroke-width="2"/>
+    <rect x="170" y="295" width="60" height="18" rx="4" fill="#ffffff" stroke="#9333ea" stroke-width="1"/>
+    <text x="200" y="307" text-anchor="middle" font-size="8" font-weight="bold" fill="#7e22ce">Sync ⇄</text>
+
+    <!-- Success Footer -->
+    <rect x="25" y="380" width="365" height="36" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+    <text x="207" y="396" text-anchor="middle" font-size="10" font-weight="bold" fill="#15803d">✔ FULL AUTOMATED FAILOVER &amp; HIGH AVAILABILITY</text>
+    <text x="207" y="409" text-anchor="middle" font-size="9" fill="#14532d">If AZ 1a drops offline, ELB &amp; RDS failover to AZ 1b instantly</text>
+  </g>
+</svg>

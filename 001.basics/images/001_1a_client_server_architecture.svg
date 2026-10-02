@@ -1,0 +1,79 @@
+<svg height="400" width="820" viewBox="0 0 820 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes reverse-flow {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 24; }
+      }
+      .flow-blue { stroke: #2563eb; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-green { stroke: #16a34a; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-red { stroke: #dc2626; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-purple { stroke: #9333ea; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-amber { stroke: #d97706; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-gray { stroke: #64748b; stroke-width: 2; stroke-dasharray: 6 4; animation: flow 1.4s linear infinite; fill: none; }
+    </style>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="820" height="400" fill="#f8fafc" rx="12"/>
+  <text x="410" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">Client-Server Architecture</text>
+  <text x="410" y="62" text-anchor="middle" font-size="13" fill="#64748b">Request &amp; Response Flow in the Same Network</text>
+
+  <!-- Client Box -->
+  <g transform="translate(100, 110)">
+    <rect width="200" height="180" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect width="200" height="36" rx="10" fill="#dbeafe"/>
+    <text x="100" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">CLIENT</text>
+    <text x="100" y="70" text-anchor="middle" font-size="12" fill="#475569">Requests a Resource</text>
+    <rect x="25" y="95" width="150" height="35" rx="6" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="100" y="117" text-anchor="middle" font-size="13" font-weight="bold" fill="#2563eb">google.com</text>
+    <text x="100" y="160" text-anchor="middle" font-size="12" fill="#64748b">Web Browser / App</text>
+  </g>
+
+  <!-- Server Box -->
+  <g transform="translate(520, 110)">
+    <rect width="200" height="180" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <rect width="200" height="36" rx="10" fill="#dcfce7"/>
+    <text x="100" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#166534">SERVER</text>
+    <text x="100" y="70" text-anchor="middle" font-size="12" fill="#475569">Responds to Resource</text>
+    <rect x="25" y="95" width="150" height="35" rx="6" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="100" y="117" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">Web Server (HTTP/S)</text>
+    <text x="100" y="160" text-anchor="middle" font-size="12" fill="#64748b">Fulfills the Request</text>
+  </g>
+
+  <!-- Flow 1: Request (Top Arrow) -->
+  <path d="M 305 160 L 515 160" class="flow-blue" marker-end="url(#arr-blue)"/>
+  <rect x="360" y="132" width="100" height="24" rx="12" fill="#dbeafe" stroke="#93c5fd"/>
+  <text x="410" y="148" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">1. Request →</text>
+
+  <!-- Flow 2: Response (Bottom Arrow) -->
+  <path d="M 515 220 L 305 220" class="flow-green" marker-end="url(#arr-green)"/>
+  <rect x="360" y="228" width="100" height="24" rx="12" fill="#dcfce7" stroke="#86efac"/>
+  <text x="410" y="244" text-anchor="middle" font-size="11" font-weight="bold" fill="#166534">← 2. Response</text>
+
+  <!-- Bottom note -->
+  <rect x="180" y="325" width="460" height="35" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="410" y="347" text-anchor="middle" font-size="12" fill="#475569">Both devices must reside in the same network or be interconnected via routing.</text>
+</svg>

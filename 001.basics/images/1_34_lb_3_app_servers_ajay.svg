@@ -1,0 +1,110 @@
+<svg height="420" width="860" viewBox="0 0 860 420" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 24; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes reverse-flow {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 24; }
+      }
+      .flow-blue { stroke: #2563eb; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-green { stroke: #16a34a; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-red { stroke: #dc2626; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-purple { stroke: #9333ea; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+      .flow-amber { stroke: #d97706; stroke-width: 2.5; stroke-dasharray: 8 5; animation: flow 1.2s linear infinite; fill: none; }
+    </style>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arr-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#9333ea"/>
+    </marker>
+    <marker id="arr-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="860" height="420" fill="#f8fafc" rx="12"/>
+  <text x="430" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#0f172a">High Availability (HA): Redundancy, Monitoring &amp; Failover (RMF)</text>
+  <text x="430" y="60" text-anchor="middle" font-size="13" fill="#64748b">Load Balancer health checks inspect HTTP status 200 every 30 seconds</text>
+
+  <!-- Client -->
+  <g transform="translate(40, 140)">
+    <rect width="160" height="130" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <rect width="160" height="28" rx="8" fill="#dbeafe"/>
+    <text x="80" y="19" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">Client</text>
+    <text x="80" y="65" text-anchor="middle" font-size="11" fill="#475569">Requests Domain:</text>
+    <rect x="15" y="78" width="130" height="28" rx="4" fill="#eff6ff"/>
+    <text x="80" y="96" text-anchor="middle" font-size="11" font-weight="bold" fill="#2563eb">http://ajay.com</text>
+  </g>
+
+  <!-- Arrow Client -> LB -->
+  <path d="M 205 205 L 295 205" class="flow-blue" marker-end="url(#arr-blue)"/>
+
+  <!-- Load Balancer with Monitoring -->
+  <g transform="translate(300, 95)">
+    <rect width="150" height="260" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+    <rect width="150" height="32" rx="10" fill="#fef3c7"/>
+    <text x="75" y="21" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">LOAD BALANCER</text>
+    
+    <rect x="15" y="45" width="120" height="50" rx="4" fill="#ecfdf5" stroke="#86efac"/>
+    <text x="75" y="65" text-anchor="middle" font-size="10" font-weight="bold" fill="#166534">MONITORING</text>
+    <text x="75" y="80" text-anchor="middle" font-size="9" fill="#166534">Every 30s: HTTP 200?</text>
+
+    <g font-size="10" fill="#475569" transform="translate(15, 110)">
+      <text y="15">• Application Health Check</text>
+      <text y="35">• Not Server hardware check</text>
+      <text y="55">• Dead node isolated</text>
+      <text y="75">• Instant failover</text>
+    </g>
+    <rect x="15" y="210" width="120" height="30" rx="4" fill="#dbeafe"/>
+    <text x="75" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">ajay.com</text>
+  </g>
+
+  <!-- 3 Application Servers on Right -->
+  <!-- App 1 (Healthy) -->
+  <g transform="translate(540, 80)">
+    <rect width="280" height="70" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <text x="140" y="28" text-anchor="middle" font-size="12" font-weight="bold" fill="#166534">App Server #1 (Healthy ✓)</text>
+    <text x="140" y="46" text-anchor="middle" font-size="10" fill="#64748b">IP: 192.168.10.20 • Responding HTTP 200</text>
+    <rect x="235" y="10" width="35" height="18" rx="9" fill="#dcfce7"/>
+    <text x="252" y="22" text-anchor="middle" font-size="9" font-weight="bold" fill="#166534">200</text>
+  </g>
+  <path d="M 455 180 C 485 180, 500 115, 535 115" class="flow-green" marker-end="url(#arr-green)"/>
+
+  <!-- App 2 (Down - Isolated!) -->
+  <g transform="translate(540, 175)">
+    <rect width="280" height="70" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+    <text x="140" y="28" text-anchor="middle" font-size="12" font-weight="bold" fill="#991b1b">&#10007; App Server #2 (APPLICATION DOWN!)</text>
+    <text x="140" y="46" text-anchor="middle" font-size="10" fill="#b91c1c">IP: 192.168.10.21 • Server ON, but app crashed</text>
+    <rect x="235" y="10" width="35" height="18" rx="9" fill="#fee2e2"/>
+    <text x="252" y="22" text-anchor="middle" font-size="9" font-weight="bold" fill="#991b1b">500</text>
+  </g>
+  <!-- Red crossed out arrow to dead app -->
+  <path d="M 455 210 L 535 210" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arr-red)"/>
+  <rect x="475" y="200" width="40" height="18" rx="4" fill="#fee2e2"/>
+  <text x="495" y="213" text-anchor="middle" font-size="9" font-weight="bold" fill="#991b1b">Skip!</text>
+
+  <!-- App 3 (Healthy) -->
+  <g transform="translate(540, 270)">
+    <rect width="280" height="70" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+    <text x="140" y="28" text-anchor="middle" font-size="12" font-weight="bold" fill="#166534">App Server #3 (Healthy ✓)</text>
+    <text x="140" y="46" text-anchor="middle" font-size="10" fill="#64748b">IP: 192.168.10.22 • Responding HTTP 200</text>
+    <rect x="235" y="10" width="35" height="18" rx="9" fill="#dcfce7"/>
+    <text x="252" y="22" text-anchor="middle" font-size="9" font-weight="bold" fill="#166534">200</text>
+  </g>
+  <path d="M 455 240 C 485 240, 500 305, 535 305" class="flow-green" marker-end="url(#arr-green)"/>
+
+  <!-- Footer -->
+  <rect x="180" y="370" width="500" height="32" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="430" y="391" text-anchor="middle" font-size="12" fill="#475569">Failover: Traffic automatically routes around dead nodes to healthy ones without downtime.</text>
+</svg>
